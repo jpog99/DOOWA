@@ -1,0 +1,218 @@
+\documentclass[conference]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{array}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{DOOWA\
+\thanks{}
+}
+
+\author{\IEEEauthorblockN{Wan}
+\IEEEauthorblockA{\textit{Dept. of Computer Software} \\
+{Hanyang University}\\
+Kuala Lumpur, Malaysia \\
+aus.baik@gmail.com}
+\and
+\IEEEauthorblockN{Amin}
+\IEEEauthorblockA{\textit{Dept. of Computer Software} \\
+{Hanyang University}\\
+Kuala Lumpur, Malaysia \\
+amin.sharudin@gmail.com}
+\and
+\IEEEauthorblockN{Megat}
+\IEEEauthorblockA{\textit{Dept. of Information Systems} \\
+{Hanyang University}\\
+Johor, Malaysia \\
+megattmf@gmail.com}
+}
+
+\maketitle
+
+\begin{abstract}
+After living in the COVID-19 pandemic for approximately 2 years now, we decided that we want to make something that can alleviate people suffering during this pandemic. We came up with a web application called ‘DOOWA’. The name DOOWA is derived from the Korean word ‘\textit{deobda}’ which means to help. The main function of our application is to connect individuals or families in the community who required assistance to survive during this pandemic to a donor in the community who are willing to lend a helping hand to reduce their hardship. We are hoping that this app will facilitate and encourage members of the community to help each other during this troubling times.
+
+\end{abstract}
+\begin{IEEEkeywords}
+DOOWA, Web Application, Assistance, Donation
+\end{IEEEkeywords}
+
+\section{Introduction}
+\subsection{Motivation}
+
+    We focused on people who are financially less fortunate  to be seen by the community. We created this mechanism to have a balanced community and people can reach out and seek help from others easily. There are families that are hugely affected, and many suffer from Covid-19. As much as we would like to get rid of any bad situations, it is still unavoidable and usually unexpected. The nature and consequences of these situations can vary significantly and in worst cases can also be life threatening. Therefore, we think that it would be nice to have some mechanism by which we can notify and get notified by certain people about such circumstances and increases the chances of giving and receiving help as soon as possible.
+\\ \\
+\indent The need for such a mechanism increases even more as in this era of technology, platforms exist to support them. One such platform and a very common one in that a website. Almost everyone today has an access to websites as they are easy to use and can be accessed by phone, tablets and laptops. Hence, this motivates our team to develop a website for giving and receiving help in the community.
+\\
+    
+\subsection{Problem Statement}
+
+-	Donor receivers are difficult in reaching out for help as they do not have access with other donors physically.\\
+
+-	Some receivers are not able to find the type of donations that they really need. As a result, the donation given is wasted.\\
+
+-	It is hard to contact between donors and receivers as they do not know each other before.\\
+
+- 	We acknowledge that people in need can also request help from the government, but often times this help have to go through a long, bureaucratic application process before they are approved.\\
+
+
+\begin{table}[htbp]
+\caption{Role Assignments}
+\begin{center}
+\begin{tabular}{ | m{5em} | m{2cm}| m{3cm} | } 
+  \hline
+ \textbf{Roles}& \textbf{Name} & \textbf{Task Description} \\
+\hline
+  \textbf{User/ Customer} & Megat & Act as a beta tester to criticize and provide suggestions from a client point of view. They will provide how the application UI should look like to satisfy the ease of access from a user perspective. They also should test every feature in the app to identify bugs and report to the software developer. \\
+  \hline
+  \textbf{Software Developer} & Wan & The software developer should have the general point of view of how the application works overall. They will provide the services for backend server and database as well as providing the general UI of the frontend.   \\ 
+  \hline
+  \textbf{Development Manager} & Amin & Development manager will be the main overseer of the project development, and gathers the information from the client side and handles the reports. They also will be the main proofreader for the project documentation to meet the project specification.	\\
+  \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection{Research on any related software }
+
+\begin{enumerate}
+\item \textit{KakaoPay }\\ 
+KakaoPay is a mobile payment and digital wallet service by Kakao based in \indent South Korea that allows users make mobile payments and online transactions easily. It ensures smooth operations where users can make payments or do a money transfer via KakaoPay handily and there is no floating time for recipients to receive the money. It also lets users to invest with a small amount of money, get a loan for a house, and find the perfect insurance partner. Users can also save any credit or debit card information on it so that they can make one-time payment easily without filling in payment information once again with just only one tap. The service also supports contactless payments where users can send an amount of money to anyone they want to. Users can also notify recipients if they have successfully transferred the money and vice versa. \\
+\item \textit{PayPal} \\
+PayPal is one of the world’s largest payment services that is secured with advanced technologies. PayPal offers a worldwide payment service and supports Visa, MasterCard and so on. Users can sign up for PayPal account to have an extra level of security and fraud prevention with a quicker payment option and save payment details for future transactions. PayPal also lowest transaction fees for a global transaction, therefore users can freely use any card they prefer to use. Besides, it also offers reward points for each successful transactions that can later benefit users to transfer money wirelessly with even lower transaction fees. PayPal also has its own digital wallet that users can put money in so that users can directly transfer money without entering one’s account numbers every single time.\\
+\item \textit{Yogiyo }\\
+Yogiyo is a food delivery service application which enable users to get their food delivered at their doorstep from various restaurants easily. The application connects users to a variety of restaurants from different cuisines such as Western, Korean, Japanese and Chinese. One of the features of the application that we want to emulate is their delivery tracking feature. Through the application users can know the location of the delivery food rider in real time. Rider’s location is represented by an icon on the map in the application, and the icon moves in relation to the rider’s location. This is the feature that we want to have in our web application so that whenever a meeting is set up, one person can know the location of the other party in real time and plan accordingly.\\
+\item \textit{Coupang }\\
+Coupang is an online shopping application based in Seoul, South Korea that sells products from a wide-ranging category including food, clothing, fresh produce, baby products and many more. User can shop online in the comfort of their own home and have the products delivered on their doorsteps. In the application, users can know the current location of their parcel through an icon. Every time the parcel moves from the seller to the warehouse or currently in delivery, each and every stage of this process is shown to the user so that they can have the assurance that the product that they buy will arrive. We want to do the same thing with our web application in case a donor wants to send products through the postal service. \\
+\item \textit{Google/Facebook Account}\\
+Google and Facebook account is something that the majority of people have. We have also seen a lot of application nowadays which requires first time users to make an account if they want to use the services provided by the application. Similar to this, our web application will also require first time user to register an account with us. However, instead of filling in their details one by one, we will allow users to use their already existing Google of Facebook account to register on our web application. This will ensure smooth registration process and provide a hassle-free service to our users.\\
+\item \textit{AirAsia AVA} \\
+Air Asia is one of the famous low-cost airline that is originated form Malaysia. Its website has a feature called AVA (AirAsia Virtual Allstar) which is an AI chat bot that can be used by the customer to help them undergo the booking and flight cancellation processes or even find any cheapest flight available at any time. Furthermore, AVA are implemented in AirAsia official application and also Facebook. On Facebook, you can start up a conversation with the official AirAsia Facebook account and it will be replied by AVA instantly. Additionally, this chat bot also has its own mobile phone number which can be used from WhatsApp, a messenger application and interact with the customers. Our goal is to implement this chat bot into our donation application so that our application can be fully interactive with any other social messenger application.\\
+\item \textit{SirenGPS} \\
+SirenGPS integrates emergency management tools with real-time visibility and interoperability for emergency managers, first responders, and stakeholders in your community. This application also has a Siren Alert feature that can send real-time messages to specific groups, locations, buildings or your entire community. Siren Alert not only allows you to inform individuals of a crisis in their immediate vicinity, it lets you warn people as they approach a threat and steer them toward safety. With Siren Alert, you can also enable individuals in your community to respond back in real-time. Our application plans to integrate the Siren Alert feature and enable anyone to alert any person nearby for donation. 
+\end{enumerate}
+
+
+\section{Requirement}
+
+\subsection{Functional Requirements\\}
+
+\begin{itemize}
+\item \textbf{Account Creation}
+\end{itemize}
+\par The application should have an account creation system for the users before enabling them to access all the features on the app. On the main screen, there should be a button for sign up option. User will have to enter their email and password and these data will be stored in backend database. In addition, all email address should be unique and users cannot sign up with an already used email address. There should be no specific requirement for password but the application should display the strength of the password inputted by user. Upon completing the registration, a verification email should be sent to the new users’ email address. All users will also have unique ID bind to their account.\\
+\begin{itemize}
+\item \textbf{Login}
+\end{itemize}
+\par Upon opening the application, the main screen should display the login menu with blank space for the users to input their email address and password. After the users entered their credentials, the inputted info will be sent to the backend server and it will search for matching email address and password combination in the database. In case of successful login, the application will inform the user that the login was successful and the user will be sent to the main page of the application. In failure case, the user will be rejected by the system and prompted to enter the correct combination.  Alternatively, the application will provide the users another option to login via Google, Facebook or Twitter.\\
+\begin{itemize}
+\item \textbf{Chat Bot}
+\end{itemize}
+\par The application should provide a chat bot service to the users which let the users to ask questions and set a reminder. This chat bot should not use an AI approach, but rather a very simple approach where the users just type in the command and arguments and the bot will reply accordingly. The chat bot should have various kind of features and commands that covers all the users’ needs.\\
+\begin{itemize}
+\item \textbf{Maps}
+\end{itemize}
+\par The application should have a map as the main interface. To implement this, the Google Maps API services will be used. On this map, it should show all the locations of the other users that are requesting for donation and nearby foodbanks. If the user is a donor, the map should show the location of where the donor is giving out the donation, the time available and the type of donation which will be indicated by an icon on the map. If the user is a receiver, the map will display their location for another donor to come and visit them and the severity of their desperation which will be indicated by color hue of their location. The locations of the two types of users should be indicated by the common map pin with different color each. If the location is an organization type donor, a special pin should be used.\\
+\begin{itemize}
+\item \textbf{Online Banking}
+\end{itemize}
+\par Donation can be made by physically or online transfer for money. The application should provide an online banking service for the users which let online money transfer between the users. Services such as Paypal, FPX banking and KakaoPay should be implemented.\\
+\begin{itemize}
+\item \textbf{Points for Donor}
+\end{itemize}
+\par Setting up points for donor every time they made a donation. This kind of grading system will allow us to identify frequent donors who will be rewarded accordingly with coupons based on their numbers of contribution. Donors will also be put into groups/level according to the points they accumulated.\\
+\begin{itemize}
+\item \textbf{Notifications}
+\end{itemize}
+\par The notification system in the app will pop-up whenever the help that you requested are answered by a donor. This will help the requester to be alert at all time.\\
+\begin{itemize}
+\item \textbf{Donor Rating}
+\end{itemize}
+\par The app will have a rating and review system for its donors and aid receivers. An aid receiver can rate their donor based on a 5-star rating system and also leave a review after they have received the help that the required. This system is put in place in order to prevent scams, and accounts who does not follows our community guidelines.\\
+\begin{itemize}
+\item \textbf{Reminder}
+\end{itemize}
+\par The app will also have a notification system where you can set, to remind you of the date and place of meeting to receive or deliver your donation. You can set the notification to pop up at 2 hours or 30 minutes before your meeting time.\\
+\begin{itemize}
+\item \textbf{Chat Room between Donor/Receiver}
+\end{itemize}
+\par The chat function between the donor and the receiver is important so that they can get more detailed information on what kind of help that they require. They can also use the chat function to set up time and place to meet if necessary.\\
+\begin{itemize}
+\item \textbf{Donor Tracker (postage/meeting)}
+\end{itemize}
+\par We believe that any form of help is important and should be facilitated. Therefore, in a case where the donor wanted to send the required items through postage, we will have a function where the app tracks the position of your postage. This will help the receiver to identify the location of the items that they so direly need at all times. This function can also be modified to tract the location of individuals on the way to the meeting spot which they have agreed upon beforehand.\\
+\begin{itemize}
+\item  \textbf{Set a Face-to-Face Meeting}
+\end{itemize}
+\par This allows donators to have face-to-face meetings with the recipients within a specific time. 
+\begin{enumerate}
+\item  Click the “Time” to pop out the clock to set the meeting time.
+\item  Click the “Date” to pop out the calendar to set the meeting date and day.
+\item  Past dates cannot be clicked as there will be an error message.
+\item  The furthest appointment that can be made is one month ahead. Hence, user cannot make an appointment that is more than one month ahead.
+\item There are no multiple appointments in one meeting. Therefore, if a date has been chosen for a meeting, user cannot reserve any other dates before cancelling the previous chosen date.
+\item The dates must be agreed by both donator and the recipient. Click “Accept” button to agree the dates and “Reject” button to inform that one is not available for the chosen date.
+\item  If both parties agreed to the chosen dates, they then move to the confirmation page. \\
+\end{enumerate}
+\begin{itemize}
+\item \textbf{Choosing Types of Donation}
+\end{itemize}
+\par This allows donators to categorize their types of donations so that it is easier for recipients to seek for help with a specific type of donation.
+\begin{enumerate}
+\item Donators and recipients can choose which type of goods is important to them. This includes money, clothing, foods, baby items, gadgets, home essentials and others. 
+\item  If Others is picked, user can state the type of donation that will be give or needed. 
+\item Once the type of donation is picked, then it will only show donator/recipient that have the same type of donation. 
+\item This will help donators and recipients to discover those who have the same interest. \\
+\end{enumerate}
+\begin{itemize}
+\item \textbf{Pictures Upload}
+\end{itemize}
+\par This allows users to upload pictures of themselves and the donations for confirmation and proof so that it will make the donation more precise and clearer.
+\begin{enumerate}
+\item  Click ‘Camera’ button to connect the application to the camera.
+\item  The pictures taken are going to be stored and shared in the user’s profile for others to confirm them.
+\item  Click ‘Trash Bin’ button to delete pictures on the profile and there will be a pop-out whether to confirm the deletion.
+\item  Click ‘Sure’ for confirm deletion, and ‘Cancel’ to cancel the deletion request. \\
+\end{enumerate}
+\begin{itemize}
+\item \textbf{Guidelines and Manuals}
+\end{itemize}
+\par There is a guideline check for donators and recipients to follow to prevent any misbehavior and illegal actions throughout the donation process. This helps users to use the application properly.
+\begin{enumerate}
+\item  Click ‘Guidelines’ to view the guidelines of the application that help users to understand better about the application operation. 
+\item  For first-time user, click ‘Agree’ to accept and follow the guidelines given. 
+\item  Click ‘Disagree’ if the guidelines if the user does not accept the guidelines of the application. \\
+\end{enumerate}
+\begin{itemize}
+\item \textbf{Report Button}
+\end{itemize}
+\par All entries from donor and receivers should comply with the terms and agreements of the application. Hence, for every entry, a report button must be provided. Whenever a user sees any other donor/receiver entry that does not comply with the guidelines, the user can use the report the button to alert the developers. This report feature should provide text box for what kind of terms violated. The report will be sent to the backend database and will be reviewed by the developers. Every report should have a unique ID and the severity point of the violation. The developer then will review the reports starting from the entry with the most severity points.  \\
+\begin{itemize}
+\item \textbf{Terms and Conditions}
+\end{itemize}
+\par This will provide legal agreements between us and people who are using our application. Users must agree to abide the terms of the service (application) to use it. This can also act as a disclaimer for users to understand and aware of the terms and conditions that are applied.
+\par Users must acknowledge that the application is collecting names, addresses, credit card information or other personal data from the users. The data given may be used, stored, and shared. Besides, any misbehavior and illegal actions would result in termination of the user accounts. 
+\begin{enumerate}
+\item  Before logging in, user is opted to read and understand all the terms and conditions in the application.
+\item  User must scroll through all the terms and conditions before clicking the ‘Agree’ button. 
+\item  ‘Agree’ button will pop out if the user has scrolled through the terms and conditions.
+\item  Click ‘Disagree’ button if user does not accept the terms and conditions. 
+\item  If the user clicked ‘Disagree’ button, user is unable to log in and eventually use the application.\\
+\end{enumerate}
+
+\subsection{Non-Functional Requirements}
+\begin{itemize}
+\item  The application should have dark mode UI.
+\item  The application should ask for satisfaction rating periodically
+\item  The application should be simple enough to be accessible to elder users.
+\item  The application must detect the internet connection before giving access to the users.
+\item  The application should have an option to change language between English and Korean.
+\item  The application must be ready before the final week of class. 
+\end{itemize}
+\end{document}
