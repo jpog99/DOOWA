@@ -14,33 +14,30 @@
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/background" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="122dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="134dp"
-        android:layout_marginBottom="65dp"
-        android:fontFamily="sans-serif-smallcaps"
+        android:layout_width="219dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="73dp"
+        android:fontFamily="sans-serif-black"
         android:text="DOOWA"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/email"
+        android:textSize="60sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/email"
-        android:layout_width="375dp"
+        android:layout_width="0dp"
         android:layout_height="56dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginEnd="19dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="80dp"
         android:background="#66FFFFFF"
         android:drawableLeft="@android:drawable/sym_action_email"
         android:ems="10"
@@ -52,18 +49,17 @@
         android:textSize="18sp"
         android:textStyle="italic"
         android:typeface="normal"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
-        android:layout_width="370dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="29dp"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
         android:background="#66FFFFFF"
         android:drawableLeft="@android:drawable/ic_lock_idle_lock"
         android:ems="10"
@@ -72,32 +68,53 @@
         android:paddingLeft="20dp"
         android:textColorHint="#66FFFFFF"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/btn_signin"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_signin"
-        android:layout_width="176dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="7dp"
-        android:text="Sign In"
-        app:layout_constraintBottom_toTopOf="@+id/btn_reg"
+        android:id="@+id/btn_login"
+        android:layout_width="355dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#1E88E5"
+        android:text="login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
-    <Button
-        android:id="@+id/btn_reg"
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginBottom="177dp"
+        android:layout_marginStart="15dp"
+        android:text="Share And Stay Blessed."
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/btn_forgotpass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="23dp"
+        android:text="Forgot Password?"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+    <TextView
+        android:id="@+id/txt_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="40dp"
         android:text="Register"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/btn_signin"
-        app:layout_constraintTop_toBottomOf="@+id/btn_signin" />
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
