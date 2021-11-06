@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -19,6 +20,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
@@ -66,6 +69,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         password = txt_pass.getText().toString().trim();
         email = txt_email.getText().toString().trim();
         confirmpass = txt_confirmpass.getText().toString().trim();
+        String regex = "^(.+)@(.+)$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(email);
 
         if(fullname.isEmpty()){
             txt_fullname.setError("Full name is required!");
@@ -77,8 +83,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             txt_username.requestFocus();
             return;
         }
-        if(email.isEmpty()){
-            txt_email.setError("Email is required!");
+        if(email.isEmpty()||!matcher.matches()){
+            txt_email.setError("Invalid Email!");
             txt_email.requestFocus();
             return;
         }
@@ -103,7 +109,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             return;
         }
 
-
+        btn_register.onEditorAction(EditorInfo.IME_ACTION_DONE);
         //Start ProgressBar first (Set visibility VISIBLE)
         progressbar.setVisibility(View.VISIBLE);
         Handler handler = new Handler(Looper.getMainLooper());

@@ -8,8 +8,10 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -68,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             txt_password.requestFocus();
             return;
         }
-
+        signin.onEditorAction(EditorInfo.IME_ACTION_DONE);
         //Start ProgressBar first (Set visibility VISIBLE)
         Handler handler = new Handler(Looper.getMainLooper());
         handler.post(new Runnable() {
@@ -91,7 +93,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             Toast.makeText(MainActivity.this, "Logged In Successfuly!", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(getApplicationContext(),Menu.class);
                             startActivity(intent);
-                            finish();
                         }else{
                             Toast.makeText(MainActivity.this,result, Toast.LENGTH_SHORT).show();
                         }
