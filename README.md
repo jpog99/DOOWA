@@ -7,3 +7,6 @@ After living in the COVID-19 pandemic for approximately 2 years now, we decided 
 1. Amin (Development Manager, UI, Frontend)
 2. Wan (Software Developer, Backend, Databases)
 4. Megat (Documentation, Release Tests)
+
+## Links
+Backend Server: [Heroku](https://dashboard.heroku.com/apps/doowa-server) 
