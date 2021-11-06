@@ -10,4 +10,5 @@ After living in the COVID-19 pandemic for approximately 2 years now, we decided 
 
 ## Links
 Backend Server: [Heroku](https://dashboard.heroku.com/apps/doowa-server) 
+
 Try our current app so far: [APK File](https://github.com/jpog99/DOOWA/blob/master/app/release/app-release.apk?raw=true)
