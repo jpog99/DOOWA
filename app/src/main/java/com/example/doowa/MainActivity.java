@@ -4,35 +4,103 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button signin;
-    private TextView register;
+    private TextView register,forgotpass;
+    private EditText txt_email,txt_password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        txt_email = (EditText)findViewById(R.id.username);
+        txt_password = (EditText)findViewById(R.id.password);
+
         signin = (Button) findViewById(R.id.btn_login);
         signin.setOnClickListener(this);
 
-
         register = (TextView) findViewById(R.id.txt_register);
         register.setOnClickListener(this);
+
+        forgotpass = (TextView) findViewById(R.id.btn_forgotpass);
+        forgotpass.setOnClickListener(this);
+
     }
 
     public void onClick(View v){
         switch (v.getId()){
             case R.id.btn_login:
-                startActivity(new Intent(this,Menu.class));
+                userSignIn();
                 break;
             case R.id.txt_register:
                 startActivity(new Intent(this,RegisterActivity.class));
                 break;
+            case R.id.btn_forgotpass:
+                startActivity(new Intent(this,ForgotPassActivity.class));
+                break;
         }
+    }
+
+    private void userSignIn() {
+        String email,password;
+        email = txt_email.getText().toString().trim();
+        password = txt_password.getText().toString().trim();
+
+        if(email.isEmpty()){
+            txt_email.setError("Username is required!");
+            txt_email.requestFocus();
+            return;
+        }
+        if(password.isEmpty()){
+            txt_password.setError("Password is required!");
+            txt_password.requestFocus();
+            return;
+        }
+
+        //Start ProgressBar first (Set visibility VISIBLE)
+        Handler handler = new Handler(Looper.getMainLooper());
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                //Starting Write and Read data with URL
+                //Creating array for parameters
+                String[] field = new String[2];
+                field[0] = "username";
+                field[1] = "password";
+                //Creating array for data
+                String[] data = new String[2];
+                data[0] = email;
+                data[1] = password;
+                PutData putData = new PutData("http://172.30.1.6/LoginRegister/login.php", "POST", field, data);
+                if (putData.startPut()) {
+                    if (putData.onComplete()) {
+                        String result = putData.getResult();
+                        if(result.equals("Login Success")){
+                            Toast.makeText(MainActivity.this, "Logged In Successfuly!", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(getApplicationContext(),Menu.class);
+                            startActivity(intent);
+                            finish();
+                        }else{
+                            Toast.makeText(MainActivity.this,result, Toast.LENGTH_SHORT).show();
+                        }
+                        //End ProgressBar (Set visibility to GONE)
+                        Log.i("PutData", result);
+                    }
+                }
+                //End Write and Read data with URL
+            }
+        });
     }
 }
