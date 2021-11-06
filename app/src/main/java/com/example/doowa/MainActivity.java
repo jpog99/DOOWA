@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 String[] data = new String[2];
                 data[0] = email;
                 data[1] = password;
-                PutData putData = new PutData("http://172.30.1.6/LoginRegister/login.php", "POST", field, data);
+                PutData putData = new PutData("https://doowa-server.herokuapp.com/login.php", "POST", field, data);
                 if (putData.startPut()) {
                     if (putData.onComplete()) {
                         String result = putData.getResult();

@@ -123,7 +123,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 data[1] = username;
                 data[2] = password;
                 data[3] = email;
-                PutData putData = new PutData("http://172.30.1.6/LoginRegister/signup.php", "POST", field, data);
+                PutData putData = new PutData("https://doowa-server.herokuapp.com/signup.php", "POST", field, data);
                 if (putData.startPut()) {
                     if (putData.onComplete()) {
                         progressbar.setVisibility(View.GONE);
