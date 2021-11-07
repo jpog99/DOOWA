@@ -139,8 +139,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                             Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                             startActivity(intent);
                             finish();
-                        }else{
-                            Toast.makeText(RegisterActivity.this,result, Toast.LENGTH_SHORT).show();
+                        }else if(result.equals("Sign up Failed")){
+                            Toast.makeText(RegisterActivity.this,"Username/e-mail address already in use! Please try again.", Toast.LENGTH_SHORT).show();
                         }
                         //End ProgressBar (Set visibility to GONE)
                         Log.i("PutData", result);
