@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button signin;
     private TextView register,forgotpass;
     private EditText txt_email,txt_password;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         txt_email = (EditText)findViewById(R.id.username);
         txt_password = (EditText)findViewById(R.id.password);
+        progressBar = (ProgressBar)findViewById(R.id.pgb_login);
 
         signin = (Button) findViewById(R.id.btn_login);
         signin.setOnClickListener(this);
@@ -72,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         signin.onEditorAction(EditorInfo.IME_ACTION_DONE);
         //Start ProgressBar first (Set visibility VISIBLE)
+        progressBar.setVisibility(View.VISIBLE);
         Handler handler = new Handler(Looper.getMainLooper());
         handler.post(new Runnable() {
             @Override
@@ -88,6 +91,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 PutData putData = new PutData("https://doowa-server.herokuapp.com/login.php", "POST", field, data);
                 if (putData.startPut()) {
                     if (putData.onComplete()) {
+                        progressBar.setVisibility(View.GONE);
                         String result = putData.getResult();
                         if(result.equals("Login Success")){
                             Toast.makeText(MainActivity.this, "Logged In Successfuly!", Toast.LENGTH_SHORT).show();

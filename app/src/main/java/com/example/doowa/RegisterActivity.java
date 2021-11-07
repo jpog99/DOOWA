@@ -57,7 +57,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 userRegisteration();
                 break;
             case R.id.txt_regToLogin:
-                startActivity(new Intent(this,MainActivity.class));
+                finish();
                 break;
         }
     }
