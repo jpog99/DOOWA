@@ -1,6 +1,5 @@
 package com.example.doowa;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -16,8 +15,6 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
 import java.util.regex.Matcher;
@@ -136,7 +133,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                         String result = putData.getResult();
                         if(result.equals("Sign Up Success")){
                             Toast.makeText(RegisterActivity.this, "User has been successfully created!", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                             startActivity(intent);
                             finish();
                         }else if(result.equals("Sign up Failed")){

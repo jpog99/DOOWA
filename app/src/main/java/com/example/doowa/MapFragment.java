@@ -1,12 +1,14 @@
 package com.example.doowa;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -16,26 +18,26 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-import java.util.ArrayList;
-
-public class Menu extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener {
+public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener {
 
     private GoogleMap map;
 
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+        View view = inflater.inflate(R.layout.fragment_map, container, false);
+
+        SupportMapFragment supportMapFragment = (SupportMapFragment) getChildFragmentManager()
                 .findFragmentById(R.id.google_map);
 
+        supportMapFragment.getMapAsync(this);
 
-        mapFragment.getMapAsync(this);
+        return view;
     }
 
     @Override
-    public void onMapReady(GoogleMap googleMap) {
+    public void onMapReady(@NonNull GoogleMap googleMap) {
         map = googleMap;
 
 
@@ -48,13 +50,11 @@ public class Menu extends FragmentActivity implements OnMapReadyCallback, Google
 
         map.setOnInfoWindowClickListener(this);
 
-
-
     }
 
     @Override
     public void onInfoWindowClick(@NonNull Marker marker) {
-        Intent intent = new Intent(getApplicationContext(),DetailsActivity.class);
+        Intent intent = new Intent(getContext(),DetailsActivity.class);
         startActivity(intent);
     }
 }
