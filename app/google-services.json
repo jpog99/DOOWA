@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "260360994080",
+    "project_id": "doowa-331112",
+    "storage_bucket": "doowa-331112.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:260360994080:android:5314754b0ce96d8cd36b45",
+        "android_client_info": {
+          "package_name": "com.example.doowa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "260360994080-onuhnl465tgkeu0nnq9ltfik0jv8kaod.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqtLJBHSUmY-Dxc1Hg0GhYbYmdj3sVEig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "260360994080-onuhnl465tgkeu0nnq9ltfik0jv8kaod.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
