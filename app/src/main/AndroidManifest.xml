@@ -15,9 +15,13 @@
         android:theme="@style/Theme.Doowa"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".DetailsActivity"
+            android:exported="false"
+            android:label="Donation Details"/>
+        <activity
             android:name=".ForgotPassActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".RegisterActivity"
             android:exported="false"

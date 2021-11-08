@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -12,15 +13,14 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
 
-public class Menu extends FragmentActivity implements OnMapReadyCallback {
+public class Menu extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener {
 
     private GoogleMap map;
-    private MarkerOptions options = new MarkerOptions();
-    private ArrayList<LatLng> latlngs = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,25 +38,23 @@ public class Menu extends FragmentActivity implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
         map = googleMap;
 
-        latlngs.add(new LatLng(37.567280, 127.055114));
-        latlngs.add(new LatLng(37.557280, 127.045114));
-        latlngs.add(new LatLng(37.557780, 127.042114));
-        latlngs.add(new LatLng(37.512280, 127.021114));
-        latlngs.add(new LatLng(37.587280, 127.045614));
 
-        for (LatLng point : latlngs) {
-            options.position(point);
-            options.title("someTitle");
-            options.snippet("someDesc");
-            googleMap.addMarker(options);
-        }
+        LatLng seoulCenter = new LatLng(37.5516389589813, 126.99199317374934);
+        LatLng hanyang = new LatLng(37.557280, 127.045114);
+        LatLng hanyang2 = new LatLng(37.587280, 127.045614);
+        map.addMarker(new MarkerOptions().position(hanyang).snippet("Tap for details").title("Donation type"));
+        map.addMarker(new MarkerOptions().position(hanyang2).snippet("Tap for details").title("Donation type"));
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(seoulCenter,10));
 
-
-        //LatLng hanyang = new LatLng(37.557280, 127.045114);
-        //map.addMarker(new MarkerOptions().position(hanyang).title("Hanyang1"));
-        //map.moveCamera(CameraUpdateFactory.newLatLng(hanyang));
+        map.setOnInfoWindowClickListener(this);
 
 
 
+    }
+
+    @Override
+    public void onInfoWindowClick(@NonNull Marker marker) {
+        Intent intent = new Intent(getApplicationContext(),DetailsActivity.class);
+        startActivity(intent);
     }
 }
