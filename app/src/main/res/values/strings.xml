@@ -2,4 +2,7 @@
     <string name="app_name">Doowa</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hyperlink_tnc">I agree with the <a href = "https://github.com/jpog99/DOOWA/blob/master/README.md#terms-and-conditions">Terms and Conditions</a></string>
+    <string name="default_web_client_id">260360994080-0ii29a5tnamun8m2nk0n4b4i7is4bghq.apps.googleusercontent.com</string>
+
 </resources>

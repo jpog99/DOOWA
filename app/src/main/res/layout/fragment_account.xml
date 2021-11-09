@@ -1,25 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/img_accountPic"
+        android:layout_width="86dp"
+        android:layout_height="83dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="162dp"
-        android:layout_marginTop="318dp"
-        android:text="this is account page" />
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="76dp"
+        app:srcCompat="@drawable/ic_baseline_account_circle_24" />
 
-    <Button
-        android:id="@+id/button"
+    <TextView
+        android:id="@+id/txt_accountUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="145dp"
-        android:layout_marginTop="152dp"
-        android:text="Button" />
+        android:layout_marginStart="129dp"
+        android:layout_marginTop="125dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/txt_accountFullname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="84dp"
+        android:text="TextView"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txt_accSignOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="57dp"
+        android:layout_marginBottom="71dp"
+        android:text="Sign Out" />
 </RelativeLayout>

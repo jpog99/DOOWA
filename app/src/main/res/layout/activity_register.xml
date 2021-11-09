@@ -38,13 +38,13 @@
         android:layout_height="0dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="11dp"
         android:ems="10"
         android:hint="Confirm Password"
         android:inputType="textPassword"
         android:textColor="#FAF8F8"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/btn_register"
+        app:layout_constraintBottom_toTopOf="@+id/chk_tnc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_pass" />
@@ -67,9 +67,9 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="61dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="69dp"
+        android:layout_marginBottom="71dp"
         android:ems="10"
         android:hint="Username"
         android:inputType="textPersonName"
@@ -86,7 +86,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="19dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:hint="E-Mail"
         android:inputType="textEmailAddress"
@@ -94,7 +94,6 @@
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/txt_pass"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressBar" />
 
@@ -104,7 +103,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="21dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
@@ -117,18 +116,16 @@
 
     <Button
         android:id="@+id/btn_register"
-        android:layout_width="0dp"
+        android:layout_width="335dp"
         android:layout_height="0dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginEnd="38dp"
-        android:layout_marginBottom="18dp"
+        android:layout_marginBottom="13dp"
         android:backgroundTint="#039BE5"
         android:text="register"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/txt_regToLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_confirmpass" />
+        app:layout_constraintTop_toBottomOf="@+id/chk_tnc" />
 
     <EditText
         android:id="@+id/txt_fullname"
@@ -151,7 +148,7 @@
         android:id="@+id/txt_regToLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="68dp"
+        android:layout_marginBottom="48dp"
         android:text="Already has an account? Log in."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -163,14 +160,21 @@
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="182dp"
-        android:layout_marginTop="325dp"
-        android:layout_marginEnd="181dp"
-        android:layout_marginBottom="358dp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintBottom_toTopOf="@+id/txt_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_fullname" />
+
+    <CheckBox
+        android:id="@+id/chk_tnc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="@string/hyperlink_tnc"
+        app:layout_constraintBottom_toTopOf="@+id/btn_register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_confirmpass" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

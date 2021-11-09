@@ -6,10 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -27,6 +29,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     TextView txt_regToLogin;
     private Button btn_register;
     private ProgressBar progressbar;
+    private CheckBox checkbox_tnc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +44,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         txt_confirmpass = (EditText) findViewById(R.id.txt_confirmpass);
         txt_regToLogin = (TextView)findViewById(R.id.txt_regToLogin);
         progressbar = (ProgressBar) findViewById(R.id.progressBar);
+        checkbox_tnc = (CheckBox)findViewById(R.id.chk_tnc);
+        checkbox_tnc.setMovementMethod(LinkMovementMethod.getInstance());
 
         btn_register.setOnClickListener(this);
         txt_regToLogin.setOnClickListener(this);
@@ -103,6 +108,12 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         if(!confirmpass.equals(password)){
             txt_confirmpass.setError("Password is different!");
             txt_confirmpass.requestFocus();
+            return;
+        }
+
+        if(!checkbox_tnc.isChecked()){
+            checkbox_tnc.setError("Check this before proceed!");
+            checkbox_tnc.requestFocus();
             return;
         }
 
