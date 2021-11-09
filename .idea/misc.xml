@@ -21,9 +21,9 @@
         <entry key="..\:/Users/ausba/Downloads/Software Engineering/DOOWA/app/src/main/res/menu/bottom_navigation.xml" value="0.125" />
         <entry key="..\:/Users/ausba/Downloads/Software Engineering/DOOWA/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.25743589743589745" />
         <entry key="..\:/Users/ausba/Downloads/Software Engineering/DOOWA/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.25743589743589745" />
-        <entry key="app/src/main/res/layout/activity_details.xml" value="0.24895833333333334" />
+        <entry key="app/src/main/res/layout/activity_details.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.32897408212443296" />
-        <entry key="app/src/main/res/layout/fragment_foodbank.xml" value="0.24895833333333334" />
+        <entry key="app/src/main/res/layout/fragment_foodbank.xml" value="0.375" />
         <entry key="app/src/main/res/layout/fragment_map.xml" value="0.3446557971014493" />
       </map>
     </option>
