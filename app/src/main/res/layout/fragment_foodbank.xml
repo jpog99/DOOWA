@@ -74,17 +74,6 @@
         android:textSize="17sp" />
 
     <TextView
-        android:id="@+id/textView34"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="311dp"
-        android:text="Calendar"
-        android:textSize="14sp" />
-
-    <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -226,5 +215,16 @@
         android:layout_marginEnd="41dp"
         android:background="#B13737"
         app:srcCompat="@android:drawable/ic_menu_camera" />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="169dp"
+        android:layout_height="31dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="214dp"
+        android:layout_marginBottom="386dp"
+        android:ems="10"
+        android:inputType="date" />
 
 </RelativeLayout>
