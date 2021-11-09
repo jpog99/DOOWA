@@ -6,12 +6,12 @@
 
     <ImageView
         android:id="@+id/img_accountPic"
-        android:layout_width="86dp"
-        android:layout_height="83dp"
+        android:layout_width="102dp"
+        android:layout_height="103dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="15dp"
         app:srcCompat="@drawable/ic_baseline_account_circle_24" />
 
     <TextView
@@ -20,8 +20,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="129dp"
-        android:layout_marginTop="125dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="158dp"
         android:text="TextView" />
 
     <TextView
@@ -30,18 +31,230 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="84dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="127dp"
         android:text="TextView"
         android:textSize="20sp" />
 
     <TextView
         android:id="@+id/txt_accSignOut"
+        android:layout_width="226dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="19dp"
+        android:drawableLeft="@drawable/ic_baseline_login_24"
+        android:drawablePadding="10sp"
+        android:text="Sign Out"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="111dp"
+        android:layout_marginEnd="45dp"
+        android:text="Ratings:"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="135dp"
+        android:layout_marginEnd="50dp"
+        android:text="4.6"
+        android:textSize="34sp" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="191dp" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="247dp"
+        android:background="?android:attr/listDivider" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="46dp"
+        android:layout_height="54dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="249dp"
+        app:srcCompat="@drawable/ic_baseline_list_alt_24" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="48dp"
+        android:layout_height="53dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="249dp"
+        android:layout_marginEnd="181dp"
+        app:srcCompat="@drawable/ic_baseline_moped_24" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="44dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="249dp"
+        android:layout_marginEnd="68dp"
+        app:srcCompat="@drawable/ic_baseline_swap_horiz_24" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="60dp"
+        android:layout_height="49dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="303dp"
+        android:text="Requests List"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="69dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="303dp"
+        android:text="Donation Tracker"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="71dp"
+        android:layout_height="46dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="301dp"
+        android:layout_marginEnd="54dp"
+        android:text="Points Exchange"
+        android:textAlignment="center" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="320dp"
+        android:background="?android:attr/listDivider" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="258dp"
+        android:background="?android:attr/listDivider" />
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="134dp"
+        android:background="?android:attr/listDivider" />
+
+    <View
+        android:id="@+id/divider6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginBottom="72dp"
+        android:background="?android:attr/listDivider" />
+
+    <View
+        android:id="@+id/divider7"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="198dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="263dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginBottom="273dp"
+        android:drawableLeft="@drawable/ic_baseline_settings_24"
+        android:drawablePadding="10sp"
+        android:text="Account Settings"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="57dp"
-        android:layout_marginBottom="71dp"
-        android:text="Sign Out" />
+        android:layout_marginStart="21dp"
+        android:layout_marginBottom="212dp"
+        android:drawableLeft="@drawable/ic_baseline_history_24"
+        android:drawablePadding="10sp"
+        android:text="Donation/Requests History"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginBottom="149dp"
+        android:drawableLeft="@drawable/ic_baseline_question_answer_24"
+        android:drawablePadding="10sp"
+        android:text="FAQs"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginBottom="87dp"
+        android:drawableLeft="@drawable/ic_baseline_bug_report_24"
+        android:drawablePadding="10sp"
+        android:text="Bugs Report"
+        android:textSize="24sp" />
 </RelativeLayout>

@@ -20,7 +20,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="#340AED"
-        app:menu="@menu/bottom_navigation" />
+        app:menu="@menu/bottom_navigation">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
 </RelativeLayout>

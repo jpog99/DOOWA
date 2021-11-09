@@ -77,14 +77,14 @@
         android:id="@+id/btn_login"
         android:layout_width="373dp"
         android:layout_height="59dp"
-        android:layout_marginTop="38dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginBottom="48dp"
         android:backgroundTint="#1E88E5"
         android:text="login"
         android:textColor="#F8F6F6"
-        app:layout_constraintBottom_toTopOf="@+id/btn_forgotpass"
-        app:layout_constraintEnd_toEndOf="@+id/btn_forgotpass"
-        app:layout_constraintStart_toEndOf="@+id/btn_forgotpass"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_forgotpass"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <TextView
@@ -102,19 +102,19 @@
         android:id="@+id/btn_forgotpass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="74dp"
-        android:layout_marginBottom="189dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="187dp"
         android:text="Forgot Password?"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/btn_login" />
 
     <TextView
         android:id="@+id/txt_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="76dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="49dp"
         android:text="Register"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/btn_login"
@@ -128,16 +128,16 @@
         android:layout_marginBottom="42dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/password"
-        app:layout_constraintEnd_toEndOf="@+id/password"
-        app:layout_constraintStart_toStartOf="@+id/password" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/btn_googleSignIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="47dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="37dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_forgotpass" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
