@@ -8,7 +8,7 @@ After living in the COVID-19 pandemic for approximately 2 years now, we decided 
 2. Wan (Software Developer, Backend, Databases)
 4. Megat (Documentation, Release Tests)
 
-# Terms and Conditions
+## Terms and Conditions
 
 ## Links
 Backend Server: [Heroku](https://dashboard.heroku.com/apps/doowa-server) 
