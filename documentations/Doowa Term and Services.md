@@ -8,12 +8,16 @@ The Doowa Service is provided to you by Doowa, Inc. These Terms of Use therefore
 
 ### The Doowa Service
 We agree to provide you with the Doowa Service. The Service includes all of the Doowa products, features, applications, services, technologies, and software that we provide to advance Doowa's mission: To bring you closer to the people and things you love. The Service is made up of the following aspects:
-•	Offering personalized opportunities to create, connect, communicate, discover, and share.
+
+## *	Offering personalized opportunities to create, connect, communicate, discover, and share.
 People are different. We want to strengthen your relationships through shared experiences you actually care about. So we build systems that try to understand who and what you and others care about, and use that information to help you create, find, join, and share in experiences that matter to you. Part of that is highlighting content, features, offers, and accounts you might be interested in, and offering ways for you to experience Doowa, based on things you and others do on and off Doowa.
-•	Fostering a positive, inclusive, and safe environment.
-We develop and use tools and offer resources to our community members that help to make their experiences positive and inclusive, including when we think they might need help. We also have teams and systems that work to combat abuse and violations of our Terms and policies, as well as harmful and deceptive behavior. We use all the information we have-including your information-to try to keep our platform secure. We also may share information about misuse or harmful content with other Doowa Companies or law enforcement. 
-•	Developing and using technologies that help us consistently serve our growing community.
+
+## *	Fostering a positive, inclusive, and safe environment.
+We develop and use tools and offer resources to our community members that help to make their experiences positive and inclusive, including when we think they might need help. We also have teams and systems that work to combat abuse and violations of our Terms and policies, as well as harmful and deceptive behavior. We use all the information we have-including your information-to try to keep our platform secure. We also may share information about misuse or harmful content with other Doowa Companies or law enforcement.
+
+## *	Developing and using technologies that help us consistently serve our growing community.
 Organizing and analyzing information for our growing community is central to our Service. A big part of our Service is creating and using cutting-edge technologies that help us personalize, protect, and improve our Service on an incredibly large scale for a broad global community. Technologies like artificial intelligence and machine learning give us the power to apply complex processes across our Service. Automated technologies also help us ensure the functionality and integrity of our Service.
+
 •	Providing consistent and seamless experiences across other Doowa Company Products.
 Doowa is part of the Doowa Companies, which share technology, systems, insights, and information-including the information we have about you (learn more in the Data Policy) in order to provide services that are better, safer, and more secure. We also provide ways to interact across the Doowa Company Products that you use, and designed systems to achieve a seamless and consistent experience across the Doowa Company Products.
 •	Ensuring access to our Service.
