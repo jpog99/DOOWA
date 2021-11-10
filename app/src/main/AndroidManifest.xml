@@ -18,9 +18,13 @@
         <activity
             android:name=".DetailsActivity"
             android:exported="false"
-            android:label="Donation Details"/>
+            android:label="Donation Details" />
         <activity
             android:name=".ForgotPassActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".SetLocationActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
@@ -35,7 +39,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".LoginActivity"
             android:exported="true"
