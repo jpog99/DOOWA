@@ -6,13 +6,25 @@
     android:background="#BEE0F3">
 
     <TextView
+        android:id="@+id/textView39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="87dp"
+        android:text="Let's Distribute!"
+        android:textColor="#3F51B5"
+        android:textStyle="italic" />
+
+    <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="33dp"
         android:text="Food Bank"
         android:textColor="#FF9800"
         android:textSize="40sp" />
@@ -27,182 +39,13 @@
         android:layout_marginTop="195dp" />
 
     <TextView
-        android:id="@+id/textView29"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="149dp"
-        android:text="Organization Name Here"
-        android:textSize="14sp" />
-
-    <TextView
-        android:id="@+id/textView27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="116dp"
-        android:text="Organization "
-        android:textColor="#0B0A0A"
-        android:textSize="17sp" />
-
-    <TextView
-        android:id="@+id/textView32"
-        android:layout_width="328dp"
-        android:layout_height="57dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="471dp"
-        android:text="Details Here"
-        android:textSize="14sp" />
-
-    <TextView
-        android:id="@+id/textView33"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="286dp"
-        android:text="Meeting Time (optional)"
-        android:textColor="#0C0C0C"
-        android:textSize="17sp" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="357dp"
-        android:text="Type of Donation"
-        android:textColor="#0B0A0A"
-        android:textSize="17sp" />
-
-    <TextView
-        android:id="@+id/textView30"
-        android:layout_width="325dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="388dp"
-        android:text="Type of Donation Here"
-        android:textSize="14sp" />
-
-    <TextView
-        android:id="@+id/textView31"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="440dp"
-        android:text="Details"
-        android:textColor="#0B0A0A"
-        android:textSize="17sp" />
-
-    <TextView
-        android:id="@+id/textView36"
-        android:layout_width="321dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="27dp"
-        android:layout_marginBottom="143dp"
-        android:text="Phone Number Here"
-        android:textSize="14sp" />
-
-    <TextView
-        android:id="@+id/textView35"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="27dp"
-        android:layout_marginBottom="170dp"
-        android:text="Phone Number"
-        android:textColor="#0C0C0C"
-        android:textSize="17sp" />
-
-    <TextView
-        android:id="@+id/textView37"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="190dp"
-        android:text="Address"
-        android:textColor="#0C0C0C"
-        android:textSize="17sp" />
-
-    <TextView
-        android:id="@+id/textView38"
-        android:layout_width="319dp"
-        android:layout_height="51dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="217dp"
-        android:text="Address Here"
-        android:textSize="14sp" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="211dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="104dp"
-        android:layout_marginBottom="22dp"
-        android:backgroundTint="#8BC34A"
-        android:text="DONATE!"
-        android:textColor="#0B0A0A" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="212dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="105dp"
-        android:layout_marginBottom="74dp"
-        android:backgroundTint="#CDDC39"
-        android:shadowColor="#8E5656"
-        android:text="Set Map Location"
-        android:textColor="#0C0C0C"
-        android:textColorHint="#8F5757"
-        app:rippleColor="#6E4C4C" />
-
-    <TextView
-        android:id="@+id/textView39"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="83dp"
-        android:layout_marginTop="68dp"
-        android:text="Let's Distribute!"
-        android:textColor="#3F51B5"
-        android:textStyle="italic" />
-
-    <TextView
         android:id="@+id/textView40"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="54dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginTop="73dp"
+        android:layout_marginEnd="22dp"
         android:text="Upload Picture" />
 
     <ImageView
@@ -211,20 +54,123 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="41dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="52dp"
         android:background="#B13737"
         app:srcCompat="@android:drawable/ic_menu_camera" />
 
-    <EditText
-        android:id="@+id/editTextDate"
-        android:layout_width="169dp"
-        android:layout_height="31dp"
-        android:layout_alignParentEnd="true"
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="212dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="214dp"
-        android:layout_marginBottom="386dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="104dp"
+        android:layout_marginBottom="136dp"
+        android:backgroundTint="#CDDC39"
+        android:shadowColor="#8E5656"
+        android:text="Set Map Location"
+        android:textColor="#0C0C0C"
+        android:textColorHint="#8F5757"
+        app:rippleColor="#6E4C4C" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="211dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="103dp"
+        android:layout_marginBottom="67dp"
+        android:backgroundTint="#8BC34A"
+        android:text="DONATE!"
+        android:textColor="#0B0A0A" />
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/multiAutoCompleteTextView"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="527dp"
+        android:text="Organization Name" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName10"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="217dp"
         android:ems="10"
-        android:inputType="date" />
+        android:inputType="textPersonName"
+        android:text="Operating Hours" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName11"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="283dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Full Address" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName12"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="275dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Address" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName13"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="332dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Type of Donation" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName14"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="295dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Details" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName15"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="232dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Contact Number" />
 
 </RelativeLayout>
