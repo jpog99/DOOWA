@@ -77,13 +77,13 @@
         android:id="@+id/btn_login"
         android:layout_width="373dp"
         android:layout_height="59dp"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="46dp"
         android:layout_marginBottom="48dp"
         android:backgroundTint="#1E88E5"
         android:text="login"
         android:textColor="#F8F6F6"
         app:layout_constraintBottom_toBottomOf="@+id/btn_forgotpass"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
