@@ -6,11 +6,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -21,6 +23,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -38,8 +41,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
     private GoogleMap map;
     private static final String DBRequest_URL = "http://172.30.1.30/LoginRegister/requestDB.php";
     List<Requests> requestList;
-    private MarkerOptions options = new MarkerOptions();
-    private ArrayList<LatLng> latlngs = new ArrayList<>();
 
     @Nullable
     @Override
@@ -49,13 +50,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
 
         SupportMapFragment supportMapFragment = (SupportMapFragment) getChildFragmentManager()
                 .findFragmentById(R.id.google_map);
-
-
-        requestList = new ArrayList<>();
-        loadRequests();
-
-
-
 
         supportMapFragment.getMapAsync(this);
 
@@ -93,15 +87,42 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
                                     ));
                                 }
                                 Log.d("Success", "Fetched from request database successfully!");
-
                                 for (Requests requests : requestList) {
-                                    LatLng hanyang2 = new LatLng(requests.lat, requests.lng);
-                                    map.addMarker(new MarkerOptions()
-                                            .position(hanyang2)
-                                            .snippet("Tap for details")
-                                            .title(requests.donationType));
+                                    LatLng latlng = new LatLng(requests.lat, requests.lng);
+                                    switch (requests.donationType){
+                                        case "Money":
+                                            map.addMarker(new MarkerOptions()
+                                                    .position(latlng)
+                                                    .snippet("Tap for details")
+                                                    .title(requests.donationType)).setIcon(BitmapDescriptorFactory.fromResource(R.drawable.money));
+                                            break;
+                                        case "Necessities":
+                                            map.addMarker(new MarkerOptions()
+                                                    .position(latlng)
+                                                    .snippet("Tap for details")
+                                                    .title(requests.donationType)).setIcon(BitmapDescriptorFactory.fromResource(R.drawable.necessities));
+                                            break;
+                                        case "Groceries":
+                                            map.addMarker(new MarkerOptions()
+                                                    .position(latlng)
+                                                    .snippet("Tap for details")
+                                                    .title(requests.donationType)).setIcon(BitmapDescriptorFactory.fromResource(R.drawable.groceries));
+                                            break;
+                                        case "Others":
+                                            map.addMarker(new MarkerOptions()
+                                                    .position(latlng)
+                                                    .snippet("Tap for details")
+                                                    .title(requests.donationType)).setIcon(BitmapDescriptorFactory.fromResource(R.drawable.others));
+                                            break;
+
+                                    }
 
                                 }
+
+                               /* for(MarkerOptions money : moneyList){
+                                    money.visible(false);
+                                    Log.i("MARKER", "Money Status " + money.getPosition().latitude);
+                                }*/
 
                                /* //creating adapter object and setting it to recyclerview
                                 ProductsAdapter adapter = new ProductsAdapter(getActivity(), productList);
@@ -122,9 +143,19 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
             Volley.newRequestQueue(getActivity()).add(stringRequest);
     }
 
+    private void refresh() {
+        Fragment currentFragment = getFragmentManager().findFragmentByTag("google_map");
+        FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+        fragmentTransaction.detach(currentFragment);
+        fragmentTransaction.attach(currentFragment);
+        fragmentTransaction.commit();
+    }
+
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         map = googleMap;
+        requestList = new ArrayList<>();
+        loadRequests();
         LatLng seoulCenter = new LatLng(37.5516389589813, 126.99199317374934);
 
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(seoulCenter,10));
@@ -138,4 +169,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
         intent.putExtra("markerLng",marker.getPosition().longitude);
         startActivity(intent);
     }
+
+
+
 }

@@ -255,6 +255,6 @@
         android:layout_marginBottom="87dp"
         android:drawableLeft="@drawable/ic_baseline_bug_report_24"
         android:drawablePadding="10sp"
-        android:text="Bugs Report"
+        android:text="Bugs Report/ Suggestions"
         android:textSize="24sp" />
 </RelativeLayout>

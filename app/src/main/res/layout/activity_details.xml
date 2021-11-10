@@ -21,7 +21,7 @@
         app:srcCompat="@drawable/ic_baseline_account_circle_24" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/img_detailsCall"
         android:layout_width="45dp"
         android:layout_height="44dp"
         android:layout_marginTop="39dp"
@@ -33,14 +33,14 @@
         app:srcCompat="@drawable/ic_baseline_call_24" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/img_detailsMsg"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="76dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintBottom_toBottomOf="@+id/img_detailsCall"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView19"
-        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/img_detailsCall"
         app:srcCompat="@drawable/ic_baseline_message_24" />
 
     <TextView
@@ -66,7 +66,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_detailsAddress"
-        app:srcCompat="@drawable/miskin" />
+        app:srcCompat="@drawable/noimage" />
 
     <TextView
         android:id="@+id/txt_detailsAddress"
@@ -174,7 +174,7 @@
         android:layout_marginEnd="8dp"
         android:text="Give help?"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintEnd_toStartOf="@+id/img_detailsMsg"
         app:layout_constraintStart_toEndOf="@+id/img_detailsProfilePic"
         app:layout_constraintTop_toTopOf="@+id/img_detailsProfilePic" />
 
