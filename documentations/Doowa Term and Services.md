@@ -1,11 +1,12 @@
-Doowa Term and Services
+# Doowa Term and Services
+
 Welcome to Doowa!
 
 These Terms of Use (or “Terms”) govern your use of Doowa, except where we expressly state that separate terms (and not these) apply, and provide information about the Doowa Service (the “Service”), outlined below. When you create an Doowa account or use Doowa, you agree to these terms. 
 
 The Doowa Service is provided to you by Doowa, Inc. These Terms of Use therefore constitute an agreement between you and Doowa, Inc.
 
-###The Doowa Service
+### The Doowa Service
 We agree to provide you with the Doowa Service. The Service includes all of the Doowa products, features, applications, services, technologies, and software that we provide to advance Doowa's mission: To bring you closer to the people and things you love. The Service is made up of the following aspects:
 •	Offering personalized opportunities to create, connect, communicate, discover, and share.
 People are different. We want to strengthen your relationships through shared experiences you actually care about. So we build systems that try to understand who and what you and others care about, and use that information to help you create, find, join, and share in experiences that matter to you. Part of that is highlighting content, features, offers, and accounts you might be interested in, and offering ways for you to experience Doowa, based on things you and others do on and off Doowa.
