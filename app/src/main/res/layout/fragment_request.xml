@@ -16,16 +16,6 @@
         android:visibility="visible"
         app:srcCompat="@android:drawable/ic_menu_camera" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="113dp"
-        android:layout_height="33dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="120dp"
-        android:text="Address:" />
-
     <EditText
         android:id="@+id/editTextTextPersonName"
         android:layout_width="wrap_content"
@@ -33,20 +23,21 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="107dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="137dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Put your Address here" />
 
     <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="38dp"
+        android:id="@+id/textView6"
+        android:layout_width="113dp"
+        android:layout_height="33dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="163dp"
-        android:text="Set Meeting (Optional) :" />
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="150dp"
+        android:text="Address:" />
 
     <EditText
         android:id="@+id/editTextDate"
@@ -54,9 +45,143 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="147dp"
-        android:layout_marginEnd="57dp"
+        android:layout_marginTop="206dp"
+        android:layout_marginEnd="54dp"
         android:ems="10"
         android:inputType="date" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="222dp"
+        android:text="Set Meeting (Optional) :" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="47dp"
+        android:layout_height="43dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="207dp"
+        android:layout_marginEnd="5dp"
+        app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="77dp"
+        android:layout_height="32dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="383dp"
+        android:text="Details:" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="125dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="303dp"
+        android:text="Donation Type:" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName4"
+        android:layout_width="354dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="57dp"
+        android:layout_marginBottom="319dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Describe the help you need here" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="269dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="306dp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="92dp"
+        android:layout_height="42dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="227dp"
+        android:text="Phone No:" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="77dp"
+        android:layout_marginBottom="241dp"
+        android:ems="10"
+        android:inputType="phone" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="120dp"
+        android:layout_height="37dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="184dp"
+        android:text="Bank Account:" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="191dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name of your bank" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="150dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="your bank number" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="148dp"
+        android:layout_height="63dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="121dp"
+        android:layout_marginBottom="73dp"
+        android:text="Set Map Location" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="151dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="123dp"
+        android:layout_marginBottom="22dp"
+        android:text="Request!" />
 
 </RelativeLayout>
