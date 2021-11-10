@@ -2,7 +2,13 @@
     <string name="app_name">Doowa</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="hyperlink_tnc">I agree with the <a href = "https://github.com/jpog99/DOOWA/blob/master/README.md#terms-and-conditions">Terms and Conditions</a></string>
+    <string name="hyperlink_tnc">I agree with the <a href="https://github.com/jpog99/DOOWA/blob/master/README.md#terms-and-conditions">Terms and Conditions</a></string>
+    <string-array name="donationType_list">
+        <item>Money</item>
+        <item>Neccesities</item>
+        <item>Groceries</item>
+        <item>Others</item>
+    </string-array>
 
 
 </resources>

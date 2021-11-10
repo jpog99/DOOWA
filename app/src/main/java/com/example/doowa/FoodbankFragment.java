@@ -1,17 +1,120 @@
 package com.example.doowa;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class FoodbankFragment extends Fragment {
+import com.google.android.material.navigation.NavigationBarView;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class FoodbankFragment extends Fragment implements AdapterView.OnItemSelectedListener, View.OnClickListener {
+    Spinner dropdown;
+    ArrayAdapter<String> myAdapter;
+    TextView txt_name,txt_openingHour,txt_address,txt_details,txt_phone;
+    String donationType;
+    Button btn_submit,btn_setLocation;
+    ImageView camera;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_foodbank, container, false);
+        ViewGroup view = (ViewGroup) inflater.inflate(R.layout.fragment_foodbank, container, false);
+
+        dropdown = (Spinner) view.findViewById(R.id.dropdown);
+        myAdapter = new ArrayAdapter<>(getActivity(),
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.donationType_list));
+        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        dropdown.setAdapter(myAdapter);
+        dropdown.setOnItemSelectedListener(this);
+
+        btn_submit = (Button) view.findViewById(R.id.btn_fbSubmit);
+        btn_setLocation = (Button) view.findViewById(R.id.btn_fbSetMap);
+        txt_name = (TextView) view.findViewById(R.id.txt_fbName);
+        txt_openingHour = (TextView) view.findViewById(R.id.txt_fbOperatingHour);
+        txt_address = (TextView) view.findViewById(R.id.txt_fbAddress);
+        txt_phone = (TextView) view.findViewById(R.id.txt_fbPhone);
+        txt_details = (TextView) view.findViewById(R.id.txt_fbDetails);
+        camera = (ImageView) view.findViewById(R.id.img_fbCamera);
+
+        btn_submit.setOnClickListener(this);
+        btn_setLocation.setOnClickListener(this);
+
+
+        return view;
     }
+
+    @Override
+    public void onClick(View v){
+        switch (v.getId()){
+            case R.id.btn_fbSetMap:
+                Intent intent = new Intent(getContext(),SetLocationActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_fbSubmit:
+                fbSubmission();
+                break;
+        }
+    }
+
+    private void fbSubmission() {
+        String name,openingHour,address,details,phone;
+        name = txt_name.getText().toString().trim();
+        openingHour = txt_openingHour.getText().toString().trim();
+        address = txt_address.getText().toString().trim();
+        details = txt_details.getText().toString().trim();
+        phone = txt_phone.getText().toString().trim();
+
+        if(name.isEmpty()){
+            txt_name.setError("Organization name is required!");
+            txt_name.requestFocus();
+            return;
+        }
+        if(openingHour.isEmpty()){
+            txt_openingHour.setError("Operating hour is required!");
+            txt_openingHour.requestFocus();
+            return;
+        }
+        if(address.isEmpty()){
+            txt_address.setError("Address is required!");
+            txt_address.requestFocus();
+            return;
+        }
+        if(details.isEmpty()){
+            txt_details.setError("Details is required!");
+            txt_details.requestFocus();
+            return;
+        }
+        if(phone.isEmpty()){
+            txt_phone.setError("Contact number is required!");
+            txt_phone.requestFocus();
+            return;
+        }
+
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        donationType = parent.getItemAtPosition(position).toString();
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
+
+
 }
