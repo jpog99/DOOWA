@@ -79,33 +79,6 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
         btn_setlocCurrentLoc.setOnClickListener(this);
 
 
-
-        LocationManager lm = (LocationManager)SetLocationActivity.this.getSystemService(Context.LOCATION_SERVICE);
-        boolean gps_enabled = false;
-        boolean network_enabled = false;
-
-        try {
-            gps_enabled = lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
-        } catch(Exception ex) {}
-
-        try {
-            network_enabled = lm.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
-        } catch(Exception ex) {}
-
-        if(!gps_enabled && !network_enabled) {
-            // notify user
-            new AlertDialog.Builder(SetLocationActivity.this)
-                    .setMessage("Please turn on your location services and network!")
-                    .setPositiveButton("Open Location Settings", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface paramDialogInterface, int paramInt) {
-                            SetLocationActivity.this.startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
-                        }
-                    })
-                    .setNegativeButton("Cancel",null)
-                    .show();
-        }
-
         getRequestData();
 
 
@@ -292,8 +265,37 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
                 break;
             case R.id.btn_setlocCurrentLoc:
                 useCurrLoc = true;
+                checkLocationService();
                 confirmationWindow();
                 break;
+        }
+    }
+
+    private void checkLocationService() {
+        LocationManager lm = (LocationManager)SetLocationActivity.this.getSystemService(Context.LOCATION_SERVICE);
+        boolean gps_enabled = false;
+        boolean network_enabled = false;
+
+        try {
+            gps_enabled = lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
+        } catch(Exception ex) {}
+
+        try {
+            network_enabled = lm.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
+        } catch(Exception ex) {}
+
+        if(!gps_enabled && !network_enabled) {
+            // notify user
+            new AlertDialog.Builder(SetLocationActivity.this)
+                    .setMessage("Please turn on your location services and network!")
+                    .setPositiveButton("Open Location Settings", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface paramDialogInterface, int paramInt) {
+                            SetLocationActivity.this.startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+                        }
+                    })
+                    .setNegativeButton("Cancel",null)
+                    .show();
         }
     }
 
