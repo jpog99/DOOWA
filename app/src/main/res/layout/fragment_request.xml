@@ -1,187 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#BEE0F3">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="57dp"
-        android:layout_height="61dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="333dp"
-        android:layout_marginTop="17dp"
-        android:background="#F6F3F3"
-        android:visibility="visible"
-        app:srcCompat="@android:drawable/ic_menu_camera" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
+    <TextView
+        android:id="@+id/textView39"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
+        android:text="Don't worry, Be happy!"
+        android:textColor="#3F51B5"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.151" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="188dp"
+        android:layout_height="102dp"
+        android:text="Donation Request"
+        android:textAlignment="center"
+        android:textColor="#FF9800"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.021" />
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:text="Upload Picture"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.084" />
+
+    <Button
+        android:id="@+id/btn_rqSetMap"
+        android:layout_width="212dp"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="59dp"
-        android:layout_marginTop="137dp"
+        android:backgroundTint="#CDDC39"
+        android:shadowColor="#8E5656"
+        android:text="Set Map Location"
+        android:textColor="#0C0C0C"
+        android:textColorHint="#8F5757"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.928" />
+
+    <EditText
+        android:id="@+id/txt_rqName"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Requester Name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.311"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.202" />
+
+    <EditText
+        android:id="@+id/txt_rqAddress"
+        android:layout_width="351dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:ems="10"
+        android:hint="Address"
         android:inputType="textPersonName"
-        android:text="Put your Address here" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.316"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.395" />
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="113dp"
-        android:layout_height="33dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="150dp"
-        android:text="Address:" />
-
-    <EditText
-        android:id="@+id/editTextDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="206dp"
-        android:layout_marginEnd="54dp"
-        android:ems="10"
-        android:inputType="date" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="38dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="222dp"
-        android:text="Set Meeting (Optional) :" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="47dp"
-        android:layout_height="43dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="207dp"
-        android:layout_marginEnd="5dp"
-        app:srcCompat="@android:drawable/ic_menu_my_calendar" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="77dp"
-        android:layout_height="32dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="383dp"
-        android:text="Details:" />
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="125dp"
-        android:layout_height="30dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="303dp"
-        android:text="Donation Type:" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName4"
-        android:layout_width="354dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="57dp"
-        android:layout_marginBottom="319dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Describe the help you need here" />
+        android:text="Choose Donation Type"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.274" />
 
     <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="269dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="102dp"
-        android:layout_marginTop="306dp" />
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="92dp"
-        android:layout_height="42dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="3dp"
-        android:layout_marginBottom="227dp"
-        android:text="Phone No:" />
+        android:id="@+id/dropdown_rq"
+        android:layout_width="177dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.013"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.324" />
 
     <EditText
-        android:id="@+id/editTextPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="77dp"
-        android:layout_marginBottom="241dp"
+        android:id="@+id/txt_rqDetails"
+        android:layout_width="363dp"
+        android:layout_height="144dp"
+        android:layout_marginStart="16dp"
         android:ems="10"
-        android:inputType="phone" />
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="120dp"
-        android:layout_height="37dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="184dp"
-        android:text="Bank Account:" />
+        android:gravity="start|top"
+        android:hint="Details (Tell more about what you want help with)"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.556" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
-        android:layout_width="wrap_content"
+        android:id="@+id/txt_rqMeetingHour"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="191dp"
+        android:layout_marginStart="16dp"
         android:ems="10"
+        android:hint="Available Meeting Time (Optional)"
         android:inputType="textPersonName"
-        android:text="Name of your bank" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.697" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName6"
-        android:layout_width="wrap_content"
+        android:id="@+id/txt_rqPhone"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="150dp"
+        android:layout_marginStart="16dp"
         android:ems="10"
+        android:hint="Contact Number"
         android:inputType="textPersonName"
-        android:text="your bank number" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.774" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="148dp"
-        android:layout_height="63dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="121dp"
-        android:layout_marginBottom="73dp"
-        android:text="Set Map Location" />
+    <ImageView
+        android:id="@+id/img_rqCamera"
+        android:layout_width="41dp"
+        android:layout_height="38dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04"
+        app:srcCompat="@drawable/ic_baseline_camera_alt_24" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="151dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="123dp"
-        android:layout_marginBottom="22dp"
-        android:text="Request!" />
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Bank and Account Number (Optional)"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.311"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.851" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
