@@ -4,6 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Amin Sharudin/StudioProjects/DOOWA/app/src/main/res/layout/fragment_account.xml" value="0.2" />
+<<<<<<< HEAD
+=======
+        <entry key="..\:/Users/Amin Sharudin/StudioProjects/DOOWA/app/src/main/res/layout/fragment_request.xml" value="0.152" />
+>>>>>>> 29b7fba3363c4a706e1a449662f89495b6036a84
         <entry key="..\:/Users/ausba/Doowa/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/ausba/Doowa/app/src/main/res/layout/activity_menu.xml" value="0.2" />
         <entry key="..\:/Users/ausba/Doowa/app/src/main/res/layout/fragment_map.xml" value="0.18854166666666666" />
