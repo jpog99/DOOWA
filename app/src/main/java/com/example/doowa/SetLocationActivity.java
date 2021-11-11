@@ -118,9 +118,10 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
                     lat = markerLat;
                     lng = markerLng;
                 }
-                if(lat == 0.0)
+                if(lat == 0.0){
                     Toast.makeText(SetLocationActivity.this,"Currently unable to connect to database. Please try again later..", Toast.LENGTH_SHORT).show();
-                finish();
+                finish();}
+
                 //Starting Write and Read data with URL
                 //Creating array for parameters
                 String[] field = new String[13];
