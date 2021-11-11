@@ -58,9 +58,32 @@ class DataBase
         $username = $this->prepareData($username);
         $password = $this->prepareData($password);
         $email = $this->prepareData($email);
-        $password = password_hash($password, PASSWORD_DEFAULT);
+        //$password = password_hash($password, PASSWORD_DEFAULT);
         $this->sql =
             "INSERT INTO " . $table . " (fullname, username, password, email) VALUES ('" . $fullname . "','" . $username . "','" . $password . "','" . $email . "')";
+        if (mysqli_query($this->connect, $this->sql)) {
+            return true;
+        } else return false;
+    }
+
+    function insertRequests($table,$lat,$lng,$phone,$donationType,$address,$details,$image,$report,$time,$name,$profilepic,$meetingTime,$type)
+    {
+        $lat = $this->prepareData($lat); 
+        $lng = $this->prepareData($lng); 
+        $phone = $this->prepareData($phone); 
+        $donationType = $this->prepareData($donationType); 
+        $address = $this->prepareData($address); 
+        $details = $this->prepareData($details); 
+        $image = $this->prepareData($image); 
+        $report = $this->prepareData($report); 
+        $time = $this->prepareData($time); 
+        $name = $this->prepareData($name); 
+        $profilepic = $this->prepareData($profilepic); 
+        $meetingTime =$this->prepareData($meetingTime); 
+        $type = $this->prepareData($type); 
+
+        $this->sql =
+            "INSERT INTO " . $table . " (lat,lng,phone,donationType,address,details,image,report,time,name,profilepic,meetingTime,type) VALUES ('" . $lat . "','" . $lng . "','" . $phone . "','" . $donationType . "','" . $address . "','" . $details . "','" . $image . "','" . $report . "','" . $time . "','" . $name . "','" . $profilepic . "','" . $meetingTime . "','" . $type . "')";
         if (mysqli_query($this->connect, $this->sql)) {
             return true;
         } else return false;
