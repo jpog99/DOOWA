@@ -147,13 +147,11 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
                 if (putData.startPut()) {
                     if (putData.onComplete()) {
                         String result = putData.getResult();
-                        if(result.equals("Sign Up Success")){
-                            Toast.makeText(SetLocationActivity.this, "User has been successfully created!", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-                            startActivity(intent);
+                        if(result.equals("Request DB Success")){
+                            Toast.makeText(SetLocationActivity.this, "Your " + type + " has been marked on the map successfully! Thank you for your contribution!", Toast.LENGTH_SHORT).show();
                             finish();
-                        }else if(result.equals("Sign up Failed")){
-                            Toast.makeText(SetLocationActivity.this,"Username/e-mail address already in use! Please try again.", Toast.LENGTH_SHORT).show();
+                        }else if(result.equals("Request DB Failed")){
+                            Toast.makeText(SetLocationActivity.this,"Currently unable to connect to database. Please try again later..", Toast.LENGTH_SHORT).show();
                         }
                         //End ProgressBar (Set visibility to GONE)
                         Log.i("PutData", result);
@@ -259,12 +257,10 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
         switch (v.getId()){
             case R.id.btn_setlocSet:
                 useCurrLoc = false;
-                insertRequestDB();
                 confirmationWindow();
                 break;
             case R.id.btn_setlocCurrentLoc:
                 useCurrLoc = true;
-                insertRequestDB();
                 confirmationWindow();
                 break;
         }
@@ -292,8 +288,8 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(SetLocationActivity.this, "Your " + type + " has been marked on the map successfully! Thank you for your contribution!", Toast.LENGTH_SHORT).show();
-                finish();
+                //Toast.makeText(SetLocationActivity.this, "Your " + type + " has been marked on the map successfully! Thank you for your contribution!", Toast.LENGTH_SHORT).show();
+                insertRequestDB();
             }
         });
         builder.show();

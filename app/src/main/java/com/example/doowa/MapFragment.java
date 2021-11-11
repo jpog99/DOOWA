@@ -39,7 +39,7 @@ import java.util.List;
 public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener {
 
     private GoogleMap map;
-    private static final String DBRequest_URL = "https://doowa-server.herokuapp.com/insertRequest.php";
+    private static final String DBRequest_URL = "https://doowa-server.herokuapp.com/requestDB.php";
     List<Requests> requestList;
 
     @Nullable
