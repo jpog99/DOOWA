@@ -16,9 +16,13 @@
         android:theme="@style/Theme.Doowa"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ReportActivity"
+            android:label="Submission Report."
+            android:exported="false" />
+        <activity
             android:name=".BugReportActivity"
             android:exported="false"
-            android:label="Bugs Report/ Suggestions"/>
+            android:label="Bugs Report/ Suggestions" />
         <activity
             android:name=".DetailsActivity"
             android:exported="false"

@@ -36,10 +36,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DetailsActivity extends AppCompatActivity implements View.OnClickListener {
-    TextView txt_donationType,txt_name,txt_address,txt_details,txt_time, txt_detailsAsk, txt_detailsType, txt_meetingType, txt_meetingTime;
+    TextView txt_donationType, txt_detailsReport,txt_name,txt_address,txt_details,txt_time, txt_detailsAsk, txt_detailsType, txt_meetingType, txt_meetingTime;
     ImageView img_image, img_profilepic, img_call, img_msg;
     String phone;
-    private static final String DBRequest_URL = "http://172.30.1.30/LoginRegister/requestDB.php";
+    private static final String DBRequest_URL = "https://doowa-server.herokuapp.com/requestDB.php";
     List<Requests> requestList;
     private static final int REQUEST_CALL = 1;
 
@@ -56,6 +56,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         txt_detailsType = (TextView) findViewById(R.id.txt_detailsType);
         txt_meetingTime = (TextView) findViewById(R.id.txt_detailsmeetingTime);
         txt_meetingType = (TextView) findViewById(R.id.txt_detailsMeetingType);
+        txt_detailsReport = (TextView) findViewById(R.id.txt_detailsReport);
         img_image = (ImageView) findViewById(R.id.img_detailsImage);
         img_profilepic = (ImageView) findViewById(R.id.img_detailsProfilePic);
         img_call = (ImageView)findViewById(R.id.img_detailsCall);
@@ -63,6 +64,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
 
         img_call.setOnClickListener(this);
         img_msg.setOnClickListener(this);
+        txt_detailsReport.setOnClickListener(this);
 
         requestList = new ArrayList<>();
 
@@ -165,6 +167,9 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
             case R.id.img_detailsMsg:
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", phone, null)));
                 break;
+            case R.id.txt_detailsReport:
+                Intent intent = new Intent(getApplicationContext(), ReportActivity.class);
+                startActivity(intent);
         }
     }
 
