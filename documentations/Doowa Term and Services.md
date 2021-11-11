@@ -11,90 +11,120 @@ We agree to provide you with the Doowa Service. The Service includes all of the 
 
    *  **Offering personalized opportunities to create, connect, communicate, discover, and share.**
    
-   People are different. We want to strengthen your relationships through shared experiences you actually care about. So we build systems that try to understand who and            what you and others care about, and use that information to help you create, find, join, and share in experiences that matter to you. Part of that is highlighting                content, features, offers, and accounts you might be interested in, and offering ways for you to experience Doowa, based on things you and others do on and off Doowa.
+         People are different. We want to strengthen your relationships through shared experiences you actually care about. So we build systems that try to understand who and            what you and others care about, and use that information to help you create, find, join, and share in experiences that matter to you. Part of that is highlighting                content, features, offers, and accounts you might be interested in, and offering ways for you to experience Doowa, based on things you and others do on and off Doowa.
 
 
    * **Fostering a positive, inclusive, and safe environment.**
    
-   We develop and use tools and offer resources to our community members that help to make their experiences positive and inclusive, including when we think they might need        help. We also have teams and systems that work to combat abuse and violations of our Terms and policies, as well as harmful and deceptive behavior. We use all the information    we have-including your information-to try to keep our platform secure. We also may share information about misuse or harmful content with other Doowa Companies or law            enforcement.
+        We develop and use tools and offer resources to our community members that help to make their experiences positive and inclusive, including when we think they might need         help. We also have teams and systems that work to combat abuse and violations of our Terms and policies, as well as harmful and deceptive behavior. We use all the               information we have-including your information-to try to keep our platform secure. We also may share information about misuse or harmful content with other Doowa                 Companies or law enforcement.
 
 
-   * Developing and using technologies that help us consistently serve our growing community.
+   * **Developing and using technologies that help us consistently serve our growing community.**
    
-   Organizing and analyzing information for our growing community is central to our Service. A big part of our Service is creating and using cutting-edge technologies that help    us personalize, protect, and improve our Service on an incredibly large scale for a broad global community. Technologies like artificial intelligence and machine learning        give us the power to apply complex processes across our Service. Automated technologies also help us ensure the functionality and integrity of our Service.
+        Organizing and analyzing information for our growing community is central to our Service. A big part of our Service is creating and using cutting-edge technologies that         help us personalize, protect, and improve our Service on an incredibly large scale for a broad global community. Technologies like artificial intelligence and machine           learning give us the power to apply complex processes across our Service. Automated technologies also help us ensure the functionality and integrity of our Service.
 
 
-   * Providing consistent and seamless experiences across other Doowa Company Products.
+   * **Providing consistent and seamless experiences across other Doowa Company Products.**
    
-   Doowa is part of the Doowa Companies, which share technology, systems, insights, and information-including the information we have about you (learn more in the Data Policy)      in order to provide services that are better, safer, and more secure. We also provide ways to interact across the Doowa Company Products that you use, and designed systems to    achieve a seamless and consistent experience across the Doowa Company Products.
+       Doowa is part of the Doowa Companies, which share technology, systems, insights, and information-including the information we have about you (learn more in the Data              Policy) in order to provide services that are better, safer, and more secure. We also provide ways to interact across the Doowa Company Products that you use, and                designed systems to achieve a seamless and consistent experience across the Doowa Company Products.
    
    
-   * Ensuring access to our Service.
+   * **Ensuring access to our Service.**
    
-   To operate our global Service, we must store and transfer data across our systems around the world, including outside of your country of residence. The use of this global        infrastructure is necessary and essential to provide our Service. This infrastructure may be owned or operated by Doowa Inc., Doowa Ireland Limited, or their affiliates.
+       To operate our global Service, we must store and transfer data across our systems around the world, including outside of your country of residence. The use of this global        infrastructure is necessary and essential to provide our Service. This infrastructure may be owned or operated by Doowa Inc., Doowa Ireland Limited, or their affiliates.
     
-   * Connecting you with brands, products, and services in ways you care about.
+    
+   * **Connecting you with brands, products, and services in ways you care about.**
    
-   We use data from Doowa and other Doowa Company Products, as well as from third-party partners, to show you ads, offers, and other sponsored content that we believe will be      meaningful to you. And we try to make that content as relevant as all your other experiences on Doowa.
+       We use data from Doowa and other Doowa Company Products, as well as from third-party partners, to show you ads, offers, and other sponsored content that we believe will          be meaningful to you. And we try to make that content as relevant as all your other experiences on Doowa.
 
-   * Research and innovation.
+
+   * **Research and innovation.**
   
-   We use the information we have to study our Service and collaborate with others on research to make our Service better and contribute to the well-being of our community.
+       We use the information we have to study our Service and collaborate with others on research to make our Service better and contribute to the well-being of our community.
 
 
 ## How Our Service Is Funded
 
 Instead of paying to use Doowa, by using the Service covered by these Terms, you acknowledge that we can show you ads that businesses and organizations pay us to promote on and off the Doowa Company Products. We use your personal data, such as information about your activity and interests, to show you ads that are more relevant to you.
+
 We show you relevant and useful ads without telling advertisers who you are. We don’t sell your personal data. We allow advertisers to tell us things like their business goal and the kind of audience they want to see their ads. We then show their ad to people who might be interested.
+
 We also provide advertisers with reports about the performance of their ads to help them understand how people are interacting with their content on and off Doowa. For example, we provide general demographic and interest information to advertisers to help them better understand their audience. We don’t share information that directly identifies you (information such as your name or email address that by itself can be used to contact you or identifies who you are) unless you give us specific permission. Learn more about how Doowa ads work here.
+
 You may see branded content on Doowa posted by account holders who promote products or services based on a commercial relationship with the business partner mentioned in their content. You can learn more about this here.
+
 
 ## The Data Policy
 
 Providing our Service requires collecting and using your information. The Data Policy explains how we collect, use, and share information across the Doowa Products. It also explains the many ways you can control your information, including in the Doowa Privacy and Security Settings. You must agree to the Data Policy to use Doowa.
 
+
 ## Your Commitments
 
 In return for our commitment to provide the Service, we require you to make the below commitments to us.
-Who Can Use Doowa. We want our Service to be as open and inclusive as possible, but we also want it to be safe, secure, and in accordance with the law. So, we need you to commit to a few restrictions in order to be part of the Doowa community.
-•	You must be at least 14 years old.
-•	You must not be prohibited from receiving any aspect of our Service under applicable laws or engaging in payments related Services if you are on an applicable denied party listing.
-•	We must not have previously disabled your account for violation of law or any of our policies.
-•	You must not be a convicted sex offender.
-How You Can't Use Doowa. Providing a safe and open Service for a broad community requires that we all do our part.
-•	You can't impersonate others or provide inaccurate information.
-You don't have to disclose your identity on Doowa, but you must provide us with accurate and up to date information (including registration information), which may include providing personal data. Also, you may not impersonate someone or something you aren't, and you can't create an account for someone else unless you have their express permission.
-•	You can't do anything unlawful, misleading, or fraudulent or for an illegal or unauthorized purpose.
-•	You can't violate (or help or encourage others to violate) these Terms or our policies, including in particular the Doowa Community Guidelines, Doowa Platform Terms and Developer Policies, and Music Guidelines.
-If you post branded content, you must comply with our Branded Content Policies, which require you to use our branded content tool. Learn how to report conduct or content in our Help Center.
-•	You can't do anything to interfere with or impair the intended operation of the Service.
-This includes misusing any reporting, dispute, or appeals channel, such as by making fraudulent or groundless reports or appeals.
-•	You can't attempt to create accounts or access or collect information in unauthorized ways.
-This includes creating accounts or collecting information in an automated way without our express permission.
-•	You can’t sell, license, or purchase any account or data obtained from us or our Service.
-This includes attempts to buy, sell, or transfer any aspect of your account (including your username); solicit, collect, or use login credentials or badges of other users; or request or collect Doowa usernames, passwords, or misappropriate access tokens.
-•	You can't post someone else’s private or confidential information without permission or do anything that violates someone else's rights, including intellectual property rights (e.g., copyright infringement, trademark infringement, counterfeit, or pirated goods).
-You may use someone else's works under exceptions or limitations to copyright and related rights under applicable law. You represent you own or have obtained all necessary rights to the content you post or share. Learn more, including how to report content that you think infringes your intellectual property rights, here.
-•	You can’t modify, translate, create derivative works of, or reverse engineer our products or their components.
-•	You can't use a domain name or URL in your username without our prior written consent.
-Permissions You Give to Us. As part of our agreement, you also give us permissions that we need to provide the Service.
-•	We do not claim ownership of your content, but you grant us a license to use it.
-Nothing is changing about your rights in your content. We do not claim ownership of your content that you post on or through the Service and you are free to share your content with anyone else, wherever you want. However, we need certain legal permissions from you (known as a “license”) to provide the Service. When you share, post, or upload content that is covered by intellectual property rights (like photos or videos) on or in connection with our Service, you hereby grant to us a non-exclusive, royalty-free, transferable, sub-licensable, worldwide license to host, use, distribute, modify, run, copy, publicly perform or display, translate, and create derivative works of your content (consistent with your privacy and application settings). This license is for the purpose of making our Service available to you and to others that access or use it. You can delete content individually or all at once by deleting your account. To learn more about how we use information, and how to control or delete your content, review the Data Policy and visit the Doowa Help Center.
-•	Permission to use your username, profile picture, and information about your relationships and actions with accounts, ads, and sponsored content.
-You give us permission to show your username, profile picture, and information about your actions (such as likes) or relationships (such as follows) for the purpose of enabling us to show such information next to or in connection with accounts, ads, offers, and other sponsored content that you follow or engage with that are displayed on Doowa Products, without any compensation to you. For example, we may show that you liked a sponsored post created by a brand that has paid us to display its ads on Doowa. As with actions on other content and follows of other accounts, actions on sponsored content and follows of sponsored accounts can be seen only by people who have permission to see that content or follow. We will also respect your ad settings. You can learn more here about your ad settings.
-•	You agree that we can download and install updates to the Service on your device.
+
+**Who Can Use Doowa.** We want our Service to be as open and inclusive as possible, but we also want it to be safe, secure, and in accordance with the law. So, we need you to commit to a few restrictions in order to be part of the Doowa community.
+
+   * You must be at least 14 years old.
+   * You must not be prohibited from receiving any aspect of our Service under applicable laws or engaging in payments related Services if you are on an applicable denied party      listing.
+   *	We must not have previously disabled your account for violation of law or any of our policies.
+   * You must not be a convicted sex offender.
+   
+**How You Can't Use Doowa.** Providing a safe and open Service for a broad community requires that we all do our part.
+
+   * **You can't impersonate others or provide inaccurate information.**
+        You don't have to disclose your identity on Doowa, but you must provide us with accurate and up to date information (including registration information), which may               include providing personal data. Also, you may not impersonate someone or something you aren't, and you can't create an account for someone else unless you have their           express permission.
+        
+   * **You can't do anything unlawful, misleading, or fraudulent or for an illegal or unauthorized purpose.**
+   
+   * **You can't violate (or help or encourage others to violate) these Terms or our policies, including in particular the Doowa Community Guidelines, Doowa Platform Terms and          Developer Policies, and Music Guidelines.**
+        If you post branded content, you must comply with our Branded Content Policies, which require you to use our branded content tool. Learn how to report conduct or content         in our Help Center.
+        
+   * **You can't do anything to interfere with or impair the intended operation of the Service.**
+        This includes misusing any reporting, dispute, or appeals channel, such as by making fraudulent or groundless reports or appeals.
+        
+   *	**You can't attempt to create accounts or access or collect information in unauthorized ways.**
+        This includes creating accounts or collecting information in an automated way without our express permission.
+   
+   * **You can’t sell, license, or purchase any account or data obtained from us or our Service.**
+        This includes attempts to buy, sell, or transfer any aspect of your account (including your username); solicit, collect, or use login credentials or badges of other             users; or request or collect Doowa usernames, passwords, or misappr opriate access tokens.
+        
+   * **You can't post someone else’s private or confidential information without permission or do anything that violates someone else's rights, including intellectual property          rights (e.g., copyright infringement, trademark infringement, counterfeit, or pirated goods).**
+        You may use someone else's works under exceptions or limitations to copyright and related rights under applicable law. You represent you own or have obtained all                 necessary rights to the content you post or share. Learn more, including how to report content that you think infringes your intellectual property rights, here.
+
+   * **You can’t modify, translate, create derivative works of, or reverse engineer our products or their components.**
+   
+   * **You can't use a domain name or URL in your username without our prior written consent.**
+        Permissions You Give to Us. As part of our agreement, you also give us permissions that we need to provide the Service.
+
+   * **We do not claim ownership of your content, but you grant us a license to use it.**
+        Nothing is changing about your rights in your content. We do not claim ownership of your content that you post on or through the Service and you are free to share your           content with anyone else, wherever you want. However, we need certain legal permissions from you (known as a “license”) to provide the Service. When you share, post, or         upload content that is covered by intellectual property rights (like photos or videos) on or in connection with our Service, you hereby grant to us a non-exclusive,             royalty-free, transferable, sub-licensable, worldwide license to host, use, distribute, modify, run, copy, publicly perform or display, translate, and create derivative         works of your content (consistent with your privacy and application settings). This license is for the purpose of making our Service available to you and to others that         access or use it. You can delete content individually or all at once by deleting your account. To learn more about how we use information, and how to control or delete           your content, review the Data Policy and visit the Doowa Help Center.
+        
+   * **Permission to use your username, profile picture, and information about your relationships and actions with accounts, ads, and sponsored content.**
+        You give us permission to show your username, profile picture, and information about your actions (such as likes) or relationships (such as follows) for the purpose of           enabling us to show such information next to or in connection with accounts, ads, offers, and other sponsored content that you follow or engage with that are displayed           on Doowa Products, without any compensation to you. For example, we may show that you liked a sponsored post created by a brand that has paid us to display its ads on           Doowa. As with actions on other content and follows of other accounts, actions on sponsored content and follows of sponsored accounts can be seen only by people who have         permission to see that content or follow. We will also respect your ad settings. You can learn more here about your ad settings.
+
+   * **You agree that we can download and install updates to the Service on your device.**
+
 
 ## Additional Rights We Retain
-•	If you select a username or similar identifier for your account, we may change it if we believe it is appropriate or necessary (for example, if it infringes someone's intellectual property or impersonates another user).
-•	If you use content covered by intellectual property rights that we have and make available in our Service (for example, images, designs, videos, or sounds we provide that you add to content you create or share), we retain all rights to our content (but not yours).
-•	You can only use our intellectual property and trademarks or similar marks as expressly permitted by our Brand Guidelines or with our prior written permission.
-•	You must obtain written permission from us or under an open source license to modify, create derivative works of, decompile, or otherwise attempt to extract source code from us.
+
+   * If you select a username or similar identifier for your account, we may change it if we believe it is appropriate or necessary (for example, if it infringes someone's            intellectual property or impersonates another user).
+
+   * If you use content covered by intellectual property rights that we have and make available in our Service (for example, images, designs, videos, or sounds we provide that        you add to content you create or share), we retain all rights to our content (but not yours).
+
+   * You can only use our intellectual property and trademarks or similar marks as expressly permitted by our Brand Guidelines or with our prior written permission.
+   
+   * You must obtain written permission from us or under an open source license to modify, create derivative works of, decompile, or otherwise attempt to extract source code          from us.
 
 ## Content Removal and Disabling or Terminating Your Account
-•	We can remove any content or information you share on the Service if we believe that it violates these Terms of Use, our policies (including our Doowa Community Guidelines), or we are required to do so by law. We can refuse to provide or stop providing all or part of the Service to you (including terminating or disabling your your access to the Doowa Products and Doowa Company Products) immediately to protect our community or services, or if you create risk or legal exposure for us, violate these Terms of Use or our policies (including our Doowa Community Guidelines), if you repeatedly infringe other people's intellectual property rights, or where we are permitted or required to do so by law. We can also terminate or change the Service, remove or block content or information shared on our Service, or stop providing all or part of the Service if we determine that doing so is reasonably necessary to avoid or mitigate adverse legal or regulatory impacts on us. If you believe your account has been terminated in error, or you want to disable or permanently delete your account, consult our Help Center. When you request to delete content or your account, the deletion process will automatically begin no more than 30 days after your request. It may take up to 90 days to delete content after the deletion process begins. While the deletion process for such content is being undertaken, the content is no longer visible to other users, but remains subject to these Terms of Use and our Data Policy. After the content is deleted, it may take us up to another 90 days to remove it from backups and disaster recovery systems.
-•	Content will not be deleted within 90 days of the account deletion or content deletion process beginning in the following situations:
-•	where your content has been used by others in accordance with this license and they have not deleted it (in which case this license will continue to apply until that content is deleted); or
-•	where deletion within 90 days is not possible due to technical limitations of our systems, in which case, we will complete the deletion as soon as technically feasible; or
+
+   * We can remove any content or information you share on the Service if we believe that it violates these Terms of Use, our policies (including our Doowa Community                  Guidelines), or we are required to do so by law. We can refuse to provide or stop providing all or part of the Service to you (including terminating or disabling your your      access to the Doowa Products and Doowa Company Products) immediately to protect our community or services, or if you create risk or legal exposure for us, violate these          Terms of Use or our policies (including our Doowa Community Guidelines), if you repeatedly infringe other people's intellectual property rights, or where we are permitted        or required to do so by law. We can also terminate or change the Service, remove or block content or information shared on our Service, or stop providing all or part of the      Service if we determine that doing so is reasonably necessary to avoid or mitigate adverse legal or regulatory impacts on us. If you believe your account has been                terminated in error, or you want to disable or permanently delete your account, consult our Help Center. When you request to delete content or your account, the deletion        process will automatically begin no more than 30 days after your request. It may take up to 90 days to delete content after the deletion process begins. While the deletion      process for such content is being undertaken, the content is no longer visible to other users, but remains subject to these Terms of Use and our Data Policy. After the          content is deleted, it may take us up to another 90 days to remove it from backups and disaster recovery systems.
+
+   * Content will not be deleted within 90 days of the account deletion or content deletion process beginning in the following situations:
+	
+        * where your content has been used by others in accordance with this license and they have not deleted it (in which case this license will continue to apply until that            content is deleted); or
+        * where deletion within 90 days is not possible due to technical limitations of our systems, in which case, we will complete the deletion as soon as technically feasible; or
 •	where deletion would restrict our ability to:
 •	investigate or identify illegal activity or violations of our terms and policies (for example, to identify or investigate misuse of our products or systems);
 •	protect the safety and security of our products, systems, and users;
