@@ -6,13 +6,16 @@ import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -74,6 +77,34 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
         btn_setlocCurrentLoc = (Button)findViewById(R.id.btn_setlocCurrentLoc);
         btn_setlocSet.setOnClickListener(this);
         btn_setlocCurrentLoc.setOnClickListener(this);
+
+
+
+        LocationManager lm = (LocationManager)SetLocationActivity.this.getSystemService(Context.LOCATION_SERVICE);
+        boolean gps_enabled = false;
+        boolean network_enabled = false;
+
+        try {
+            gps_enabled = lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
+        } catch(Exception ex) {}
+
+        try {
+            network_enabled = lm.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
+        } catch(Exception ex) {}
+
+        if(!gps_enabled && !network_enabled) {
+            // notify user
+            new AlertDialog.Builder(SetLocationActivity.this)
+                    .setMessage("Please turn on your location services and network!")
+                    .setPositiveButton("Open Location Settings", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface paramDialogInterface, int paramInt) {
+                            SetLocationActivity.this.startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+                        }
+                    })
+                    .setNegativeButton("Cancel",null)
+                    .show();
+        }
 
         getRequestData();
 
@@ -265,6 +296,7 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
                 break;
         }
     }
+
 
     private void confirmationWindow() {
         String msg;
