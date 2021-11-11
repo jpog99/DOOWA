@@ -59,7 +59,7 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
     private ActivitySetLocationBinding binding;
     Button btn_setlocSet,btn_setlocCurrentLoc;
     MarkerOptions marker = new MarkerOptions();
-    Double lat,lng,currLat,currLng,markerLat,markerLng;
+    double lat,lng,currLat,currLng,markerLat,markerLng;
     FusedLocationProviderClient client;
     SupportMapFragment mapFragment;
     String name,meetingTime,address,details,donationType,phone,type,time,profilepic,image;
@@ -73,14 +73,14 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
         binding = ActivitySetLocationBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        checkLocationService();
+
         btn_setlocSet = (Button)findViewById(R.id.btn_setlocSet);
         btn_setlocCurrentLoc = (Button)findViewById(R.id.btn_setlocCurrentLoc);
         btn_setlocSet.setOnClickListener(this);
         btn_setlocCurrentLoc.setOnClickListener(this);
 
-
         getRequestData();
-
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -96,6 +96,7 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
 
 
 
+
         mapFragment.getMapAsync(this);
     }
 
@@ -105,6 +106,7 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
             profilepic = String.valueOf(signInAccount.getPhotoUrl());
             name = signInAccount.getGivenName();
         }
+        checkLocationService();
         Handler handler = new Handler(Looper.getMainLooper());
         handler.post(new Runnable() {
             @Override
@@ -134,8 +136,8 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
                 field[12] = "type";
                 //Creating array for data
                 String[] data = new String[13];
-                data[0] = lat.toString();
-                data[1] = lng.toString();
+                data[0] = Double.toString(lat);
+                data[1] = Double.toString(lng);
                 data[2] = phone;
                 data[3] = donationType;
                 data[4] = address;
@@ -265,7 +267,6 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
                 break;
             case R.id.btn_setlocCurrentLoc:
                 useCurrLoc = true;
-                checkLocationService();
                 confirmationWindow();
                 break;
         }
@@ -286,16 +287,8 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
 
         if(!gps_enabled && !network_enabled) {
             // notify user
-            new AlertDialog.Builder(SetLocationActivity.this)
-                    .setMessage("Please turn on your location services and network!")
-                    .setPositiveButton("Open Location Settings", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface paramDialogInterface, int paramInt) {
-                            SetLocationActivity.this.startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
-                        }
-                    })
-                    .setNegativeButton("Cancel",null)
-                    .show();
+            Toast.makeText(SetLocationActivity.this,"Please enable location and network services first!", Toast.LENGTH_SHORT).show();
+            finish();
         }
     }
 
@@ -311,6 +304,7 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
         builder.setCancelable(true);
         builder.setTitle("Confirmation");
         builder.setMessage(msg);
+        checkLocationService();
 
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
@@ -323,6 +317,7 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 //Toast.makeText(SetLocationActivity.this, "Your " + type + " has been marked on the map successfully! Thank you for your contribution!", Toast.LENGTH_SHORT).show();
+
                 insertRequestDB();
             }
         });
