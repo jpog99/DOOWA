@@ -39,7 +39,7 @@ import java.util.List;
 public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener {
 
     private GoogleMap map;
-    private static final String DBRequest_URL = "http://172.30.1.30/LoginRegister/requestDB.php";
+    private static final String DBRequest_URL = "https://doowa-server.herokuapp.com/insertRequest.php";
     List<Requests> requestList;
 
     @Nullable
@@ -73,50 +73,58 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
 
                                     //adding the product to product list
                                     requestList.add(new Requests(
-                                            request.getDouble("lat"),
-                                            request.getDouble("lng"),
+                                            request.getString("lat"),
+                                            request.getString("lng"),
                                             request.getString("phone"),
                                             request.getString("donationType"),
                                             request.getString("address"),
                                             request.getString("details"),
                                             request.getString("image"),
-                                            request.getInt("report"),
+                                            request.getString("report"),
                                             request.getString("time"),
                                             request.getString("name"),
-                                            request.getString("profilepic")
+                                            request.getString("profilepic"),
+                                            request.getString("meetingTime"),
+                                            request.getString("type")
                                     ));
                                 }
                                 Log.d("Success", "Fetched from request database successfully!");
                                 for (Requests requests : requestList) {
-                                    LatLng latlng = new LatLng(requests.lat, requests.lng);
-                                    switch (requests.donationType){
-                                        case "Money":
-                                            map.addMarker(new MarkerOptions()
-                                                    .position(latlng)
-                                                    .snippet("Tap for details")
-                                                    .title(requests.donationType)).setIcon(BitmapDescriptorFactory.fromResource(R.drawable.money));
-                                            break;
-                                        case "Necessities":
-                                            map.addMarker(new MarkerOptions()
-                                                    .position(latlng)
-                                                    .snippet("Tap for details")
-                                                    .title(requests.donationType)).setIcon(BitmapDescriptorFactory.fromResource(R.drawable.necessities));
-                                            break;
-                                        case "Groceries":
-                                            map.addMarker(new MarkerOptions()
-                                                    .position(latlng)
-                                                    .snippet("Tap for details")
-                                                    .title(requests.donationType)).setIcon(BitmapDescriptorFactory.fromResource(R.drawable.groceries));
-                                            break;
-                                        case "Others":
-                                            map.addMarker(new MarkerOptions()
-                                                    .position(latlng)
-                                                    .snippet("Tap for details")
-                                                    .title(requests.donationType)).setIcon(BitmapDescriptorFactory.fromResource(R.drawable.others));
-                                            break;
+                                    LatLng latlng = new LatLng(Double.parseDouble(requests.lat), Double.parseDouble(requests.lng));
+                                    if(requests.type.equals("request")){
+                                        switch (requests.donationType){
+                                            case "Money":
+                                                map.addMarker(new MarkerOptions()
+                                                        .position(latlng)
+                                                        .snippet("Tap for details")
+                                                        .title(requests.donationType)).setIcon(BitmapDescriptorFactory.fromResource(R.drawable.money));
+                                                break;
+                                            case "Necessities":
+                                                map.addMarker(new MarkerOptions()
+                                                        .position(latlng)
+                                                        .snippet("Tap for details")
+                                                        .title(requests.donationType)).setIcon(BitmapDescriptorFactory.fromResource(R.drawable.necessities));
+                                                break;
+                                            case "Groceries":
+                                                map.addMarker(new MarkerOptions()
+                                                        .position(latlng)
+                                                        .snippet("Tap for details")
+                                                        .title(requests.donationType)).setIcon(BitmapDescriptorFactory.fromResource(R.drawable.groceries));
+                                                break;
+                                            case "Others":
+                                                map.addMarker(new MarkerOptions()
+                                                        .position(latlng)
+                                                        .snippet("Tap for details")
+                                                        .title(requests.donationType)).setIcon(BitmapDescriptorFactory.fromResource(R.drawable.others));
+                                                break;
 
+                                        }
+                                    }else{
+                                        map.addMarker(new MarkerOptions()
+                                                .position(latlng)
+                                                .snippet("Tap for details")
+                                                .title("Foodbank")).setIcon(BitmapDescriptorFactory.fromResource(R.drawable.foodbank));
                                     }
-
                                 }
 
                                /* for(MarkerOptions money : moneyList){
@@ -141,14 +149,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
 
             //adding our stringrequest to queue
             Volley.newRequestQueue(getActivity()).add(stringRequest);
-    }
-
-    private void refresh() {
-        Fragment currentFragment = getFragmentManager().findFragmentByTag("google_map");
-        FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-        fragmentTransaction.detach(currentFragment);
-        fragmentTransaction.attach(currentFragment);
-        fragmentTransaction.commit();
     }
 
     @Override

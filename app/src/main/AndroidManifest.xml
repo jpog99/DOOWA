@@ -18,7 +18,7 @@
         <activity
             android:name=".DetailsActivity"
             android:exported="false"
-            android:label="Donation Details" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" /> />
         <activity
             android:name=".ForgotPassActivity"
             android:exported="false"

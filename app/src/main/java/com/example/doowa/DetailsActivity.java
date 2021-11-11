@@ -36,7 +36,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DetailsActivity extends AppCompatActivity implements View.OnClickListener {
-    TextView txt_donationType,txt_name,txt_address,txt_details,txt_time;
+    TextView txt_donationType,txt_name,txt_address,txt_details,txt_time, txt_detailsAsk, txt_detailsType, txt_meetingType, txt_meetingTime;
     ImageView img_image, img_profilepic, img_call, img_msg;
     String phone;
     private static final String DBRequest_URL = "http://172.30.1.30/LoginRegister/requestDB.php";
@@ -52,6 +52,10 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         txt_address = (TextView) findViewById(R.id.txt_detailsAddress);
         txt_details = (TextView) findViewById(R.id.txt_detailsDesc);
         txt_time = (TextView) findViewById(R.id.txt_detailsTime);
+        txt_detailsAsk = (TextView) findViewById(R.id.txt_detailsAsk);
+        txt_detailsType = (TextView) findViewById(R.id.txt_detailsType);
+        txt_meetingTime = (TextView) findViewById(R.id.txt_detailsmeetingTime);
+        txt_meetingType = (TextView) findViewById(R.id.txt_detailsMeetingType);
         img_image = (ImageView) findViewById(R.id.img_detailsImage);
         img_profilepic = (ImageView) findViewById(R.id.img_detailsProfilePic);
         img_call = (ImageView)findViewById(R.id.img_detailsCall);
@@ -83,17 +87,19 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
 
                                 //adding the product to product list
                                 requestList.add(new Requests(
-                                        request.getDouble("lat"),
-                                        request.getDouble("lng"),
+                                        request.getString("lat"),
+                                        request.getString("lng"),
                                         request.getString("phone"),
                                         request.getString("donationType"),
                                         request.getString("address"),
                                         request.getString("details"),
                                         request.getString("image"),
-                                        request.getInt("report"),
+                                        request.getString("report"),
                                         request.getString("time"),
                                         request.getString("name"),
-                                        request.getString("profilepic")
+                                        request.getString("profilepic"),
+                                        request.getString("meetingTime"),
+                                        request.getString("type")
                                 ));
                             }
                             Log.d("Success", "Fetched from request database successfully!");
@@ -104,17 +110,32 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
                             Log.d("Success", "Fetched from request database successfully!");
 
                             for (Requests requests : requestList) {
-                                if(requests.lat == markerLat && requests.lng == markerLng){
-                                    txt_time.setText(requests.time);
+                                if(Double.parseDouble(requests.lat) == markerLat && Double.parseDouble(requests.lng) == markerLng){
+                                    if(requests.type.equals("request")){
+                                        txt_detailsType.setText("I need help with:");
+                                        txt_detailsAsk.setText("Give Help?");
+                                        txt_meetingType.setText("Meeting Time:");
+                                    }else{
+                                        txt_detailsType.setText("We provide help for:");
+                                        txt_detailsAsk.setText("Ask For Help?");
+                                        txt_meetingType.setText("Operating Hours:");
+                                    }
+                                    txt_time.setText("Posted On:" + requests.time);
                                     txt_name.setText(requests.name);
                                     txt_donationType.setText(requests.donationType);
                                     txt_address.setText(requests.address);
                                     txt_details.setText(requests.details);
+                                    txt_meetingTime.setText(requests.meetingTime);
                                     phone = requests.phone;
                                     if(!requests.profilepic.equals(""))
                                         Glide.with(getApplicationContext()).load(String.valueOf(requests.profilepic)).into(img_profilepic);
                                     if(!requests.image.equals(""))
                                         Glide.with(getApplicationContext()).load(String.valueOf(requests.image)).into(img_image);
+                                    if(requests.meetingTime.equals("")){
+                                        txt_meetingType.setVisibility(View.INVISIBLE);
+                                        txt_meetingTime.setVisibility(View.INVISIBLE);
+                                    }
+
                                     break;
                                 }
 

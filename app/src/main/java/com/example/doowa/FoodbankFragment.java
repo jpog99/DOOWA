@@ -1,5 +1,6 @@
 package com.example.doowa;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -26,8 +27,10 @@ public class FoodbankFragment extends Fragment implements AdapterView.OnItemSele
     ArrayAdapter<String> myAdapter;
     TextView txt_name,txt_openingHour,txt_address,txt_details,txt_phone;
     String donationType;
-    Button btn_submit,btn_setLocation;
+    Button btn_setLocation;
     ImageView camera;
+    String name,openingHour,address,details,phone;
+    String type = "foodbank";
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -40,7 +43,6 @@ public class FoodbankFragment extends Fragment implements AdapterView.OnItemSele
         dropdown.setAdapter(myAdapter);
         dropdown.setOnItemSelectedListener(this);
 
-        btn_submit = (Button) view.findViewById(R.id.btn_fbSubmit);
         btn_setLocation = (Button) view.findViewById(R.id.btn_fbSetMap);
         txt_name = (TextView) view.findViewById(R.id.txt_fbName);
         txt_openingHour = (TextView) view.findViewById(R.id.txt_fbOperatingHour);
@@ -49,7 +51,6 @@ public class FoodbankFragment extends Fragment implements AdapterView.OnItemSele
         txt_details = (TextView) view.findViewById(R.id.txt_fbDetails);
         camera = (ImageView) view.findViewById(R.id.img_fbCamera);
 
-        btn_submit.setOnClickListener(this);
         btn_setLocation.setOnClickListener(this);
 
 
@@ -60,31 +61,39 @@ public class FoodbankFragment extends Fragment implements AdapterView.OnItemSele
     public void onClick(View v){
         switch (v.getId()){
             case R.id.btn_fbSetMap:
-                Intent intent = new Intent(getContext(),SetLocationActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btn_fbSubmit:
                 fbSubmission();
+                if(name.isEmpty() ||openingHour.isEmpty() ||address.isEmpty() ||details.isEmpty() ||donationType.isEmpty()||phone.isEmpty()){
+                    break;
+                }else{
+                    Intent intent = new Intent(getContext(),SetLocationActivity.class);
+                    intent.putExtra("name",name);
+                    intent.putExtra("openingHour",openingHour);
+                    intent.putExtra("address",address);
+                    intent.putExtra("details",details);
+                    intent.putExtra("donationType",donationType);
+                    intent.putExtra("phone",phone);
+                    intent.putExtra("type",type);
+                    startActivity(intent);
+                }
                 break;
         }
     }
 
     private void fbSubmission() {
-        String name,openingHour,address,details,phone;
+
         name = txt_name.getText().toString().trim();
         openingHour = txt_openingHour.getText().toString().trim();
         address = txt_address.getText().toString().trim();
         details = txt_details.getText().toString().trim();
         phone = txt_phone.getText().toString().trim();
+        String regex = "\\d+";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(phone);
+
 
         if(name.isEmpty()){
             txt_name.setError("Organization name is required!");
             txt_name.requestFocus();
-            return;
-        }
-        if(openingHour.isEmpty()){
-            txt_openingHour.setError("Operating hour is required!");
-            txt_openingHour.requestFocus();
             return;
         }
         if(address.isEmpty()){
@@ -97,11 +106,18 @@ public class FoodbankFragment extends Fragment implements AdapterView.OnItemSele
             txt_details.requestFocus();
             return;
         }
-        if(phone.isEmpty()){
-            txt_phone.setError("Contact number is required!");
-            txt_phone.requestFocus();
+        if(openingHour.isEmpty()){
+            txt_openingHour.setError("Operating hour is required!");
+            txt_openingHour.requestFocus();
             return;
         }
+        if(phone.isEmpty() || !matcher.matches()){
+            txt_phone.setError("Contact number is invalid!");
+            txt_phone.requestFocus();
+            phone = "";
+            return;
+        }
+
 
     }
 
@@ -115,6 +131,5 @@ public class FoodbankFragment extends Fragment implements AdapterView.OnItemSele
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
-
 
 }
