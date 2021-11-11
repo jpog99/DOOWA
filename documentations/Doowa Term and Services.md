@@ -74,34 +74,43 @@ In return for our commitment to provide the Service, we require you to make the 
 **How You Can't Use Doowa.** Providing a safe and open Service for a broad community requires that we all do our part.
 
    * **You can't impersonate others or provide inaccurate information.**
+   
         You don't have to disclose your identity on Doowa, but you must provide us with accurate and up to date information (including registration information), which may               include providing personal data. Also, you may not impersonate someone or something you aren't, and you can't create an account for someone else unless you have their           express permission.
         
    * **You can't do anything unlawful, misleading, or fraudulent or for an illegal or unauthorized purpose.**
    
    * **You can't violate (or help or encourage others to violate) these Terms or our policies, including in particular the Doowa Community Guidelines, Doowa Platform Terms and          Developer Policies, and Music Guidelines.**
+   
         If you post branded content, you must comply with our Branded Content Policies, which require you to use our branded content tool. Learn how to report conduct or content         in our Help Center.
         
    * **You can't do anything to interfere with or impair the intended operation of the Service.**
+   
         This includes misusing any reporting, dispute, or appeals channel, such as by making fraudulent or groundless reports or appeals.
         
    *	**You can't attempt to create accounts or access or collect information in unauthorized ways.**
+   
         This includes creating accounts or collecting information in an automated way without our express permission.
    
    * **You can’t sell, license, or purchase any account or data obtained from us or our Service.**
+   
         This includes attempts to buy, sell, or transfer any aspect of your account (including your username); solicit, collect, or use login credentials or badges of other             users; or request or collect Doowa usernames, passwords, or misappr opriate access tokens.
         
    * **You can't post someone else’s private or confidential information without permission or do anything that violates someone else's rights, including intellectual property          rights (e.g., copyright infringement, trademark infringement, counterfeit, or pirated goods).**
+   
         You may use someone else's works under exceptions or limitations to copyright and related rights under applicable law. You represent you own or have obtained all                 necessary rights to the content you post or share. Learn more, including how to report content that you think infringes your intellectual property rights, here.
 
    * **You can’t modify, translate, create derivative works of, or reverse engineer our products or their components.**
    
    * **You can't use a domain name or URL in your username without our prior written consent.**
+   
         Permissions You Give to Us. As part of our agreement, you also give us permissions that we need to provide the Service.
 
    * **We do not claim ownership of your content, but you grant us a license to use it.**
+   
         Nothing is changing about your rights in your content. We do not claim ownership of your content that you post on or through the Service and you are free to share your           content with anyone else, wherever you want. However, we need certain legal permissions from you (known as a “license”) to provide the Service. When you share, post, or         upload content that is covered by intellectual property rights (like photos or videos) on or in connection with our Service, you hereby grant to us a non-exclusive,             royalty-free, transferable, sub-licensable, worldwide license to host, use, distribute, modify, run, copy, publicly perform or display, translate, and create derivative         works of your content (consistent with your privacy and application settings). This license is for the purpose of making our Service available to you and to others that         access or use it. You can delete content individually or all at once by deleting your account. To learn more about how we use information, and how to control or delete           your content, review the Data Policy and visit the Doowa Help Center.
         
    * **Permission to use your username, profile picture, and information about your relationships and actions with accounts, ads, and sponsored content.**
+   
         You give us permission to show your username, profile picture, and information about your actions (such as likes) or relationships (such as follows) for the purpose of           enabling us to show such information next to or in connection with accounts, ads, offers, and other sponsored content that you follow or engage with that are displayed           on Doowa Products, without any compensation to you. For example, we may show that you liked a sponsored post created by a brand that has paid us to display its ads on           Doowa. As with actions on other content and follows of other accounts, actions on sponsored content and follows of sponsored accounts can be seen only by people who have         permission to see that content or follow. We will also respect your ad settings. You can learn more here about your ad settings.
 
    * **You agree that we can download and install updates to the Service on your device.**
@@ -124,40 +133,59 @@ In return for our commitment to provide the Service, we require you to make the 
    * Content will not be deleted within 90 days of the account deletion or content deletion process beginning in the following situations:
 	
         * where your content has been used by others in accordance with this license and they have not deleted it (in which case this license will continue to apply until that            content is deleted); or
-        * where deletion within 90 days is not possible due to technical limitations of our systems, in which case, we will complete the deletion as soon as technically feasible; or
-•	where deletion would restrict our ability to:
-•	investigate or identify illegal activity or violations of our terms and policies (for example, to identify or investigate misuse of our products or systems);
-•	protect the safety and security of our products, systems, and users;
-•	comply with a legal obligation, such as the preservation of evidence; or
-•	comply with a request of a judicial or administrative authority, law enforcement or a government agency;
-•	in which case, the content will be retained for no longer than is necessary for the purposes for which it has been retained (the exact duration will vary on a case-by-case basis).
-•	If you delete or we disable your account, these Terms shall terminate as an agreement between you and us, but this section and the section below called "Our Agreement and What Happens if We Disagree" will still apply even after your account is terminated, disabled, or deleted.
+        
+        * where deletion within 90 days is not possible due to technical limitations of our systems, in which case, we will complete the deletion as soon as technically 		 feasible; or
+      
+        * where deletion would restrict our ability to:
+
+		* investigate or identify illegal activity or violations of our terms and policies (for example, to identify or investigate misuse of our products or systems);
+		
+		* protect the safety and security of our products, systems, and users;
+		
+		* comply with a legal obligation, such as the preservation of evidence; or
+		
+		* comply with a request of a judicial or administrative authority, law enforcement or a government agency;
+		
+        * in which case, the content will be retained for no longer than is necessary for the purposes for which it has been retained (the exact duration will vary on a 		  case-by-case basis).
+		
+   * If you delete or we disable your account, these Terms shall terminate as an agreement between you and us, but this section and the section below called "Our Agreement and        What Happens if We Disagree" will still apply even after your account is terminated, disabled, or deleted.
 
 
 ## Our Agreement and What Happens if We Disagree
 ## Our Agreement.
-•	If any aspect of this agreement is unenforceable, the rest will remain in effect.
-•	Any amendment or waiver to our agreement must be in writing and signed by us. If we fail to enforce any aspect of this agreement, it will not be a waiver.
-•	We reserve all rights not expressly granted to you.
+
+   * If any aspect of this agreement is unenforceable, the rest will remain in effect.
+   * Any amendment or waiver to our agreement must be in writing and signed by us. If we fail to enforce any aspect of this agreement, it will not be a waiver.
+   * We reserve all rights not expressly granted to you.
+
 
 ## Who Has Rights Under this Agreement.
-•	This agreement does not give rights to any third parties.
-•	You cannot transfer your rights or obligations under this agreement without our consent.
-•	Our rights and obligations can be assigned to others. For example, this could occur if our ownership changes (as in a merger, acquisition, or sale of assets) or by law.
+   * This agreement does not give rights to any third parties.
+   * You cannot transfer your rights or obligations under this agreement without our consent.
+   * Our rights and obligations can be assigned to others. For example, this could occur if our ownership changes (as in a merger, acquisition, or sale of assets) or by law.
 
 ## Who Is Responsible if Something Happens.
-•	Our Service is provided "as is," and we can't guarantee it will be safe and secure or will work perfectly all the time. TO THE EXTENT PERMITTED BY LAW, WE ALSO DISCLAIM ALL WARRANTIES, WHETHER EXPRESS OR IMPLIED, INCLUDING THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.
-•	We also don’t control what people and others do or say, and we aren’t responsible for their (or your) actions or conduct (whether online or offline) or content (including unlawful or objectionable content). We also aren’t responsible for services and features offered by other people or companies, even if you access them through our Service.
-•	Our responsibility for anything that happens on the Service (also called "liability") is limited as much as the law will allow. If there is an issue with our Service, we can't know what all the possible impacts might be. You agree that we won't be responsible ("liable") for any lost profits, revenues, information, or data, or consequential, special, indirect, exemplary, punitive, or incidental damages arising out of or related to these Terms, even if we know they are possible. This includes when we delete your content, information, or account.
-•	Notwithstanding the foregoing, applicable law may not allow the limitation or exclusion of liability set forth above. In such case, we shall bear liability to the extent required by such law.
+   * Our Service is provided "as is," and we can't guarantee it will be safe and secure or will work perfectly all the time. TO THE EXTENT PERMITTED BY LAW, WE ALSO DISCLAIM ALL      WARRANTIES, WHETHER EXPRESS OR IMPLIED, INCLUDING THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.
+
+   * We also don’t control what people and others do or say, and we aren’t responsible for their (or your) actions or conduct (whether online or offline) or content (including        unlawful or objectionable content). We also aren’t responsible for services and features offered by other people or companies, even if you access them through our Service.
+
+   * Our responsibility for anything that happens on the Service (also called "liability") is limited as much as the law will allow. If there is an issue with our Service, we        can't know what all the possible impacts might be. You agree that we won't be responsible ("liable") for any lost profits, revenues, information, or data, or consequential,      special, indirect, exemplary, punitive, or incidental damages arising out of or related to these Terms, even if we know they are possible. This includes when we delete your      content, information, or account.
+
+   * Notwithstanding the foregoing, applicable law may not allow the limitation or exclusion of liability set forth above. In such case, we shall bear liability to the extent        required by such law.
+   
 
 ## How We Will Handle Disputes.
+
 If you are a consumer, or where required by applicable law, the laws of the country in which you reside will apply to any claim, cause of action, or dispute you have against us that arises out of or relates to these Terms ("claim"), and you may resolve your claim in any competent court in that country that has jurisdiction over the claim. In all other cases, you agree that the claim must be resolved exclusively in the U.S. District Court for the Northern District of California or a state court located in San Mateo County, that you submit to the personal jurisdiction of either of these courts for the purpose of litigating any such claim, and that the laws of the State of California will govern these Terms and any claim, without regard to conflict of law provisions. Without prejudice to the foregoing, you agree that, in its sole discretion, Doowa Inc. may also bring any claim we have against you related to efforts to abuse, interfere or engage with our products in unauthorized ways in the country in which you reside that has jurisdiction over the claim.
 
+
 ## Unsolicited Material.
+
 We always appreciate feedback or other suggestions, but may use them without any restrictions or obligation to compensate you for them, and are under no obligation to keep them confidential.
 
+
 ## Updating These Terms
+
 We may change our Service and policies, and we may need to make changes to these Terms so that they accurately reflect our Service and policies. Unless otherwise required by law, we will notify you before we make changes to these Terms and give you an opportunity to review them at least 30 days before they go into effect. Then, if you continue to use the Service following the effective date of the changes, you will be bound by the updated Terms. If you do not want to agree to these or any updated Terms, you can delete your account, here.
 
 
