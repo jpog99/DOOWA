@@ -3,6 +3,7 @@ package com.example.doowa;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +26,7 @@ import java.util.regex.Pattern;
 public class FoodbankFragment extends Fragment implements AdapterView.OnItemSelectedListener, View.OnClickListener {
     Spinner dropdown;
     ArrayAdapter<String> myAdapter;
-    TextView txt_name,txt_openingHour,txt_address,txt_details,txt_phone;
+    TextView txt_name,txt_openingHour,txt_address,txt_details,txt_phone,txt_guideline;
     String donationType;
     Button btn_setLocation;
     ImageView camera;
@@ -50,6 +51,8 @@ public class FoodbankFragment extends Fragment implements AdapterView.OnItemSele
         txt_phone = (TextView) view.findViewById(R.id.txt_fbPhone);
         txt_details = (TextView) view.findViewById(R.id.txt_fbDetails);
         camera = (ImageView) view.findViewById(R.id.img_fbCamera);
+        txt_guideline = (TextView) view.findViewById(R.id.txt_fbguideline);
+        txt_guideline.setMovementMethod(LinkMovementMethod.getInstance());
 
         btn_setLocation.setOnClickListener(this);
 
