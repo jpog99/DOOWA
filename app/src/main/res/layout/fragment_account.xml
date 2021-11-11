@@ -285,7 +285,7 @@
         app:layout_constraintVertical_bias="0.763" />
 
     <TextView
-        android:id="@+id/textView23"
+        android:id="@+id/txt_accSettings"
         android:layout_width="263dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -303,7 +303,7 @@
         app:layout_constraintVertical_bias="0.647" />
 
     <TextView
-        android:id="@+id/textView24"
+        android:id="@+id/txt_accHistory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -321,7 +321,7 @@
         app:layout_constraintVertical_bias="0.733" />
 
     <TextView
-        android:id="@+id/textView25"
+        android:id="@+id/txt_accFAQ"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -339,7 +339,7 @@
         app:layout_constraintVertical_bias="0.814" />
 
     <TextView
-        android:id="@+id/textView26"
+        android:id="@+id/txt_accBug"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"

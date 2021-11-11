@@ -16,9 +16,13 @@
         android:theme="@style/Theme.Doowa"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".BugReportActivity"
+            android:exported="false"
+            android:label="Bugs Report/ Suggestions"/>
+        <activity
             android:name=".DetailsActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" /> />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".ForgotPassActivity"
             android:exported="false"

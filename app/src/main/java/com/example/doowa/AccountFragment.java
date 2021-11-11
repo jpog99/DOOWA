@@ -24,7 +24,7 @@ public class AccountFragment extends Fragment {
 
     ImageView img_acc;
     TextView txt_accFullname,txt_accUsername;
-    TextView googleSignOut;
+    TextView googleSignOut,txt_bug;
     RatingBar ratingbar;
     @Nullable
     @Override
@@ -77,6 +77,15 @@ public class AccountFragment extends Fragment {
                 builder.show();
             }
         });
+        txt_bug = (TextView) view.findViewById(R.id.txt_accBug);
+        txt_bug.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),BugReportActivity.class);
+                startActivity(intent);
+            }
+        });
+
         return view;
     }
 }
