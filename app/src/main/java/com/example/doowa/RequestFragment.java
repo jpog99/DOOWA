@@ -55,6 +55,7 @@ public class RequestFragment extends Fragment implements AdapterView.OnItemSelec
         txt_guideline.setMovementMethod(LinkMovementMethod.getInstance());
 
         btn_setLocation.setOnClickListener(this);
+        camera.setOnClickListener(this);
 
 
         return view;
@@ -63,6 +64,10 @@ public class RequestFragment extends Fragment implements AdapterView.OnItemSelec
     @Override
     public void onClick(View v){
         switch (v.getId()){
+            case R.id.img_rqCamera:
+                Intent i = new Intent(getContext(),CameraActivity.class);
+                startActivity(i);
+                break;
             case R.id.btn_rqSetMap:
                 fbSubmission();
                 if(name.isEmpty() ||address.isEmpty() ||details.isEmpty() ||donationType.isEmpty()||phone.isEmpty()){

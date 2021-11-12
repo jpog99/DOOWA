@@ -9,12 +9,14 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
@@ -65,6 +67,8 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
     String name,meetingTime,address,details,donationType,phone,type,time,profilepic,image;
     int report;
     boolean useCurrLoc;
+    SharedPreferences prefs;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -160,6 +164,9 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
                         String result = putData.getResult();
                         if(result.equals("Request DB Success")){
                             Toast.makeText(SetLocationActivity.this, "Your " + type + " has been marked on the map successfully! Thank you for your contribution!", Toast.LENGTH_SHORT).show();
+                            SharedPreferences.Editor editor = prefs.edit();
+                            editor.remove("image");
+                            editor.commit();
                             finish();
                         }else if(result.equals("Request DB Failed")){
                             Toast.makeText(SetLocationActivity.this,"Currently unable to connect to database. Please try again later..", Toast.LENGTH_SHORT).show();
@@ -191,7 +198,9 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
 
 
         //image left
-        image = "";
+        prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        image = prefs.getString("image", "");
+
 
 
     }

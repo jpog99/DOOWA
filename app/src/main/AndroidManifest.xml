@@ -16,9 +16,13 @@
         android:theme="@style/Theme.Doowa"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".CameraActivity"
+            android:exported="false"
+            android:label="Picture Upload" />
+        <activity
             android:name=".ReportActivity"
-            android:label="Submission Report."
-            android:exported="false" />
+            android:exported="false"
+            android:label="Submission Report." />
         <activity
             android:name=".BugReportActivity"
             android:exported="false"

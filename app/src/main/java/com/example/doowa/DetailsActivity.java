@@ -7,6 +7,7 @@ import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -42,6 +43,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
     private static final String DBRequest_URL = "https://doowa-server.herokuapp.com/requestDB.php";
     List<Requests> requestList;
     private static final int REQUEST_CALL = 1;
+    ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +63,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         img_profilepic = (ImageView) findViewById(R.id.img_detailsProfilePic);
         img_call = (ImageView)findViewById(R.id.img_detailsCall);
         img_msg = (ImageView)findViewById(R.id.img_detailsMsg);
+        progressDialog = new ProgressDialog(this);
 
         img_call.setOnClickListener(this);
         img_msg.setOnClickListener(this);
@@ -73,6 +76,8 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
 
 
     private void loadRequests() {
+        progressDialog.show();
+        progressDialog.setContentView(R.layout.show_dialog);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, DBRequest_URL,
                 new Response.Listener<String>() {
                     @Override
@@ -137,7 +142,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
                                         txt_meetingType.setVisibility(View.INVISIBLE);
                                         txt_meetingTime.setVisibility(View.INVISIBLE);
                                     }
-
+                                    progressDialog.dismiss();
                                     break;
                                 }
 

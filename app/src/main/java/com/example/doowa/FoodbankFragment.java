@@ -55,6 +55,7 @@ public class FoodbankFragment extends Fragment implements AdapterView.OnItemSele
         txt_guideline.setMovementMethod(LinkMovementMethod.getInstance());
 
         btn_setLocation.setOnClickListener(this);
+        camera.setOnClickListener(this);
 
 
         return view;
@@ -63,6 +64,10 @@ public class FoodbankFragment extends Fragment implements AdapterView.OnItemSele
     @Override
     public void onClick(View v){
         switch (v.getId()){
+            case R.id.img_fbCamera:
+                Intent i = new Intent(getContext(),CameraActivity.class);
+                startActivity(i);
+                break;
             case R.id.btn_fbSetMap:
                 fbSubmission();
                 if(name.isEmpty() ||openingHour.isEmpty() ||address.isEmpty() ||details.isEmpty() ||donationType.isEmpty()||phone.isEmpty()){

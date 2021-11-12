@@ -104,6 +104,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:clickable="false"
+        android:isIndicator="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.187"
