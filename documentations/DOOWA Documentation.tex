@@ -93,10 +93,12 @@ Yogiyo is a food delivery service application which enable users to get their fo
 Coupang is an online shopping application based in Seoul, South Korea that sells products from a wide-ranging category including food, clothing, fresh produce, baby products and many more. User can shop online in the comfort of their own home and have the products delivered on their doorsteps. In the application, users can know the current location of their parcel through an icon. Every time the parcel moves from the seller to the warehouse or currently in delivery, each and every stage of this process is shown to the user so that they can have the assurance that the product that they buy will arrive. We want to do the same thing with our application in case a donor wants to send products through the postal service. \\
 \item \textit{Google/Facebook Account}\\
 Google and Facebook account is something that the majority of people have. We have also seen a lot of application nowadays which requires first time users to make an account if they want to use the services provided by the application. Similar to this, our application will also require first time user to register an account with us. However, instead of filling in their details one by one, we will allow users to use their already existing Google of Facebook account to register on our application. This will ensure smooth registration process and provide a hassle-free service to our users.\\
-\item \textit{AirAsia AVA} \\
-Air Asia is one of the famous low-cost airline that is originated form Malaysia. Its website has a feature called AVA (AirAsia Virtual Allstar) which is an AI chat bot that can be used by the customer to help them undergo the booking and flight cancellation processes or even find any cheapest flight available at any time. Furthermore, AVA are implemented in AirAsia official application and also Facebook. On Facebook, you can start up a conversation with the official AirAsia Facebook account and it will be replied by AVA instantly. Additionally, this chat bot also has its own mobile phone number which can be used from WhatsApp, a messenger application and interact with the customers. Our goal is to implement this chat bot into our donation application so that our application can be fully interactive with any other social messenger application.\\
+\item \textit{Sambal SOS App} \\
+The effects of pandemic have hit Malaysia in many aspects that this has increased the suicide rates at an all-time high. Therefore, Sambal SOS app or know as “White Flag” is an application that is programmed by three Malaysian students where the purpose of the application is to connect Malaysians who are in need with those who can help. Users can also access through web application and log in with Google or Facebook account. This application is also implemented map where users can give their hands easily depending on their location. Donator and recipient can immediately connect on this app to have further details regarding their needs. Recipient can also fill in their details and what type of donations they need so that donator can have detailed information before giving out donation.  This application has a basic interface where all generations are able to use the features on the application at ease. \\
 \item \textit{SirenGPS} \\
-SirenGPS integrates emergency management tools with real-time visibility and interoperability for emergency managers, first responders, and stakeholders in your community. This application also has a Siren Alert feature that can send real-time messages to specific groups, locations, buildings or your entire community. Siren Alert not only allows you to inform individuals of a crisis in their immediate vicinity, it lets you warn people as they approach a threat and steer them toward safety. With Siren Alert, you can also enable individuals in your community to respond back in real-time. Our application plans to integrate the Siren Alert feature and enable anyone to alert any person nearby for donation. 
+SirenGPS integrates emergency management tools with real-time visibility and interoperability for emergency managers, first responders, and stakeholders in your community. This application also has a Siren Alert feature that can send real-time messages to specific groups, locations, buildings or your entire community. Siren Alert not only allows you to inform individuals of a crisis in their immediate vicinity, it lets you warn people as they approach a threat and steer them toward safety. With Siren Alert, you can also enable individuals in your community to respond back in real-time. Our application plans to integrate the Siren Alert feature and enable anyone to alert any person nearby for donation. \\
+\item \textit{ShareTheMeal}\\
+This application is launched by the United Nations with the aim of feeding the needy especially with foods. This app is available in about 9 languages, including English, Spanish, French, German, Italian, Portuguese, Russian, Korean, and Japanese. Besides, this app gives users a direct channel to fund UN efforts in supporting children in need, on the go, with just a single tap. It only costs 0.50USD to feed one hungry child a day, plus users can track where the meals are distributed and the impact of the donations to the needy. ShareTheMeal application is an extension of the ShareTheMeal non-profit initiative run by the World Food Programme (WFP) which is the world’s largest humanitarian agency combating hunger globally and providing food aid to an estimated 80 million people each year. Therefore, this application covers a wide range of location where people in need get to seek help easier.\\
 \end{enumerate}
 
 
@@ -115,11 +117,11 @@ SirenGPS integrates emergency management tools with real-time visibility and int
 \begin{itemize}
 \item \textbf{Chat Bot}
 \end{itemize}
-\par The application should provide a chat bot service to the users which let the users to ask questions and set a reminder. This chat bot should not use an AI approach, but rather a very simple approach where the users just type in the command and arguments and the bot will reply accordingly. The chat bot should have various kind of features and commands that covers all the users’ needs.\\
+\par The application should provide a chat bot service to the users which let the users to ask questions and set a reminder. This chat bot should not use an AI approach, bdut rather a very simple approach where the users just type in the command and arguments and the bot will reply accordingly. The chat bot should have various kind of features and commands that covers all the users’ needs.\\
 \begin{itemize}
 \item \textbf{Maps}
 \end{itemize}
-\par The application should have a map as the main interface. To implement this, the Google Maps API services will be used. On this map, it should show all the locations of the other users that are requesting for donation and nearby foodbanks. If the user is a donor, the map should show the location of where the donor is giving out the donation, the time available and the type of donation which will be indicated by an icon on the map. If the user is a receiver, the map will display their location for another donor to come and visit them and the severity of their desperation which will be indicated by color hue of their location. The locations of the two types of users should be indicated by the common map pin with different color each. If the location is an organization type donor, a special pin should be used.\\
+\par The applicadftion should have a map as the main interface. To implement this, the Google Maps API \\services will be used. On this map, it should show all the locations of the otherd users that are requesting for donation and nearby foodbanks. If the user is a donor, the map should show the location of where the donor is giving out the donation, the time available and the type of donation which will be indicated by an icon on the map. If the user is a receiver, the map will display their location for another donor to come and visit them and the severity of their desperation which will be indicated by color hue of their location. The locations of the two types of users should be indicated by the common map pin with different color each. If the location is an organization type donor, a special pin should be used.\\
 \begin{itemize}
 \item \textbf{Online Banking}
 \end{itemize}
@@ -509,11 +511,24 @@ Failed registration can only be occurred whenever a user tries to register using
 \caption{Failed registration.}
 \end{figure}
 
-3) Password retrieval\\
-Sometimes user might forgot their password from time to time. On the login page, there will be a small clickable text "Forgot Password?" which can be used by the users to reset their password. Users only need to provide their email address which was used for account registration into the field provided. Under the text field, a button "SEND EMAIL VERIFICATION" will be provided and whenever clicked, an email containing the hashed code of the user password will be sent to the inputted email. Failure will occur if the field is blank, invalid email format or the email is not found in the account database.
+3) Sign In with Google Authentication\\
+
+Additionally, users can also sign in into our application by using their existing Google account. Using this, users do not need to undergo the hassle process of creating new account for our application. If users uses this alternate sign in method, the user full name, username, and profile picture will be used instead for the account. With this method, users can feel more secure of their account and they are linked and administrated by the Google itself. To implement this feature, we used the Google Firebase authentication service and implemented the API into our application. Through the Firebase database, we can identify which users are logged in using the Google sign in method. Finally, users only need to sign in once through the Google authentication and the next time users open the app, they will be automatically signed in.
+
 
 \begin{figure}[h!]
-\includegraphics[width=4cm]{./img/retrievepage}
+\includegraphics[width=4cm]{./img/googlesignin}
+\centering
+\caption{Google sign in button.}
+\end{figure}
+
+
+
+4) Password retrieval\\
+\par Sometimes user might forgot their password from time to time. On the login page, there will be a small clickable text "Forgot Password?" which can be used by the users to reset their password. Users only need to provide their email address which was used for account registration into the field provided. Under the text field, a button "SEND EMAIL VERIFICATION" will be provided and whenever clicked, an email containing the hashed code of the user password will be sent to the inputted email. Failure will occur if the field is blank, invalid email format or the email is not found in the account database.
+
+\begin{figure}[h!]
+\includegraphics[width=3cm]{./img/retrievepage}
 \centering
 \caption{Password retrieval page.}
 \end{figure}
@@ -560,14 +575,14 @@ Click on the "Credentials" from the tabs above and click on the "API key" to sta
 \\Finally, we can see the map being displayed in our application as the main display whenever user logs in.
 
 \begin{figure}[h!]
-\includegraphics[width=4cm]{./img/mapmain}
+\includegraphics[width=3cm]{./img/mapmain}
 \centering
 \caption{Main map display.}
 \end{figure}
 \begin{itemize}
 \item Map Markers
 \end{itemize}
-\par On the map, there should be multiple markers that are indicating the location of other users which are requesting donations. These markers has different colours according the urgency of the requester needs. For very urgent requests, they will be indicated with red markers. For moderate urgency, they will have yellow markers and for lowest priority, green marker should be used. Whenever a marker is clicked, a label showing the details of the request such as the name of the requester, the type of donation needed and full address of the location should be displayed. If multiple markers are showing up at a very close distance, the markers should be grouped as one to make it easier for another user to click the overlapping markers. 
+\par On the map, there should be multiple markers that are indicating the location of other users which are requesting donations. These markers has different icons according to the donation type. If the donation type is "MONEY", then the marker should be replaced by money icon. The same rule will be applied for the other donation types. Whenever a marker is clicked, a label showing the details of the request such as the name of the requester, the type of donation needed and full address of the location should be displayed. If multiple markers are showing up at a very close distance, the markers should be grouped as one to make it easier for another user to click the overlapping markers. 
 
 \begin{figure}[h!]
 \includegraphics[width=3.5cm]{./img/mapmulti}
@@ -579,47 +594,342 @@ Click on the "Credentials" from the tabs above and click on the "API key" to sta
 \end{itemize}
 \par As mentioned before, upon clicking any markers on the map, the application will bring the users to another page that will display all the details of the request such as the full name of the receiver, type of donation requested, time and date of request, and much more. On the page, there will be a call and message button which can be used by the donor to either call or message the receiver. Whenever these buttons are clicked, a pop up will appear at the bottom of the screen, showing multiple choices of applications which the donor prefer to make a call or send a message. Another button with the icon "navigation" also should be added on the details page. When this button is clicked, the application will launch the Google Maps application to show the location of the marker inside that app which will provide the navigation available to reach the location.\\
 
-\textbf{INSERT UI FOR DETAIL PAGE HERE!!!}\\
-
 \begin{itemize}
 \item Marker removed upon completed donation
 \end{itemize}
 \par On the requester side, whenever they are satisfied with the donation arrived, they can click the "Donation completed" button on their donation request page. Clicking this button will cause the marker of the request location to be removed from the map and database.\\
 
 \subsection{Details Page}
--online banking\\
--report button\\
--chatroom(other messaging app)\\
 
-\subsection{Request Page}
--set meeting (request page)\\
--choose type donation (request page)\\
--pic upload (request page)\\
--guideline n manual (request page)\\
-
-\subsection{Chatbot}
-The  application  should  provide  a  chat  bot  service  to  the users which let the users to ask questions and set a reminder.This chat bot should not use an AI approach, but rather a very simple  approach  where  the  users  just  type  in  the  command and  arguments  and  the  bot  will  reply  accordingly.  The  chatbot  should  have  various  kind  of  features  and  commands  that covers all the users’ needs. 
-\\\par  At the bottom of the screen, there is a navigation bar to navigate the users to the chat bot page. The user simply have to click the "Live Help" button to navigate to the chat bot page.
+\par As mentioned before, Whenever the users clicked the markers on the map, the details page of the donation request will appear. This details page will display all the necessary information of the requester such as their account username, profile picture, full name, address, explanation of the donation request, time and date and more.
 
 \begin{figure}[h!]
-\includegraphics[width=4cm]{chatsample}
+\includegraphics[width=3.5cm]{./img/detailspage}
 \centering
-\caption{Sample UI for chat bot page.}
+\caption{Details of donation request.}
+\end{figure}
+At the top of the page, the type of donation will be displayed. The type of donation can be either "Money", "Necessities", "Food" or "Others". Underneath it is the profile picture of the account of the requester. Besides it, there are two buttons for call and message. If any users clicked either of the button, the app will direct the user to another application accordingly.
+
+\begin{figure}[h!]
+\includegraphics[width=3.5cm]{./img/details1}
+\centering
+\caption{Buttons for contacting the requester.}
+\end{figure}
+
+\begin{itemize}
+\item Call button
+\end{itemize}
+Whenever the users clicked this button on the details page, the application will immediately make call to the phone number provided by the requester.
+\begin{itemize}
+\item Message button
+\end{itemize}
+Whenever the users clicked this button on the details page, the application will immediately open up messaging app for the user to send message to the requester.\\
+
+At the center of the details page will be filled by the details of the donation request as mentioned before. Additionally, at the bottom of the screen, the image uploaded by the requester will be shown. Moreover, there will also be another button "Transfer Money". With this button, any user will be directed to the banking app which will enable them to transfer money through online banking to the bank account number provided by the requester. Finally, at the very bottom of the page, users can click the "Report this request?" button if the request is inappropriate, suspicious or does not follow the donation request guidelines. Users can state the reason of the report and submit them.
+
+\begin{figure}[h!]
+\includegraphics[width=3.5cm]{./img/details2}
+\centering
+\caption{Buttons for transfer money and report.}
 \end{figure}
 
 \begin{figure}[h!]
-\includegraphics[width=4cm]{chatcode}
+\includegraphics[width=3.5cm]{./img/report}
 \centering
-\caption{Simple pseudocode for chat bot.}
+\caption{Submission report page.}
+\end{figure}
+
+\subsection{Request Page}
+
+Users can request their donation on this page. Users will be asked to fill up few details before proceeding to submit their donation request.
+
+\begin{figure}[h!]
+\includegraphics[width=3cm]{./img/rqPage}
+\centering
+\caption{Donation request page.}
+\end{figure}
+
+\begin{itemize}
+\item "Donation Request" text
+\end{itemize}
+
+- This is the title of the page to indicate users that they are accessing the donation request page and its details.\\
+
+\begin{itemize}
+\item “Don't worry, Be Happy!” slogan
+\end{itemize}
+- This is the short slogan placed below the title page to motivate and desire users to be not ashamed for not being fortunate. \\
+
+\begin{itemize}
+\item Camera icon
+\end{itemize}
+- This lets users to upload an appropriate picture regarding their needs. There is only one picture can be uploaded at a time.\\
+
+\begin{itemize}
+\item Upload Picture text
+\end{itemize}
+- This is an indicator for users to notice where to upload picture regarding their needs. \\
+
+\begin{itemize}
+\item Requester Name section
+\end{itemize}
+-  Users must fill in this section with their correct full name. They may fill in this section with alphabets and numbers. The full name may not be too long exceeding the space provided.\\
+
+\begin{itemize}
+\item Choose Donation Type section
+\end{itemize}
+- Users can click this section to have a pop-down menu where they can go more details regarding what type of donation, they are giving by choosing the options such as "money", "necessities", "groceries", and "others". Users can select ‘others’ if the type of donation is not available among the given options. \\
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./img/dropdown}
+\centering
+\caption{Donation type choices.}
+\end{figure}
+
+\begin{itemize}
+\item Address section
+\end{itemize}
+- This lets users to fill in their full address of their home so that people will get the information of where they can provide the donation. In this section, users may fill in with alphabets, numbers, and also special characters. \\
+ 
+\begin{itemize}
+\item Details  section
+\end{itemize}
+- Users can add more details regarding their needs such as their necessities, how many family members are in need and the specific things that are needed. This section provides a space for users to add any more details that seem important for people to know that have not been informed in other sections. \\
+
+\begin{itemize}
+\item Available Meeting Time section
+\end{itemize}
+- This allows users to inform the time that is most suitable to provide donations or visitation by filling in when is the available time so that people can get aware and plan when the best time is to visit them. This field is optional.\\
+
+\begin{itemize}
+\item Contact Number section.
+\end{itemize}
+- This is the section for users to fill in their contact number in case of people want to reach out to them. This section lets user to fill in their contact number with numbers and special characters. It is preferable to have at least one contact number to be filled in.\\
+
+\begin{itemize}
+\item Bank and Account Number section
+\end{itemize}
+-Users can fill up this field with the details of their preferred bank account and the number. Using this will let other people to give donation through bank transfer without the hassle of meeting up. This field is optional.\\ 
+
+
+\begin{itemize}
+\item Set Map Location button 
+\end{itemize}
+- Users can press this button to navigate to the real map page where they can indicate the pinpoint on the map of where is exactly the location of their location. This helps to strengthen the address section where it lets people to confirm where the requester is by looking at the map. Clicking this button will bring the users to the map selection page to pin their selected location for their donation request. \\
+
+\begin{itemize}
+\item Guidelines
+\end{itemize}
+At the very bottom of the screen, there will be a link that will redirects the user to the guideline page on their defaul browser. Users can refer to this guidelines and take extra precautions so that the submission are complying with our submission guidelines.
+
+\subsection{Food Bank Submission}
+
+On this app, users can also open up a donation spot where other people who are in need can came by themselves to receive help needed. For that, user will be able to submit a submission for their open donation on the "Foodbank Submission" page. The food bank submission page is very similar to the donation request page with few different attributes.
+
+\begin{figure}[h!]
+\includegraphics[width=3cm]{./img/foodbankpage}
+\centering
+\caption{Main page for food bank submission.}
+\end{figure}
+
+
+\begin{itemize}
+\item "Food Bank" text
+\end{itemize}
+
+- This is the title of the page to indicate organization (users) that they are accessing the food bank page and its details.\\
+
+\begin{itemize}
+\item “Let’s Distribute!” slogan
+\end{itemize}
+
+- This is the short slogan placed below the title page to motivate and desire users to be part of the food bank’s activity. \\
+\begin{itemize}
+\item Camera icon
+\end{itemize}
+- This lets organization (users) to upload an appropriate picture regarding their organizations. There is only one picture can be uploaded at a time.\\
+
+\begin{itemize}
+\item Upload Picture text
+\end{itemize}
+- This is an indicator for users to notice where to upload picture regarding their organizations. \\
+
+\begin{itemize}
+\item Organization Name section
+\end{itemize}
+- (Organization) Users must fill in this section with their correct organization’s name. They may fill in this section with alphabets and numbers. The organization’s name may not be too long exceeding the space provided.\\
+
+\begin{itemize}
+\item Choose Donation Type section
+\end{itemize}
+- Users can click this section to have a pop-down menu where they can go more details regarding what type of donation, they are giving by choosing the options such as money, necessities, groceries, and others. Users can select ‘others’ if the type of donation is not available among the given options. \\
+
+\begin{itemize}
+\item Address section
+\end{itemize}
+- This lets users to fill in their full address of the organization so that people will get the information of where they can provide the donation. In this section, users may fill in with alphabets, numbers, and also special characters. \\
+ 
+\begin{itemize}
+\item Details (tell me about what you are donating) section
+\end{itemize}
+- Users can add more details regarding their organizations such as their organization landmarks, person in charge and the process of providing donation to this organization. This section provides a space for organizations to add any more details that seem important for people to know that have not been informed in other sections. \\
+
+\begin{itemize}
+\item Operating Hours section
+\end{itemize}
+- This allows users to inform the time that is most suitable to provide donations by filling in when is the opening time and when is the closing time so that people can get aware and plan when the best time is to visit the organization.\\
+
+\begin{itemize}
+\item Contact Number section.
+\end{itemize}
+- This is the section for organization to fill in their contact number in case of people want to reach out the organization. This section lets user to fill in their contact number with numbers and special characters. It is preferable to have at least one contact number to be filled in.\\
+
+\begin{itemize}
+\item Set Map Location button 
+\end{itemize}
+- Users can press this button to navigate to the real map page where organization can indicate the pinpoint on the map of where is exactly the location of the organization. This helps to strengthen the address section where it lets people to confirm where the organization is by looking at the map. Clicking this button will bring the users to the map selection page to pin their selected location for their foodbank. \\
+
+\begin{itemize}
+\item Guidelines
+\end{itemize}
+At the very bottom of the screen, there will be a link that will redirects the user to the guideline page on their defaul browser. Users can refer to this guidelines and take extra precautions so that the submission are complying with our submission guidelines.
+
+
+Unlike the Donation Request page, all the fields in the foodbank submission page are mandatory. Failure to such will cause the application to prompt an error to the blank fields until the user inputted the filed.
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./img/fbError}
+\centering
+\caption{Error on blank field.}
+\end{figure}
+
+\subsection{Select Location Page}
+
+This page will appear whenever a user clicked the "Set Map Location" from the donation request page or foodbank submission page. On this page, a map will be executed on the screen and there will be 2 button at the bottom of the screen which are "Set Location" and "Use Current Location". User can use this page to select their desired location for their request or foodbank to appear on the map at the Main page after a successful submission. There will be one draggable marker on the initial execution.
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./img/mapPage}
+\centering
+\caption{Location selection page.}
+\end{figure}
+
+Before user are able to reach this page, they must turn on the location and network services on their devices. Failure to do such will causes an error and user will be rejected from entering the page.
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./img/maperror}
+\centering
+\caption{Error on disabled location service.}
+\end{figure}
+
+\begin{itemize}
+\item Set Location Button
+\end{itemize}
+
+If users wanted to use the draggable marker to mark their desired location, they should use this button. The position of the marker will then be recorded and be added to their submission. After clicking the button, another popup window will appear to get the confirmation of the user if they are really satisfied with the location. If they are satisfied, users should click "OK" prompt on the popup window. If not, users can click the "Cancel" button or just click anywhere outside the popup window to return to the location selection page.
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./img/selectconfirm}
+\centering
+\caption{Confirmation popup window.}
+\end{figure}
+\begin{itemize}
+\item Use Current Location
+\end{itemize}
+If users prefer to use their own current location, the users can click this button without having to drag the map marker. Using this will cause the donation request or foodbank submission to appear on the map on the exact current location of the user. User also must be aware that their location service should be on before clicking this button. Failure to do such will cause the app to return to the donation request page or foodbank submission age. After clicking the button, another popup window will appear to get the confirmation of the user if they are really satisfied with the location. If they are satisfied, users should click "OK" prompt on the popup window. If not, users can click the "Cancel" button or just click anywhere outside the popup window to return to the location selection page. 
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./img/currconfirm}
+\centering
+\caption{Confirmation popup window.}
+\end{figure}
+If the user successfully chosen the desired location, a message will be shown at the bottom of the page informing that the submission is successfully uploaded and the marker should appear immediately on the map in the Map page.
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./img/mapsuccess}
+\centering
+\caption{Successfully submitted the form.}
 \end{figure}
 
 \subsection{Account Page}
--points for donor (account page)\\
--notification (account page)\\
--donor rating (account page)\\
--reminder (account page)\\
--donor tracker (account page)\\
 
+\par The application should have another page dedicated to show all the account information such as user name, full name, user ratings and others services and features. 
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./img/accountpage}
+\centering
+\caption{User account page.}
+\end{figure}
+
+At the top of the page, the user profile picture account will be displayed and their user name and full name will be displayed underneath. On the right side, a numeric display will be shown to indicate the rating of the user. Below the user information is a rating bar that shows accordingly by the rating. If the user signed in using the Google authentication service, the profile picture, user name and full name will be displayed according to the user Google account.\\
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./img/acc1}
+\centering
+\caption{User details are displayed at top.}
+\end{figure}
+
+Below the details are the 3 additional features that are provided for every user. \\
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./img/acc2}
+\centering
+\caption{3 additional features.}
+\end{figure}
+\begin{itemize}
+\item Request List
+\end{itemize}
+This tab will display all the request that has been submitted by the user. User can remove their made requests from here when they are satisfied with all the donation received. Doing such will remove the request from the list and also remove the marker from the map.
+\begin{itemize}
+\item Donation Tracker
+\end{itemize}
+This tab is only used for receiver who are going to receive donations via delivery or postage. In this tab, user can see the progress of the postage and their current status.
+\begin{itemize}
+\item Points Exchange
+\end{itemize}
+If the users completed any donations, they will receive points and those points can be exchanged to various prizes here. Such prizes are for example discount coupons, cashback, meals and much more.\\
+
+
+At the half bottom of the page, we can see few services for the user to manage their account. 
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./img/acc3}
+\centering
+\caption{Bottom half of page.}
+\end{figure}
+\begin{itemize}
+\item Account Settings
+\end{itemize}
+As the name implies, this button will let the users to manage their account details such as full name, user name, change password, change profile picture, change app language and much more.
+\begin{itemize}
+\item Donation/Requests History
+\end{itemize}
+User can check their completed donations and deleted requests here for future references.
+\begin{itemize}
+\item FAQs
+\end{itemize}
+If users has any questions regarding our application features and services, they can refer to the frequently asked questions (FAQs) here. 
+\begin{itemize}
+\item Bugs Report
+\end{itemize}
+If users encountered any problem or error in our application they can submit a report form here. Additionally, they also can submit suggestion to improve the application.
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./img/bugs}
+\centering
+\caption{Bugs report and suggestions page.}
+\end{figure}
+
+\begin{itemize}
+\item Sign Out
+\end{itemize}
+Users can sign out from their account by just clicking this button. Upon click, a popup alert window will appear and ask the user if they really wanted to sign out. If "Cancel" is clicked, user will not sign out and stay on the account page. If "OK" button is clicked, user will be sent to the login page and logged out from the application.
+
+\begin{figure}[h!]
+\includegraphics[width=5cm]{./img/signout}
+\centering
+\caption{Sign out confirmation.}
+\end{figure}
+\section{Architecture and Design}
+
+\textit{(TO BE CONTINUED...)}
 
 \end{document}
 
