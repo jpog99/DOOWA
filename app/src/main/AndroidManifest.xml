@@ -16,6 +16,22 @@
         android:theme="@style/Theme.Doowa"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".checkSubmissionLocation"
+            android:exported="false"
+            android:label="Submission Location" />
+        <activity
+            android:name=".TrackingActivity"
+            android:exported="false"
+            android:label="Package Tracking" />
+        <activity
+            android:name=".ListDetailsActivity"
+            android:exported="false"
+            android:label="Submission Details" />
+        <activity
+            android:name=".SubmissionListActivity"
+            android:exported="false"
+            android:label="Submission List" />
+        <activity
             android:name=".CameraActivity"
             android:exported="false"
             android:label="Picture Upload" />

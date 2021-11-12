@@ -123,7 +123,7 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
                     lng = markerLng;
                 }
                 if(lat == 0.0){
-                    Toast.makeText(SetLocationActivity.this,"Currently unable to connect to database. Please try again later.. Error no: 0", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SetLocationActivity.this,"Something went wrong. Try restarting the app or alternatively use the marker to set the location.", Toast.LENGTH_SHORT).show();
                     return;
                 }
 

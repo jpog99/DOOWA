@@ -96,7 +96,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
                                 Log.d("Success", "Fetched from request database successfully!");
                                 for (Requests requests : requestList) {
                                     LatLng latlng = new LatLng(Double.parseDouble(requests.lat), Double.parseDouble(requests.lng));
-                                    if(requests.type.equals("request")){
+                                    if(requests.type.equals("Request")){
                                         switch (requests.donationType){
                                             case "Money":
                                                 map.addMarker(new MarkerOptions()

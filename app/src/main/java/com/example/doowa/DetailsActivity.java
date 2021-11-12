@@ -118,7 +118,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
 
                             for (Requests requests : requestList) {
                                 if(Double.parseDouble(requests.lat) == markerLat && Double.parseDouble(requests.lng) == markerLng){
-                                    if(requests.type.equals("request")){
+                                    if(requests.type.equals("Request")){
                                         txt_detailsType.setText("I need help with:");
                                         txt_detailsAsk.setText("Give Help?");
                                         txt_meetingType.setText("Meeting Time:");

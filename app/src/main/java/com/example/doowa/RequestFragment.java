@@ -31,7 +31,7 @@ public class RequestFragment extends Fragment implements AdapterView.OnItemSelec
     Button btn_setLocation;
     ImageView camera;
     String name,openingHour,address,details,phone;
-    String type = "request";
+    String type = "Request";
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

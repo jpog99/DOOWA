@@ -31,7 +31,7 @@ public class FoodbankFragment extends Fragment implements AdapterView.OnItemSele
     Button btn_setLocation;
     ImageView camera;
     String name,openingHour,address,details,phone;
-    String type = "foodbank";
+    String type = "Foodbank";
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

@@ -25,4 +25,14 @@ public class Requests {
         this.meetingTime = meetingTime;
         this.type = type;
     }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
 }
+
