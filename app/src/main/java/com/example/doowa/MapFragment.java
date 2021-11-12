@@ -1,5 +1,6 @@
 package com.example.doowa;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -39,6 +40,7 @@ import java.util.List;
 public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener {
 
     private GoogleMap map;
+    ProgressDialog progressDialog = new ProgressDialog(getActivity());
     private static final String DBRequest_URL = "https://doowa-server.herokuapp.com/requestDB.php";
     List<Requests> requestList;
 
@@ -57,6 +59,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
     }
 
     private void loadRequests() {
+
             StringRequest stringRequest = new StringRequest(Request.Method.GET, DBRequest_URL,
                     new Response.Listener<String>() {
                         @Override
@@ -154,11 +157,14 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         map = googleMap;
+        progressDialog.show();
+        progressDialog.setContentView(R.layout.show_dialog);
         requestList = new ArrayList<>();
         loadRequests();
         LatLng seoulCenter = new LatLng(37.5516389589813, 126.99199317374934);
 
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(seoulCenter,10));
+        progressDialog.dismiss();
         map.setOnInfoWindowClickListener(this);
     }
 
