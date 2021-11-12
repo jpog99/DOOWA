@@ -40,7 +40,7 @@ import java.util.List;
 public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener {
 
     private GoogleMap map;
-    ProgressDialog progressDialog = new ProgressDialog(getActivity());
+    ProgressDialog progressDialog;
     private static final String DBRequest_URL = "https://doowa-server.herokuapp.com/requestDB.php";
     List<Requests> requestList;
 
@@ -52,6 +52,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
 
         SupportMapFragment supportMapFragment = (SupportMapFragment) getChildFragmentManager()
                 .findFragmentById(R.id.google_map);
+        progressDialog = new ProgressDialog(getActivity());
 
         supportMapFragment.getMapAsync(this);
 
@@ -59,7 +60,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
     }
 
     private void loadRequests() {
-
+        progressDialog.show();
+        progressDialog.setContentView(R.layout.show_dialog);
             StringRequest stringRequest = new StringRequest(Request.Method.GET, DBRequest_URL,
                     new Response.Listener<String>() {
                         @Override
@@ -129,6 +131,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
                                                 .title("Foodbank")).setIcon(BitmapDescriptorFactory.fromResource(R.drawable.foodbank));
                                     }
                                 }
+                                progressDialog.dismiss();
 
                                /* for(MarkerOptions money : moneyList){
                                     money.visible(false);
@@ -157,14 +160,13 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         map = googleMap;
-        progressDialog.show();
-        progressDialog.setContentView(R.layout.show_dialog);
+
         requestList = new ArrayList<>();
         loadRequests();
         LatLng seoulCenter = new LatLng(37.5516389589813, 126.99199317374934);
 
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(seoulCenter,10));
-        progressDialog.dismiss();
+
         map.setOnInfoWindowClickListener(this);
     }
 
