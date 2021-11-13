@@ -18,7 +18,7 @@
         android:layout_marginTop="106dp"
         android:layout_marginEnd="132dp"
         android:backgroundTint="#00ACC1"
-        android:text="Check Tracking" />
+        android:text="@string/tracker_button" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
@@ -30,7 +30,7 @@
         android:layout_marginStart="42dp"
         android:layout_marginTop="51dp"
         android:ems="10"
-        android:hint="Enter Tracking No. "
+        android:hint="@string/tracker_text"
         android:inputType="textPersonName" />
 
     <ImageView

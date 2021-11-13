@@ -20,7 +20,7 @@
         android:backgroundTint="#00ACC1"
         android:drawableLeft="@drawable/location"
         android:drawablePadding="10sp"
-        android:text="Set Location"
+        android:text="@string/setLoc_setLocation"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.113"
@@ -30,13 +30,13 @@
 
     <Button
         android:id="@+id/btn_setlocCurrentLoc"
-        android:layout_width="136dp"
-        android:layout_height="61dp"
+        android:layout_width="159dp"
+        android:layout_height="58dp"
         android:backgroundTint="#00ACC1"
-        android:text="Use Current Location"
+        android:text="@string/setLoc_CurrLoc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.872"
+        app:layout_constraintHorizontal_bias="0.892"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.921" />

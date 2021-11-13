@@ -11,7 +11,7 @@
         android:id="@+id/button_choose_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Choose file" />
+        android:text="@string/camera_choose" />
 
     <EditText
         android:id="@+id/edit_text_file_name"
@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_toEndOf="@+id/button_choose_image"
-        android:hint="Enter file name (optional)" />
+        android:hint="@string/camera_filename" />
 
     <ImageView
         android:id="@+id/image_view"
@@ -44,6 +44,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="Use image" />
+        android:text="@string/camera_use" />
 
 </RelativeLayout>

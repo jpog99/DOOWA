@@ -250,7 +250,7 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
         mMap.addMarker(marker
                 .position(seoulCenter)
                 .draggable(true)
-                .title("Hold and drag to location"));
+                .title(getResources().getString(R.string.setLoc_marker)));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(seoulCenter,10));
         mMap.setOnMarkerDragListener(new GoogleMap.OnMarkerDragListener()
         {

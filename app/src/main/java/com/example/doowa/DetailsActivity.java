@@ -121,15 +121,15 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
                             for (Requests requests : requestList) {
                                 if(Double.parseDouble(requests.lat) == markerLat && Double.parseDouble(requests.lng) == markerLng){
                                     if(requests.type.equals("Request")){
-                                        txt_detailsType.setText("I need help with:");
-                                        txt_detailsAsk.setText("Give Help?");
-                                        txt_meetingType.setText("Meeting Time:");
+                                        txt_detailsType.setText(getResources().getString(R.string.detail_needHelpRq));
+                                        txt_detailsAsk.setText(getResources().getString(R.string.detail_giveHelpRq));
+                                        txt_meetingType.setText(getResources().getString(R.string.detail_timeRq));
                                     }else{
-                                        txt_detailsType.setText("We provide help for:");
-                                        txt_detailsAsk.setText("Ask For Help?");
-                                        txt_meetingType.setText("Operating Hours:");
+                                        txt_detailsType.setText(getResources().getString(R.string.detail_needHelpFb));
+                                        txt_detailsAsk.setText(getResources().getString(R.string.detail_giveHelpFb));
+                                        txt_meetingType.setText(getResources().getString(R.string.detail_timeFb));
                                     }
-                                    txt_time.setText("Posted On:" + requests.time);
+                                    txt_time.setText(getResources().getString(R.string.detail_posted) + requests.time);
                                     txt_name.setText(requests.displayName);
                                     txt_donationType.setText(requests.donationType);
                                     txt_address.setText(requests.address);

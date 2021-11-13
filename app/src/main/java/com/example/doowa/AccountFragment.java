@@ -100,8 +100,8 @@ public class AccountFragment extends Fragment implements View.OnClickListener{
     private void signOut() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setCancelable(true);
-        builder.setTitle("Sign Out");
-        builder.setMessage("Are you sure you want to log out?");
+        builder.setTitle(getResources().getString(R.string.signout_title));
+        builder.setMessage(getResources().getString(R.string.signout_message));
 
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override

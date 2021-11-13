@@ -22,7 +22,7 @@
         <activity
             android:name=".TrackingActivity"
             android:exported="false"
-            android:label="Package Tracking" />
+            android:label="@string/tracker_title" />
         <activity
             android:name=".ListDetailsActivity"
             android:exported="false"
@@ -30,19 +30,19 @@
         <activity
             android:name=".SubmissionListActivity"
             android:exported="false"
-            android:label="Submission List" />
+            android:label="@string/sublist_title" />
         <activity
             android:name=".CameraActivity"
             android:exported="false"
-            android:label="Picture Upload" />
+            android:label="@string/camera_title" />
         <activity
             android:name=".ReportActivity"
             android:exported="false"
-            android:label="Submission Report." />
+            android:label="@string/report_title" />
         <activity
             android:name=".BugReportActivity"
             android:exported="false"
-            android:label="Bugs Report/ Suggestions" />
+            android:label="@string/bug_title" />
         <activity
             android:name=".DetailsActivity"
             android:exported="false"

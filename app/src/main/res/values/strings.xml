@@ -1,9 +1,124 @@
 <resources>
-    <string name="app_name">Doowa</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="hyperlink_tnc">I agree with the <a href="https://github.com/jpog99/DOOWA/tree/master/documentations#doowa-term-and-services">Terms and Conditions</a></string>
+    <string name="app_name" translatable="false">Doowa</string>
+
+    <string name="login_username">Username</string>
+    <string name="login_password">Password</string>
+    <string name="login_button">LOGIN</string>
+    <string name="login_forgotPass">Forgot Password?</string>
+    <string name="login_register">Register</string>
+
+    <string name="forgotPass_enterEmail">Enter Your Email Here</string>
+    <string name="forgotPass_emailField">E-mail</string>
+    <string name="forgotPass_buttonVeri">SEND EMAIL VERIFICATION</string>
+
+    <string name="register_fullname">Fullname</string>
+    <string name="register_username">Username</string>
+    <string name="register_email">Email</string>
+    <string name="register_password">Password</string>
+    <string name="register_confirm">ConfirmPassword</string>
+    <string name="register_button">REGISTER</string>
+    <string name="register_alreadyHaveAcc">Already has an account? Log in.</string>
+
+    <string name="main_hometab">Home</string>
+    <string name="main_requesttab">Request</string>
+    <string name="main_foodbanktab">Foodbank</string>
+    <string name="main_accounttab">Account</string>
+
+    <string name="detail_needHelpRq">I need help with:</string>
+    <string name="detail_needHelpFb">We provide help for:</string>
+    <string name="detail_posted">Posted On: </string>
+    <string name="detail_giveHelpRq">Give Help?</string>
+    <string name="detail_giveHelpFb">Ask For Help?</string>
+    <string name="detail_name">Name: </string>
+    <string name="detail_address">Address: </string>
+    <string name="detail_details">Details: </string>
+    <string name="detail_timeRq">Meeting time: </string>
+    <string name="detail_timeFb">Operating Hours: </string>
+    <string name="detail_transferMoney">TRANSFER MONEY: </string>
+    <string name="detail_report">Report this submission?</string>
+
+    <string name="report_title">Submission Report</string>
+    <string name="report_text">ENter your report details of this submission.</string>
+    <string name="report_button">SUBMIT</string>
+
+    <string name="request_name">Requester Name</string>
+    <string name="request_type">Choose Donation Type</string>
+    <string name="request_address">Address</string>
+    <string name="request_details">Details (Tell more about what you want to help with)</string>
+    <string name="request_time">Available Meeting Time (Optional)</string>
+    <string name="request_phone">Contact Number</string>
+    <string name="request_bank">Bank and Account Number (Optional)</string>
+
+    <string name="camera">Upload Picture</string>
+    <string name="set_map">SET MAP LOCATION</string>
+
+    <string name="foodbank_name">Organization Name</string>
+    <string name="foodbank_type">Choose Donation Type</string>
+    <string name="foodbank_address">Address</string>
+    <string name="foodbank_details">Details (Tell more about what you are donating)</string>
+    <string name="foodbank_time">Operating Hours</string>
+    <string name="foodbank_phone">Contact Number</string>
+
+    <string name="setLoc_marker">Hold and drag to location</string>
+    <string name="setLoc_setLocation">SET LOCATION</string>
+    <string name="setLoc_CurrLoc">USE CURRENT LOCATION</string>
+
+    <string name="camera_choose">CHOOSE FILE</string>
+    <string name="camera_filename">Enter file name (optional)</string>
+    <string name="camera_use">Use Image</string>
+    <string name="camera_title">Picture Upload</string>
+
+    <string name="account_rating">Ratings</string>
+    <string name="account_submissionList">Submission List</string>
+    <string name="account_tracker">Donation Tracker</string>
+    <string name="account_exchange">Points Exchange</string>
+    <string name="account_lang">Change Language</string>
+    <string name="account_history">Donation/Requests History</string>
+    <string name="account_bugs">Bugs Report/Suggestions</string>
+    <string name="account_signout">Sign Out</string>
+
+    <string name="sublist_title">Submission List</string>
+    <string name="sublist_details">Details</string>
+    <string name="sublist_loc">Check Location</string>
+    <string name="sublist_del">Delete Submission</string>
+
+    <string name="tracker_title">Package Tracking</string>
+    <string name="tracker_text">Enter Tracking No.</string>
+    <string name="tracker_button">Check Tracking</string>
+
+    <string name="bug_title">Bug Report/Suggestions</string>
+    <string name="bug_text">Enter your bug reports or suggestions here</string>
+    <string name="bug_btn">SUBMIT</string>
+
+    <string name="signout_title">Sign Out</string>
+    <string name="signout_message">Are you sure you want to log out?</string>
+
+    <!-- warning popups
+    <string name="warning_username">Username is required!</string>
+    <string name="warning_pass">Password is required!</string>
+    <string name="warning_passType">Password must be 6 or more characters!</string>
+    <string name="warning_fullname">Full name is required!</string>
+    <string name="warning_email">Invalid Email!</string>
+    <string name="warning_passConfirm">Password confirmation is required!</string>
+    <string name="warning_passConfirmDiff">Password is different!</string>
+    <string name="warning_registerUsedName">Username/E-mail address already in use! Please try again.</string>
+    <string name="warning_registerSuccess">User has been successfully created!</string>
+    <string name="warning_emailVeriSent">Verification email has been sent to </string>
+    <string name="warning_reportfail">Please fill the form!</string>
+    <string name="warning_reportSuccess">Thank you for your submission!</string>
+    <string name="warning_cameraUpload">Are you sure to upload this image?</string>
+    <string name="warning_cameraNoFile">No file selected</string>
+    <string name="warning_cameraUploadSuccess">Image uploaded successfully!</string>
+    <string name="warning_requestName">Requester name is required!</string>
+    <string name="warning_requestAddress">Address is required!</string>
+    <string name="warning_requestDetails">Detail is required!</string>
+    <string name="warning_requestPhone">Contact number is invalid!</string>
+    -->
+
     <string name="guidelines">You can read our submission guidelines <a href="https://github.com/jpog99/DOOWA/tree/master/documentations#submission-guidelines">here</a></string>
+    <string name="hyperlink_tnc">I agree with the <a href="https://github.com/jpog99/DOOWA/tree/master/documentations#doowa-term-and-services">Terms and Conditions</a></string>
+
+
     <string-array name="donationType_list">
         <item>Money</item>
         <item>Necessities</item>
