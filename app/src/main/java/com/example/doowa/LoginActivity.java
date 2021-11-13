@@ -4,9 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -16,6 +18,11 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -31,10 +38,16 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.List;
+
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     private Button signin;
-    private TextView register,forgotpass;
-    private EditText txt_email,txt_password;
+    private TextView register, forgotpass;
+    private EditText txt_email, txt_password;
     private ProgressBar progressBar;
     private GoogleSignInClient mGoogleSignInClient;
     private final static int RC_SIGN_IN = 1;
@@ -46,9 +59,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_login);
         mAuth = FirebaseAuth.getInstance();
 
-        txt_email = (EditText)findViewById(R.id.username);
-        txt_password = (EditText)findViewById(R.id.password);
-        progressBar = (ProgressBar)findViewById(R.id.pgb_login);
+        txt_email = (EditText) findViewById(R.id.username);
+        txt_password = (EditText) findViewById(R.id.password);
+        progressBar = (ProgressBar) findViewById(R.id.pgb_login);
 
         signin = (Button) findViewById(R.id.btn_login);
         signin.setOnClickListener(this);
@@ -66,7 +79,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             }
         });
         createRequest();
-
+        mGoogleSignInClient.signOut();
     }
 
     @Override
@@ -74,8 +87,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onStart();
 
         FirebaseUser user = mAuth.getCurrentUser();
-        if(user!=null){
-            Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+        if (user != null) {
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(intent);
         }
     }
@@ -92,9 +105,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void signIn() {
+
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -125,43 +140,44 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             Log.d("Success", "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             Toast.makeText(LoginActivity.this, "Logged In Successfuly!", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+
+                            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                             startActivity(intent);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("Error", "signInWithCredential:failure", task.getException());
-                            Toast.makeText(LoginActivity.this, "Logged In Failed!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "Log In Failed!", Toast.LENGTH_SHORT).show();
                             //updateUI(null);
                         }
                     }
                 });
     }
 
-    public void onClick(View v){
-        switch (v.getId()){
+    public void onClick(View v) {
+        switch (v.getId()) {
             case R.id.btn_login:
                 userSignIn();
                 break;
             case R.id.txt_register:
-                startActivity(new Intent(this,RegisterActivity.class));
+                startActivity(new Intent(this, RegisterActivity.class));
                 break;
             case R.id.btn_forgotpass:
-                startActivity(new Intent(this,ForgotPassActivity.class));
+                startActivity(new Intent(this, ForgotPassActivity.class));
                 break;
         }
     }
 
     private void userSignIn() {
-        String email,password;
+        String email, password;
         email = txt_email.getText().toString().trim();
         password = txt_password.getText().toString().trim();
 
-        if(email.isEmpty()){
+        if (email.isEmpty()) {
             txt_email.setError("Username is required!");
             txt_email.requestFocus();
             return;
         }
-        if(password.isEmpty()){
+        if (password.isEmpty()) {
             txt_password.setError("Password is required!");
             txt_password.requestFocus();
             return;
@@ -187,15 +203,21 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     if (putData.onComplete()) {
                         progressBar.setVisibility(View.GONE);
                         String result = putData.getResult();
-                        if(result.equals("Login Success")){
+                        String[] info = result.split("\\s+");
+                        Log.i("PutData", info[0]);
+                        if (info[0].equals(email)) {
                             Toast.makeText(LoginActivity.this, "Logged In Successfuly!", Toast.LENGTH_SHORT).show();
+                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(LoginActivity.this);
+                            prefs.edit().putString("username", info[0]).commit();
+                            prefs.edit().putString("fullname", info[1]).commit();
                             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                             startActivity(intent);
-                        }else{
-                            Toast.makeText(LoginActivity.this,result, Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(LoginActivity.this, result, Toast.LENGTH_SHORT).show();
                         }
                         //End ProgressBar (Set visibility to GONE)
                         Log.i("PutData", result);
+
                     }
                 }
                 //End Write and Read data with URL

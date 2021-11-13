@@ -3,8 +3,10 @@ package com.example.doowa;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +29,8 @@ public class AccountFragment extends Fragment implements View.OnClickListener{
     TextView txt_accFullname,txt_accUsername;
     TextView googleSignOut,txt_bug;
     RatingBar ratingbar;
+    SharedPreferences prefs;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -43,12 +47,19 @@ public class AccountFragment extends Fragment implements View.OnClickListener{
         googleSignOut = view.findViewById(R.id.txt_accSignOut);
         ratingbar.setRating(4.6f);
 
+        prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        String username = prefs.getString("username", "");
+        String fullname = prefs.getString("fullname", "");
+
 
         GoogleSignInAccount signInAccount = GoogleSignIn.getLastSignedInAccount(getActivity());
         if(signInAccount!=null){
             txt_accFullname.setText(signInAccount.getGivenName());
             txt_accUsername.setText(signInAccount.getDisplayName());
             Glide.with(this).load(String.valueOf(signInAccount.getPhotoUrl())).into(img_acc);
+        }else{
+            txt_accFullname.setText(username);
+            txt_accUsername.setText(fullname);
         }
 
         //Clickables on layout
@@ -103,6 +114,11 @@ public class AccountFragment extends Fragment implements View.OnClickListener{
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 FirebaseAuth.getInstance().signOut();
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.remove("username");
+                editor.commit();
+                editor.remove("fullname");
+                editor.commit();
                 Intent intent = new Intent(getActivity(),LoginActivity.class);
                 startActivity(intent);
                 getActivity().finish();

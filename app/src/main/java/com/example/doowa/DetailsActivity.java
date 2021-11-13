@@ -94,6 +94,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
 
                                 //adding the product to product list
                                 requestList.add(new Requests(
+                                        request.getInt("id"),
                                         request.getString("lat"),
                                         request.getString("lng"),
                                         request.getString("phone"),
@@ -106,7 +107,8 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
                                         request.getString("name"),
                                         request.getString("profilepic"),
                                         request.getString("meetingTime"),
-                                        request.getString("type")
+                                        request.getString("type"),
+                                        request.getString("displayName")
                                 ));
                             }
                             Log.d("Success", "Fetched from request database successfully!");
@@ -128,7 +130,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
                                         txt_meetingType.setText("Operating Hours:");
                                     }
                                     txt_time.setText("Posted On:" + requests.time);
-                                    txt_name.setText(requests.name);
+                                    txt_name.setText(requests.displayName);
                                     txt_donationType.setText(requests.donationType);
                                     txt_address.setText(requests.address);
                                     txt_details.setText(requests.details);

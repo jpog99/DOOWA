@@ -64,7 +64,7 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
     double lat,lng,currLat,currLng,markerLat,markerLng;
     FusedLocationProviderClient client;
     SupportMapFragment mapFragment;
-    String name,meetingTime,address,details,donationType,phone,type,time,profilepic,image;
+    String name,meetingTime,address,details,donationType,phone,type,time,profilepic,image,displayName;
     int report;
     boolean useCurrLoc;
     SharedPreferences prefs;
@@ -109,6 +109,9 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
         if(signInAccount!=null){
             profilepic = String.valueOf(signInAccount.getPhotoUrl());
             name = signInAccount.getGivenName();
+        }else{
+            profilepic = "";
+            name = prefs.getString("username","");
         }
         checkLocationService();
         Handler handler = new Handler(Looper.getMainLooper());
@@ -129,7 +132,7 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
 
                 //Starting Write and Read data with URL
                 //Creating array for parameters
-                String[] field = new String[13];
+                String[] field = new String[14];
                 field[0] = "lat";
                 field[1] = "lng";
                 field[2] = "phone";
@@ -143,8 +146,9 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
                 field[10] = "profilepic";
                 field[11] = "meetingTime";
                 field[12] = "type";
+                field[13] = "displayName";
                 //Creating array for data
-                String[] data = new String[13];
+                String[] data = new String[14];
                 data[0] = Double.toString(lat);
                 data[1] = Double.toString(lng);
                 data[2] = phone;
@@ -158,6 +162,7 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
                 data[10] = profilepic;
                 data[11] = meetingTime;
                 data[12] = type;
+                data[13] = displayName;
                 PutData putData = new PutData(DB_URL, "POST", field, data);
                 if (putData.startPut()) {
                     if (putData.onComplete()) {
@@ -183,7 +188,7 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
     private void getRequestData() {
 
         Intent intent = getIntent();
-        name = intent.getStringExtra("name");
+        displayName = intent.getStringExtra("name");
         meetingTime = intent.getStringExtra("openingHour");
         address = intent.getStringExtra("address");
         details = intent.getStringExtra("details");

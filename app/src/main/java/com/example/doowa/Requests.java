@@ -5,12 +5,14 @@ public class Requests {
     String lat;
     String lng;
     String phone, donationType, time,address, image,name,profilepic,details,meetingTime,type;
-    String report;
+    String report,displayName;
+    int id;
 
     public Requests(){
     }
 
-    public Requests(String lat, String lng, String phone, String donationType, String address, String details, String image, String report, String time, String name, String profilepic, String meetingTime,String type){
+    public Requests(int id,String lat, String lng, String phone, String donationType, String address, String details, String image, String report, String time, String name, String profilepic, String meetingTime,String type,String displayName){
+        this.id = id;
         this.lat = lat;
         this.lng = lng;
         this.phone = phone;
@@ -24,6 +26,7 @@ public class Requests {
         this.profilepic = profilepic;
         this.meetingTime = meetingTime;
         this.type = type;
+        this.displayName = displayName;
     }
 
     public String getType() {

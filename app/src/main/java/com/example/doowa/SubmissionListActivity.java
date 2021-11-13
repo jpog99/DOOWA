@@ -106,6 +106,7 @@ public class SubmissionListActivity extends AppCompatActivity {
 
                                 //adding the product to product list
                                 requestList.add(new Requests(
+                                        request.getInt("id"),
                                         request.getString("lat"),
                                         request.getString("lng"),
                                         request.getString("phone"),
@@ -118,7 +119,8 @@ public class SubmissionListActivity extends AppCompatActivity {
                                         request.getString("name"),
                                         request.getString("profilepic"),
                                         request.getString("meetingTime"),
-                                        request.getString("type")
+                                        request.getString("type"),
+                                        request.getString("displayName")
                                 ));
                             }
                             Log.d("Success", "Fetched from request database successfully!");

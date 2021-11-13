@@ -65,7 +65,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
                         switch (item.getItemId()) {
                             case R.id.menu1:
                                 intent = new Intent(mCtx,ListDetailsActivity.class);
-                                intent.putExtra("name",rq.name);
+                                intent.putExtra("name",rq.displayName);
                                 intent.putExtra("openingHour",rq.meetingTime);
                                 intent.putExtra("address",rq.address);
                                 intent.putExtra("details",rq.details);
@@ -97,20 +97,18 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         });
     }
 
-    private void deleteSubmission(String lat, String lng) {
+    private void deleteSubmission(int id) {
         Handler handler = new Handler(Looper.getMainLooper());
         handler.post(new Runnable() {
             @Override
             public void run() {
                 //Starting Write and Read data with URL
                 //Creating array for parameters
-                String[] field = new String[2];
-                field[0] = "lat";
-                field[1] = "lng";
+                String[] field = new String[1];
+                field[0] = "id";
                 //Creating array for data
-                String[] data = new String[2];
-                data[0] = lat;
-                data[1] = lng;
+                String[] data = new String[1];
+                data[0] = String.valueOf(id);
                 PutData putData = new PutData(DBRequest_URL, "POST", field, data);
                 if (putData.startPut()) {
                     if (putData.onComplete()) {
@@ -151,7 +149,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         AlertDialog.Builder builder = new AlertDialog.Builder(mCtx);
         builder.setCancelable(true);
         builder.setTitle("Confirmation");
-        builder.setMessage("Are you sure to delete all the submissions location from the map?");
+        builder.setMessage("Are you sure to delete this submission from the map?");
 
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
@@ -163,7 +161,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                deleteSubmission(rq.lat,rq.lng);
+                deleteSubmission(rq.id);
                 Toast.makeText(mCtx, "Your submission has been deleted from successfully!", Toast.LENGTH_SHORT).show();
                 ((Activity)mCtx).finish();
             }
