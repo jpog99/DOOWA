@@ -27,7 +27,7 @@ public class AccountFragment extends Fragment implements View.OnClickListener{
 
     ImageView img_acc,img_accList,img_accExchange,img_accTrack;
     TextView txt_accFullname,txt_accUsername;
-    TextView googleSignOut,txt_bug;
+    TextView googleSignOut,txt_bug,txt_history;
     RatingBar ratingbar;
     SharedPreferences prefs;
 
@@ -44,6 +44,7 @@ public class AccountFragment extends Fragment implements View.OnClickListener{
         img_accExchange = view.findViewById(R.id.img_accExchange);
         img_accTrack = view.findViewById(R.id.img_accTrack);
         txt_bug = view.findViewById(R.id.txt_accBug);
+        txt_history = view.findViewById(R.id.txt_accHistory);
         googleSignOut = view.findViewById(R.id.txt_accSignOut);
         ratingbar.setRating(4.6f);
 
@@ -68,6 +69,7 @@ public class AccountFragment extends Fragment implements View.OnClickListener{
         img_accList.setOnClickListener(this);
         img_accExchange.setOnClickListener(this);
         img_accTrack.setOnClickListener(this);
+        txt_history.setOnClickListener(this);
         return view;
     }
 
@@ -92,6 +94,11 @@ public class AccountFragment extends Fragment implements View.OnClickListener{
                 break;
             case R.id.img_accTrack:
                 intent = new Intent(getActivity(),TrackingActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.txt_accHistory:
+                intent = new Intent(getActivity(),HistoryListActivity.class);
+                intent.putExtra("name",txt_accFullname.getText());
                 startActivity(intent);
                 break;
         }

@@ -32,6 +32,10 @@
             android:exported="false"
             android:label="@string/sublist_title" />
         <activity
+            android:name=".HistoryListActivity"
+            android:exported="false"
+            android:label="@string/historylist_title" />
+        <activity
             android:name=".CameraActivity"
             android:exported="false"
             android:label="@string/camera_title" />

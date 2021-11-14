@@ -125,7 +125,7 @@ public class SubmissionListActivity extends AppCompatActivity {
                             }
                             Log.d("Success", "Fetched from request database successfully!");
 
-                            adapter = new CustomAdapter(SubmissionListActivity.this, requestList);
+                            adapter = new SubmissionListAdapter(SubmissionListActivity.this, requestList);
                             recyclerView.setAdapter(adapter);
                             if(requestList.size()==0)
                                 Toast.makeText(SubmissionListActivity.this, "You have no submission!", Toast.LENGTH_SHORT).show();

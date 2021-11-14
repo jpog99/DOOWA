@@ -81,6 +81,9 @@
     <string name="sublist_details">Details</string>
     <string name="sublist_loc">Check Location</string>
     <string name="sublist_del">Delete Submission</string>
+    <string name="sublist_restore">Restore Submission</string>
+    <string name="historylist_title">Donation/Requests History</string>
+
 
     <string name="tracker_title">Package Tracking</string>
     <string name="tracker_text">Enter Tracking No.</string>
