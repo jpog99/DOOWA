@@ -3,82 +3,97 @@
     <string name="login_username">아이디</string>
     <string name="login_password">비밀번호</string>
     <string name="login_button">로그인</string>
-    <string name="login_forgotPass">Lupa Kata Laluan?</string>
+    <string name="login_forgotPass">비밀번호를 잊으신가요?</string>
     <string name="login_register">회원가입</string>
+
     <string name="forgotPass_enterEmail">이메일 주소를 입력해주세요</string>
     <string name="forgotPass_emailField">이메일</string>
     <string name="forgotPass_buttonVeri">인증 이메이를 요청하기</string>
+
     <string name="register_fullname">이름</string>
     <string name="register_username">아이디</string>
     <string name="register_email">이메일</string>
     <string name="register_password">비밀번호</string>
     <string name="register_confirm">비밀번호 확인</string>
     <string name="register_button">회원가입</string>
-    <string name="register_alreadyHaveAcc">SUdah mempunyai akaun? Daftar masuk.</string>
-    <string name="main_hometab">Utama</string>
-    <string name="main_requesttab">Permintaan</string>
-    <string name="main_foodbanktab">Bank Makanan</string>
-    <string name="main_accounttab">Akaun</string>
+    <string name="register_alreadyHaveAcc">회원이신가요? 로그인.</string>
+
+    <string name="main_hometab">홈</string>
+    <string name="main_requesttab">도운 요청</string>
+    <string name="main_foodbanktab">기부 센터</string>
+    <string name="main_accounttab">계정</string>
+
     <string name="detail_needHelpRq">Saya memerlukan bantuan dengan:</string>
-    <string name="detail_needHelpFb">Kami menyediakan bantuan:</string>
+    <string name="detail_needHelpFb">우리 기관에서는 이런 도움을 제공합니다</string>
     <string name="detail_posted">Di pos pada:</string>
-    <string name="detail_giveHelpRq">Beri Bantuan?</string>
-    <string name="detail_giveHelpFb">MInta Bantuan?</string>
-    <string name="detail_name">Nama:</string>
-    <string name="detail_address">Alamat:</string>
-    <string name="detail_details">Butir:</string>
-    <string name="detail_timeRq">Waktu Perjumpaan:</string>
-    <string name="detail_timeFb">Waktu Operasi:</string>
-    <string name="detail_transferMoney">Transfer Duit</string>
-    <string name="detail_report">Lapor penyertaan ini?</string>
-    <string name="report_title">Laporan</string>
-    <string name="report_text">Isikan laporan anda tentang maklumat di sini.</string>
-    <string name="report_button">HANTAR</string>
-    <string name="request_name">Nama Penerima</string>
-    <string name="request_type">PIlih Jenis Sumbangan</string>
-    <string name="request_address">Alamat</string>
-    <string name="request_details">Butiran (Berikan maklumat lebih terperinci untuk permintaan anda)</string>
-    <string name="request_time">Waktu Perjumpaan (Pilihan)</string>
-    <string name="request_phone">Nombor Berhubung</string>
-    <string name="request_bank">Bank dan Nombor Akaun (Pilihan)</string>
-    <string name="camera">Muat Naik Gambar</string>
+    <string name="detail_giveHelpRq">기부하기</string>
+    <string name="detail_giveHelpFb">도움 요청</string>
+    <string name="detail_name">이름:</string>
+    <string name="detail_address">주소:</string>
+    <string name="detail_details">세부 사항:</string>
+    <string name="detail_timeRq">악속 가능 시간:</string>
+    <string name="detail_timeFb">운영 기간:</string>
+    <string name="detail_transferMoney">계좌 이체하기</string>
+    <string name="detail_report">이 게시물을 신고학기</string>
+
+    <string name="report_title">신고</string>
+    <string name="report_text">신고 사항을 자세히 작성해수세요</string>
+    <string name="report_button">신고</string>
+
+    <string name="request_name">받는 사람</string>
+    <string name="request_type">기부 유형를 선택</string>
+    <string name="request_address">주소</string>
+    <string name="request_details">세부사항 (도움 요청에대해 더 지세하게 설명해주세요)</string>
+    <string name="request_time">악속 가능 시간 (선택 자유)</string>
+    <string name="request_phone">휴대폰번호</string>
+    <string name="request_bank">은행 이른과 계좌 번호 (선택 자유)</string>
+    <string name="camera">사진을 업로드하기</string>
     <string name="set_map">Tetapkan Lokasi Peta</string>
-    <string name="foodbank_name">Nama Organisasi</string>
-    <string name="foodbank_type">Pilih Jenis Sumbangan</string>
-    <string name="foodbank_address">Alamat</string>
-    <string name="foodbank_details">Butiran (Berikan maklumat lebih terperinci untuk sumbangan anda)</string>
-    <string name="foodbank_time">Waktu Operasi</string>
-    <string name="foodbank_phone">Nombor Berhubung</string>
-    <string name="setLoc_marker">Seret ke lokasi pilihan</string>
-    <string name="setLoc_setLocation">TETAPKAN LOKASI</string>
-    <string name="setLoc_CurrLoc">GUNA LOKASI SEKARANG</string>
+
+    <string name="foodbank_name">긱관명</string>
+    <string name="foodbank_type">기부 유형을 선택해주세요</string>
+    <string name="foodbank_address">주소</string>
+    <string name="foodbank_details">세부 사항 (제공한 기부에대해 더 자세하게 설명해주세요)</string>
+    <string name="foodbank_time">우영 기간</string>
+    <string name="foodbank_phone">휴대폰번호</string>
+
+    <string name="setLoc_marker">우ㅏ치를 직접 입력</string>
+    <string name="setLoc_setLocation">위치 설정</string>
+    <string name="setLoc_CurrLoc">현위치로 설정</string>
+
     <string name="camera_choose">PILIH FAIL</string>
-    <string name="camera_filename">Isi nama fail (Pilihan)</string>
+    <string name="camera_filename">Isi nama fail (선택 자유)</string>
     <string name="camera_use">Guna Gambar</string>
     <string name="camera_title">Muat Naik Gambar</string>
-    <string name="account_rating">Penilaian</string>
-    <string name="account_submissionList">Senarai Submisi</string>
+
+    <string name="account_rating">리뷰</string>
+    <string name="account_submissionList">도움 오청 목록</string>
     <string name="account_tracker">Trek Derma</string>
-    <string name="account_exchange">Penukaran Poin</string>
-    <string name="account_lang">Tukar Bahasa</string>
+    <string name="account_exchange">포인트 교환</string>
+    <string name="account_lang">언어 설정</string>
     <string name="account_history">"Sejarah Permintaan/Bank Makanan "</string>
     <string name="account_bugs">Laporan Bug / Cadangan</string>
     <string name="account_signout">Daftar Keluar</string>
-    <string name="sublist_title">Senarai Submisi</string>
-    <string name="sublist_details">Butiran</string>
-    <string name="sublist_loc">Semak Lokasi</string>
-    <string name="sublist_del">Buang Submisi</string>
+
+    <string name="sublist_title">도움 요청 목록</string>
+    <string name="sublist_details">세부 사항</string>
+    <string name="sublist_loc">위치 확인</string>
+    <string name="sublist_del">도움 요청 삭제</string>
     <string name="sublist_restore">Pulihkan Submisi</string>
     <string name="historylist_title">"Sejarah Permintaan/Bank Makanan "</string>
+
     <string name="tracker_title">Trek Pakej</string>
     <string name="tracker_text">Isikan Nombor Trek</string>
     <string name="tracker_button">Semak Trek</string>
-    <string name="bug_title">Laporan Bug / Cadangan</string>
-    <string name="bug_text">Isikan laporan atau cadangan anda</string>
-    <string name="bug_btn">HANTAR</string>
-    <string name="signout_title">Daftar Keluar</string>
-    <string name="signout_message">Anda pasti untuk daftar keluar?</string>
-    <string name="language_choose">Pilih Bahasa</string>
+
+    <string name="bug_title">버그 신고 /제안하기</string>
+    <string name="bug_text">시고아 제안을 작성헤주세요</string>
+    <string name="bug_btn">보내기 </string>
+
+    <string name="signout_title">로그아웃</string>
+    <string name="signout_message">로그아웃하시겠습니까?</string>
+
+    <string name="language_choose">언어 선택</string>
     <string name="guidelines">Semak garis panduan submisi kami <a href="https://github.com/jpog99/DOOWA/tree/master/documentations#submission-guidelines">di sini.</a></string>
     <string name="hyperlink_tnc">Saya setuju dengan <a href="https://github.com/jpog99/DOOWA/tree/master/documentations#doowa-term-and-services">Terma dan Syarat.</a></string>
 </resources>
