@@ -23,9 +23,9 @@
     <string name="main_foodbanktab">기부 센터</string>
     <string name="main_accounttab">계정</string>
 
-    <string name="detail_needHelpRq">Saya memerlukan bantuan dengan:</string>
+    <string name="detail_needHelpRq">이런 도움을 필요합니다:</string>
     <string name="detail_needHelpFb">우리 기관에서는 이런 도움을 제공합니다</string>
-    <string name="detail_posted">Di pos pada:</string>
+    <string name="detail_posted">게시물 올리는 시간:</string>
     <string name="detail_giveHelpRq">기부하기</string>
     <string name="detail_giveHelpFb">도움 요청</string>
     <string name="detail_name">이름:</string>
@@ -48,7 +48,7 @@
     <string name="request_phone">휴대폰번호</string>
     <string name="request_bank">은행 이른과 계좌 번호 (선택 자유)</string>
     <string name="camera">사진을 업로드하기</string>
-    <string name="set_map">Tetapkan Lokasi Peta</string>
+    <string name="set_map">의치 직접 입력</string>
 
     <string name="foodbank_name">긱관명</string>
     <string name="foodbank_type">기부 유형을 선택해주세요</string>
@@ -57,34 +57,34 @@
     <string name="foodbank_time">우영 기간</string>
     <string name="foodbank_phone">휴대폰번호</string>
 
-    <string name="setLoc_marker">우ㅏ치를 직접 입력</string>
+    <string name="setLoc_marker">위치를 직접 입력</string>
     <string name="setLoc_setLocation">위치 설정</string>
     <string name="setLoc_CurrLoc">현위치로 설정</string>
 
-    <string name="camera_choose">PILIH FAIL</string>
-    <string name="camera_filename">Isi nama fail (선택 자유)</string>
-    <string name="camera_use">Guna Gambar</string>
-    <string name="camera_title">Muat Naik Gambar</string>
+    <string name="camera_choose">파일 선택</string>
+    <string name="camera_filename">파일 이름 입력 (선택 자유)</string>
+    <string name="camera_use">사진 선택</string>
+    <string name="camera_title">사진 업로드</string>
 
     <string name="account_rating">리뷰</string>
     <string name="account_submissionList">도움 오청 목록</string>
-    <string name="account_tracker">Trek Derma</string>
+    <string name="account_tracker">기부 트래커</string>
     <string name="account_exchange">포인트 교환</string>
     <string name="account_lang">언어 설정</string>
-    <string name="account_history">"Sejarah Permintaan/Bank Makanan "</string>
-    <string name="account_bugs">Laporan Bug / Cadangan</string>
-    <string name="account_signout">Daftar Keluar</string>
+    <string name="account_history">"도움 오청 기록/기부 센터"</string>
+    <string name="account_bugs">버그 신고 /제안하기</string>
+    <string name="account_signout">로그아웃</string>
 
     <string name="sublist_title">도움 요청 목록</string>
     <string name="sublist_details">세부 사항</string>
     <string name="sublist_loc">위치 확인</string>
     <string name="sublist_del">도움 요청 삭제</string>
-    <string name="sublist_restore">Pulihkan Submisi</string>
-    <string name="historylist_title">"Sejarah Permintaan/Bank Makanan "</string>
+    <string name="sublist_restore">도움 오청을 새로고침</string>
+    <string name="historylist_title">"도움 오청 기록/기부 센터"</string>
 
-    <string name="tracker_title">Trek Pakej</string>
-    <string name="tracker_text">Isikan Nombor Trek</string>
-    <string name="tracker_button">Semak Trek</string>
+    <string name="tracker_title">소포 현위치 조회</string>
+    <string name="tracker_text">운송장번호</string>
+    <string name="tracker_button">소포 확인</string>
 
     <string name="bug_title">버그 신고 /제안하기</string>
     <string name="bug_text">시고아 제안을 작성헤주세요</string>
@@ -94,6 +94,6 @@
     <string name="signout_message">로그아웃하시겠습니까?</string>
 
     <string name="language_choose">언어 선택</string>
-    <string name="guidelines">Semak garis panduan submisi kami <a href="https://github.com/jpog99/DOOWA/tree/master/documentations#submission-guidelines">di sini.</a></string>
-    <string name="hyperlink_tnc">Saya setuju dengan <a href="https://github.com/jpog99/DOOWA/tree/master/documentations#doowa-term-and-services">Terma dan Syarat.</a></string>
+    <string name="guidelines">도움 요청방법 을 확인해주세요 <a href="https://github.com/jpog99/DOOWA/tree/master/documentations#submission-guidelines">  요청방법.</a></string>
+    <string name="hyperlink_tnc">저는 약관을 읽었고 동의합니다<a href="https://github.com/jpog99/DOOWA/tree/master/documentations#doowa-term-and-services">  약관.</a></string>
 </resources>
