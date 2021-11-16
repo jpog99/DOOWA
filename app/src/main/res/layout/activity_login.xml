@@ -14,8 +14,10 @@
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/background" />
 
     <TextView
@@ -37,7 +39,6 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="82dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="76dp"
         android:background="#66FFFFFF"
         android:drawableLeft="?android:attr/fingerprintAuthDrawable"
         android:ems="10"
@@ -49,10 +50,12 @@
         android:textSize="18sp"
         android:textStyle="italic"
         android:typeface="normal"
-        app:layout_constraintBottom_toBottomOf="@+id/password"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.082" />
 
     <EditText
         android:id="@+id/password"
@@ -70,22 +73,23 @@
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/username"
+        app:layout_constraintVertical_bias="0.089" />
 
     <Button
         android:id="@+id/btn_login"
         android:layout_width="373dp"
         android:layout_height="59dp"
-        android:layout_marginTop="46dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginEnd="16dp"
         android:backgroundTint="#1E88E5"
         android:text="@string/login_button"
         android:textColor="#F8F6F6"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_forgotpass"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="0.115" />
 
     <TextView
         android:id="@+id/textView2"
@@ -102,23 +106,25 @@
         android:id="@+id/btn_forgotpass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginBottom="187dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="112dp"
         android:text="@string/login_forgotPass"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/btn_login" />
+        app:layout_constraintEnd_toStartOf="@+id/txt_register"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
     <TextView
         android:id="@+id/txt_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="26dp"
-        android:layout_marginEnd="49dp"
+        android:layout_marginEnd="52dp"
         android:text="@string/login_register"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btn_login"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_login"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ProgressBar
         android:id="@+id/pgb_login"
@@ -135,9 +141,12 @@
         android:id="@+id/btn_googleSignIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="37dp"
+        android:layout_marginBottom="104dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_forgotpass" />
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,9 +1,11 @@
 package com.example.doowa;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -23,18 +25,22 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.util.Locale;
+
 public class AccountFragment extends Fragment implements View.OnClickListener{
 
     ImageView img_acc,img_accList,img_accExchange,img_accTrack;
     TextView txt_accFullname,txt_accUsername;
-    TextView googleSignOut,txt_bug,txt_history;
+    TextView googleSignOut,txt_bug,txt_history,txt_settings;
     RatingBar ratingbar;
     SharedPreferences prefs;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         ViewGroup view = (ViewGroup) inflater.inflate(R.layout.fragment_account, container, false);
+
 
         txt_accFullname = view.findViewById(R.id.txt_accountFullname);
         txt_accUsername = view.findViewById(R.id.txt_accountUsername);
@@ -45,6 +51,8 @@ public class AccountFragment extends Fragment implements View.OnClickListener{
         img_accTrack = view.findViewById(R.id.img_accTrack);
         txt_bug = view.findViewById(R.id.txt_accBug);
         txt_history = view.findViewById(R.id.txt_accHistory);
+        txt_settings = view.findViewById(R.id.txt_accSettings);
+
         googleSignOut = view.findViewById(R.id.txt_accSignOut);
         ratingbar.setRating(4.6f);
 
@@ -70,6 +78,7 @@ public class AccountFragment extends Fragment implements View.OnClickListener{
         img_accExchange.setOnClickListener(this);
         img_accTrack.setOnClickListener(this);
         txt_history.setOnClickListener(this);
+        txt_settings.setOnClickListener(this);
         return view;
     }
 
@@ -101,7 +110,51 @@ public class AccountFragment extends Fragment implements View.OnClickListener{
                 intent.putExtra("name",txt_accFullname.getText());
                 startActivity(intent);
                 break;
+            case R.id.txt_accSettings:
+                showChangeLanguageDialog();
+                break;
         }
+    }
+
+    private void showChangeLanguageDialog() {
+        final String[] listitems = {"English","Bahasa Melayu"};
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle(getResources().getString(R.string.language_choose));
+        builder.setSingleChoiceItems(listitems, -1, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                if (which == 0){
+                    setLocale("en");
+                    getActivity().recreate();
+                }
+                else if (which == 1){
+                    setLocale("ms");
+                    getActivity().recreate();
+                }
+
+                dialog.dismiss();
+            }
+        });
+        AlertDialog mDialog = builder.create();
+        mDialog.show();
+    }
+
+    private void setLocale(String lang) {
+        Locale locale = new Locale(lang);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getActivity().getResources().updateConfiguration(config,getActivity().getResources().getDisplayMetrics());
+
+        SharedPreferences.Editor editor = getActivity().getSharedPreferences("Settings", Context.MODE_PRIVATE).edit();
+        editor.putString("My_Lang", lang);
+        editor.apply();
+    }
+
+    public void loadLocale(){
+        SharedPreferences prefs  = getContext().getSharedPreferences("Settings",getActivity().MODE_PRIVATE);
+        String language = prefs.getString("My_Lang","");
+        setLocale(language);
     }
 
     private void signOut() {
