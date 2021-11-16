@@ -117,7 +117,7 @@ public class AccountFragment extends Fragment implements View.OnClickListener{
     }
 
     private void showChangeLanguageDialog() {
-        final String[] listitems = {"English","Bahasa Melayu"};
+        final String[] listitems = {"English","Bahasa Melayu", "한국어"};
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle(getResources().getString(R.string.language_choose));
         builder.setSingleChoiceItems(listitems, -1, new DialogInterface.OnClickListener() {
@@ -129,6 +129,10 @@ public class AccountFragment extends Fragment implements View.OnClickListener{
                 }
                 else if (which == 1){
                     setLocale("ms");
+                    getActivity().recreate();
+                }
+                else if (which == 2){
+                    setLocale("ko");
                     getActivity().recreate();
                 }
 
