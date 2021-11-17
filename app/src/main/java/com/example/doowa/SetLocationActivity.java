@@ -77,7 +77,15 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
         binding = ActivitySetLocationBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        client = LocationServices.getFusedLocationProviderClient(this);
+        if(ActivityCompat.checkSelfPermission(SetLocationActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
+            getCurrentLocation();
+        }else{
+            ActivityCompat.requestPermissions(SetLocationActivity.this,
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},44);
+        }
         checkLocationService();
+        getCurrentLocation();
 
         btn_setlocSet = (Button)findViewById(R.id.btn_setlocSet);
         btn_setlocCurrentLoc = (Button)findViewById(R.id.btn_setlocCurrentLoc);
@@ -89,16 +97,6 @@ public class SetLocationActivity extends FragmentActivity implements OnMapReadyC
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
-
-        client = LocationServices.getFusedLocationProviderClient(this);
-        if(ActivityCompat.checkSelfPermission(SetLocationActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
-            getCurrentLocation();
-        }else{
-            ActivityCompat.requestPermissions(SetLocationActivity.this,
-                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},44);
-        }
-
-
 
 
         mapFragment.getMapAsync(this);
