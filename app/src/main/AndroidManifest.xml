@@ -16,6 +16,10 @@
         android:theme="@style/Theme.Doowa"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".FAQActivity"
+            android:exported="false"
+            android:label="Frequently Asked Questions" />
+        <activity
             android:name=".checkSubmissionLocation"
             android:exported="false"
             android:label="Submission Location" />
