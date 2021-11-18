@@ -244,6 +244,8 @@ This application is launched by the United Nations with the aim of feeding the n
 \end{itemize}
 \par We will use SQL (Struted Query Language) for managing our database.  It is a domain-specific language used in programming and designed for managing data that are in our relational database management system. It is particularly useful in handling structured data so this makes it possible to process data such as user accounts, donation requests, list of foodbanks, and map markers.\\
 
+\newpage
+
 3) Cost Estimation
 
 \begin{table}[htbp]
@@ -311,6 +313,15 @@ This application is launched by the United Nations with the aim of feeding the n
 \centering
 \end{figure}We will use MySQL for data management because as mentioned before, it can be directly connected with our Heroku server. Today, MySQL is the second ranking RDBMS solution in the world, according to DB Engines. Its users include a wide range of websites and applications, including household brands like Spotify, Netflix, Facebook and Booking.com. Finally, the data stored there can be easily viewed in tables.\\
 \begin{itemize}
+\item Goole FIrebase
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\par \begin{figure}[h!]
+\includegraphics[width=4cm]{firebase}
+\centering
+\end{figure} We are using the Google Firebase as our second database to handle the authentication data if the user decides to use Google sign in service. By using Firebase, we can extract the data of the users' Google account such as profile picture, name, email address to be used in out application. Furthermore, Firebase also supports cloud storage which will be used to upload images that are submitted by the users whenever they made a submission. After upload, the image link will be extracted and send to our primary MySQL database. \\
+\begin{itemize}
 \item XAMPP
 \end{itemize}
 \par \begin{figure}[h!]
@@ -356,15 +367,17 @@ This application is launched by the United Nations with the aim of feeding the n
   \hline
  \textbf{Name}& \textbf{Task}  \\
 \hline
-  \textbf{Megat} &   \\
+  \textbf{Megat} & Documentation, Beta Tester, Debugger  \\
   \hline
-  \textbf{Wan} & \\ 
+  \textbf{Wan} & Backend handler, Database, API, Maps implementation\\ 
   \hline
-  \textbf{Amin} & \\
+  \textbf{Amin} & UI design, Frontend, Layout programming, Translator\\
   \hline
 \end{tabular}
 \end{center}
 \end{table}
+
+
 
 \section{Specifications}
 \subsection{Account Creation and Login}
@@ -923,13 +936,517 @@ If users encountered any problem or error in our application they can submit a r
 Users can sign out from their account by just clicking this button. Upon click, a popup alert window will appear and ask the user if they really wanted to sign out. If "Cancel" is clicked, user will not sign out and stay on the account page. If "OK" button is clicked, user will be sent to the login page and logged out from the application.
 
 \begin{figure}[h!]
-\includegraphics[width=5cm]{./img/signout}
+\includegraphics[width=3.5cm]{./img/signout}
 \centering
 \caption{Sign out confirmation.}
 \end{figure}
+\subsection{Term and Services}
+
+These Terms of Use (or “Terms”) govern your use of Doowa, except where we expressly state that separate terms (and not these) apply, and provide information about the Doowa Service (the “Service”), outlined below. When you create an Doowa account or use Doowa, you agree to these terms.
+
+The Doowa Service is provided to you by Doowa, Inc. These Terms of Use therefore constitute an agreement between you and Doowa, Inc.
+
+\begin{itemize}
+\item  The Doowa Service
+\end{itemize}
+We agree to provide you with the Doowa Service. The Service includes all of the Doowa products, features, applications, services, technologies, and software that we provide to advance Doowa's mission: To bring you closer to the people and things you love. The Service is made up of the following aspects:
+
+\begin{itemize}
+\item Offering personalized opportunities to create, connect, communicate, discover, and share.
+\end{itemize}
+
+People are different. We want to strengthen your relationships through shared experiences you actually care about. So we build systems that try to understand who and what you and others care about, and use that information to help you create, find, join, and share in experiences that matter to you. Part of that is highlighting content, features, offers, and accounts you might be interested in, and offering ways for you to experience Doowa, based on things you and others do on and off Doowa.
+
+\begin{itemize}
+\item Fostering a positive, inclusive, and safe environment.
+\end{itemize}
+
+We develop and use tools and offer resources to our community members that help to make their experiences positive and inclusive, including when we think they might need help. We also have teams and systems that work to combat abuse and violations of our Terms and policies, as well as harmful and deceptive behavior. We use all the information we have-including your information-to try to keep our platform secure. We also may share information about misuse or harmful content with other Doowa Companies or law enforcement.
+
+\begin{itemize}
+\item Developing and using technologies that help us consistently serve our growing community.
+\end{itemize}
+
+Organizing and analyzing information for our growing community is central to our Service. A big part of our Service is creating and using cutting-edge technologies that help us personalize, protect, and improve our Service on an incredibly large scale for a broad global community. Technologies like artificial intelligence and machine learning give us the power to apply complex processes across our Service. Automated technologies also help us ensure the functionality and integrity of our Service.
+
+\begin{itemize}
+\item Providing consistent and seamless experiences across other Doowa Company Products.
+\end{itemize}
+
+Doowa is part of the Doowa Companies, which share technology, systems, insights, and information-including the information we have about you (learn more in the Data Policy) in order to provide services that are better, safer, and more secure. We also provide ways to interact across the Doowa Company Products that you use, and designed systems to achieve a seamless and consistent experience across the Doowa Company Products.
+
+\begin{itemize}
+\item Ensuring access to our Service.
+\end{itemize}
+
+To operate our global Service, we must store and transfer data across our systems around the world, including outside of your country of residence. The use of this global infrastructure is necessary and essential to provide our Service. This infrastructure may be owned or operated by Doowa Inc., Doowa Ireland Limited, or their affiliates.
+
+\begin{itemize}
+\item Connecting you with brands, products, and services in ways you care about.
+\end{itemize}
+
+We use data from Doowa and other Doowa Company Products, as well as from third-party partners, to show you ads, offers, and other sponsored content that we believe will be meaningful to you. And we try to make that content as relevant as all your other experiences on Doowa.
+
+\begin{itemize}
+\item Research and innovation.
+\end{itemize}
+
+We use the information we have to study our Service and collaborate with others on research to make our Service better and contribute to the well-being of our community.
+
+\begin{itemize}
+\item How Our Service Is Funded
+
+\end{itemize}
+Instead of paying to use Doowa, by using the Service covered by these Terms, you acknowledge that we can show you ads that businesses and organizations pay us to promote on and off the Doowa Company Products. We use your personal data, such as information about your activity and interests, to show you ads that are more relevant to you.
+
+We show you relevant and useful ads without telling advertisers who you are. We don’t sell your personal data. We allow advertisers to tell us things like their business goal and the kind of audience they want to see their ads. We then show their ad to people who might be interested.
+
+We also provide advertisers with reports about the performance of their ads to help them understand how people are interacting with their content on and off Doowa. For example, we provide general demographic and interest information to advertisers to help them better understand their audience. We don’t share information that directly identifies you (information such as your name or email address that by itself can be used to contact you or identifies who you are) unless you give us specific permission. Learn more about how Doowa ads work here.
+
+You may see branded content on Doowa posted by account holders who promote products or services based on a commercial relationship with the business partner mentioned in their content. You can learn more about this here.
+
+\begin{itemize}
+\item The Data Policy
+
+\end{itemize}
+Providing our Service requires collecting and using your information. The Data Policy explains how we collect, use, and share information across the Doowa Products. It also explains the many ways you can control your information, including in the Doowa Privacy and Security Settings. You must agree to the Data Policy to use Doowa.
+
+\begin{itemize}
+\item Your Commitments
+\end{itemize}
+In return for our commitment to provide the Service, we require you to make the below commitments to us.
+
+-Who Can Use Doowa.\\
+We want our Service to be as open and inclusive as possible, but we also want it to be safe, secure, and in accordance with the law. So, we need you to commit to a few restrictions in order to be part of the Doowa community.
+
+-You must be at least 14 years old.
+-You must not be prohibited from receiving any aspect of our Service under applicable laws or engaging in payments related Services if you are on an applicable denied party listing.
+-We must not have previously disabled your account for violation of law or any of our policies.
+-You must not be a convicted sex offender.
+
+-How You Can't Use Doowa. 
+Providing a safe and open Service for a broad community requires that we all do our part.
+
+-You can't impersonate others or provide inaccurate information.
+
+-You don't have to disclose your identity on Doowa, but you must provide us with accurate and up to date information (including registration information), which may include providing personal data. Also, you may not impersonate someone or something you aren't, and you can't create an account for someone else unless you have their express permission.
+
+-You can't do anything unlawful, misleading, or fraudulent or for an illegal or unauthorized purpose.\\
+
+-You can't violate (or help or encourage others to violate) these Terms or our policies, including in particular the Doowa Community Guidelines, Doowa Platform Terms and Developer Policies, and Music Guidelines.\\
+
+-If you post branded content, you must comply with our Branded Content Policies, which require you to use our branded content tool. Learn how to report conduct or content in our Help Center.
+
+-You can't do anything to interfere with or impair the intended operation of the Service.
+
+-This includes misusing any reporting, dispute, or appeals channel, such as by making fraudulent or groundless reports or appeals.
+
+-You can't attempt to create accounts or access or collect information in unauthorized ways.
+
+-This includes creating accounts or collecting information in an automated way without our express permission.
+
+-You can’t sell, license, or purchase any account or data obtained from us or our Service. This includes attempts to buy, sell, or transfer any aspect of your account (including your username); solicit, collect, or use login credentials or badges of other users; or request or collect Doowa usernames, passwords, or misappropriate access tokens.
+
+-You can't post someone else’s private or confidential information without permission or do anything that violates someone else's rights, including intellectual property rights (e.g., copyright infringement, trademark infringement, counterfeit, or pirated goods).
+
+-You may use someone else's works under exceptions or limitations to copyright and related rights under applicable law. You represent you own or have obtained all necessary rights to the content you post or share. Learn more, including how to report content that you think infringes your intellectual property rights, here.
+
+-You can’t modify, translate, create derivative works of, or reverse engineer our products or their components.
+
+-You can't use a domain name or URL in your username without our prior written consent.
+
+-Permissions You Give to Us. As part of our agreement, you also give us permissions that we need to provide the Service.
+
+-We do not claim ownership of your content, but you grant us a license to use it.
+
+You can read more about our Terms and Services and submission guidelines at \\
+https://github.com/jpog99/DOOWA/tree/master/documentations.\\
+\newpage
+
 \section{Architecture and Design}
 
-\textit{(TO BE CONTINUED...)}
+\subsection{Overall Architecture}
+
+For our DOOWA application, we have 4 main modules as the framework for the whole architecture. The first part handles the user interface and how user interacts with our application, which is handled in Android Studio as our front end development. This part mainly reacts with the user request such as retrieving all donations and food banks submitted and displayed on the main map, getting all the info and list of users' donation and submission history. For our back end, we implemented 3 core modules for the application to work seamlessly which is the server, Heroku, which is connected to 2 separate databases, PHPMyAdmin and Google Firebase. The first database, which is PHPMyAdmin, will contain the data of the users login authentication (if they are registering through our app) and all the donation and foodbank data such as the location (in longitude and latitude), time submitted, user name, details, image if any, phone number and much more. The second database, Firebase, stores the data of the user login authentication if they logged in using the Google services. Additionally, it is also used to store the image uploaded by the user since the other database is unable to store image. After the image is stored to the Firebase, only the image link will be passed to PHPMyAdmin database according to the which donation that was submitted with the image. Finally, our Heroku server will be the one that handles the retrieval and uploads of the donation request between the user interface and the database using PHP APIs. The communication between all 4 modules is illustrated as image below.
+
+\begin{figure}[h!]
+\includegraphics[width=9cm]{framework}
+\centering
+\caption{DOOWA Application Framework.}
+\end{figure}
+
+\subsection{Directory Organization}
+
+Our project repository has various files that are used for building our application. Each files directory and usage are explained as follows.
+
+\begin{table}[htbp]
+\caption{File Directory}
+\begin{center}
+\begin{tabular}{ | m{2cm} | m{4cm}| m{2cm} | } 
+  \hline
+ \textbf{Directory}& \textbf{File Name} & \textbf{Module Name} \\
+\hline
+  DOOWA/app/src /main/java/com /example/doowa & AccountFragment.java\newline BugReportActivity.java\newline CameraActivity.java\newline DetailsActivity.java\newline FAQActivity.java\newline FoodbankFragment.java\newline ForgotPassActivity.java\newline HistoryListActivity.java\newline HistoryListAdapter.java\newline ListDetailsActivity.java\newline LoginActivity.java\newline MainActivity.java\newline MapFragment.java\newline RegisterActivity.java\newline ReportActivity.java\newline RequestFragment.java\newline Requests.java\newline SetLocationActivity.java\newline SubmissionListActivity.java\newline SubmissionListAdapter.java\newline TrackingActivity.java Upload.java\newline checkSubmissionLocation.java\newline & Android Studio\\
+  \hline
+  DOOWA/app/src /main/res/layout/ & activity\_bug\report.xml \newline activity\_camera.xml\newline activity\_check\_submission\_locati on.xml\newline activity\_details.xml\newline activity\_faqactivity.xml\newline activity\_forgot\_pass.xml\newline activity\_list\_details.xml\newline activity\_login.xml\newline activity\_main.xml\newline activity\_register.xml\newline activity\_report.xml\newline activity\_set\_location.xml\newline activity\_submission\_list.xml\newline activity\_tracking.xml\newline adapter.xml\newline fragment\_account.xml\newline fragment\_foodbank.xml\newline fragment\_map.xml\newline fragment\_request.xml\newline show\_dialog.xml\newline & Android Studio\\
+  \hline
+  DOOWA/util/ & composer.json\newline  DataBase.php\newline deleteRequest.php\newline deleteRequestHistory.php\newline filterRequest.php\newline filterRequestHistory.php\newline insertRequest.php\newline login.php\newline requestDB.php\newline restoreRequest.php\newline signup.php\newline & Server\\
+  \hline
+  DOOWA/ documentations/ & DOOWA Documentation.tex\newline DOOWA Documentation.pdf\newline README.md\newline & Documentations\\
+  \hline
+\end{tabular}
+\end{center}
+\end{table}
+\newpage
+
+\subsection{AccountFragment.java}
+
+\begin{figure}[h!]
+\includegraphics[width=5cm]{./code/accountfragment}
+\centering
+\caption{AccountFragment.java}
+\end{figure}
+
+1. Purpose: This class serves purpose to handles the account page and how each buttons interacts when pressed. This class extends Fragment class from JAVA library because it acts a a fragment and not an activity in our application. This is because it is one of the 4 main components of the bottom navigation which requires the use of fragment. This class also handles the data of each user and replaces the name and username field on the account page according to the respective users.\break
+\par 2. Functionality: As mentioned before, this class will handle the retrieval of the user data from either the MySQL database or Firebase (in case of signed in with Google). After the data is retrieved, this class will change the profile picture, username, full name and ratings field according to each user. This class also handles what each clicks on the button on the account page do such as opening new activity and shows up pop up windows.\break
+
+3. Location of Source Code: DOOWA/app/src/main/java/com/example/doowa/ AccountFragment.java\break
+
+4. Class components: There are few methods implemented in this class.
+\begin{itemize}
+\item onCreateView()
+\end{itemize}
+In this method, the profile picture, full name, username and ratings of a user will be replaced according to the data retrieved from the login info or the Firebase database if the user signed in using Google service. This method also assigns "setOnClickListener" attributes to several text and buttons that are displayed on the account page so that those texts are clickable by users. This method returns View object.
+\begin{itemize}
+\item onClick()
+\end{itemize}
+This method has switch case which assign what the application do when certain texts are clicked.
+\begin{itemize}
+\item onChangeLanguageDialog()
+\end{itemize}
+This method shows the pop up window for language choice whenever "Change Language button is clicked"
+\begin{itemize}
+\item setLocale() and loadLocale()
+\end{itemize}
+This method sets application language and restarts the app in that language.
+\begin{itemize}
+\item signOut()
+\end{itemize}
+This method handles the sign out process for the user.
+\break
+
+\subsection{BugReportActivity.java}
+\begin{figure}[h!]
+\includegraphics[width=5cm]{./code/bugclass}
+\centering
+\caption{BugReportActivity.java}
+\end{figure}
+1. Purpose: This class is used to let the users send any bugs reports or suggestions for our application improvements.\break
+\par 2. Functionality: If a user wanted to submit a bug reports or submissions, they can use the feature implemented from this class and when the submit button is clicked, the submission will be sent to our database.\break
+
+3. Location of Source Code: DOOWA/app/src/main/java/com/example/doowa/ BugReportActivity.java\break
+
+4. Class components: There are few methods implemented in this class.
+\begin{itemize}
+\item onCreateView()
+\end{itemize}
+This method prepares the text box for input and assign the button to be clickable.
+\begin{itemize}
+\item onClick()
+\end{itemize}
+When the submit button is clicked, this method sends the contents of the text box to database.
+\newpage
+\subsection{CameraActivity.java}
+\begin{figure}[h!]
+\includegraphics[width=5cm]{./code/cameraclass}
+\centering
+\caption{CameraActivity.java}
+\end{figure}
+1. Purpose: This class is used to let the users upload image they wanted optionally whenever they submit a donation request or foodbank.\break
+\par 2. Functionality: When user open the "Image upload" page, their gallery will be opened and users can choose any picture to upload. After select, the image preview will be shown on the page and when the upload button is clicked, a progress bar will be filled up and user is sent to submission page after successful upload. \break
+
+3. Location of Source Code: DOOWA/app/src/main/java/com/example/doowa/ CameraActivity.java\break
+
+4. Class components: There are few methods implemented in this class.
+\begin{itemize}
+\item onFileChooser()
+\end{itemize}
+This method opens the user gallery to choose image to upload.
+\begin{itemize}
+\item getFileExtension()
+\end{itemize}
+This method returns the type of file chosen.
+\begin{itemize}
+\item uploadFile()
+\end{itemize}
+This method handles the upload process of the image to the Firebase database. Then, the image URL will be sent to the submission page.
+\begin{itemize}
+\item confirmationWindow()
+\end{itemize}
+This method will cause a pop up window to appear and ask the user for image upload confirmation.
+\break
+\subsection{DetailsActivity.java and ListDetailsActivity.java}
+\begin{figure}[h!]
+\includegraphics[width=5cm]{./code/detailsclass}
+\centering
+\caption{DetailsActivity.java}
+\end{figure}
+1. Purpose: This class handles the details page which shows the details of donations or foodbanks that are appeared on the main map. User will see this page when they clicked the marker on the map.\break
+\par 2. Functionality: When the user clicked on a marker on the map, this class will fetch the data from the database and replaces all the text fields on the details page according to the fetched data. The data is fetched by sending request to server along with the langtitude and longtitude of the marker.\break
+
+3. Location of Source Code: DOOWA/app/src/main/java/com/example/doowa/ DetailsActivity.java
+DOOWA/app/src/main/java/com/example/doowa/ ListDetailsActivity.java\break
+
+4. Class components: There are few methods implemented in this class.
+\begin{itemize}
+\item loadRequests()
+\end{itemize}
+This method retrieves the data from the database to be displayed ion the details page.
+\begin{itemize}
+\item makePhoneCall()
+\end{itemize}
+This method redirects the user form the application to their phone app and calls the number of the requester immediately.
+\break
+\subsection{FAQActivity}
+\begin{figure}[h!]
+\includegraphics[width=5cm]{./code/faqclass}
+\centering
+\caption{FAQActivity.java}
+\end{figure}
+1. Purpose: This class will show the frequently asked question text on the FAQ page to the users.\break
+\par 2. Functionality: When the user clicked on the FAQs button on the account page, this class will show the contents of the FAQ page and make the page scrollable.\break
+
+3. Location of Source Code: DOOWA/app/src/main/java/com/example/doowa/ FAQActivity.java\break
+
+4. Class components: There are few methods implemented in this class.
+\begin{itemize}
+\item onCreate()
+\end{itemize}
+This method set the text field of the FAQ page to the given FAQ text.
+\break
+
+\subsection{FoodbankFragment.java}
+\begin{figure}[h!]
+\includegraphics[width=5cm]{./code/foodbankclass}
+\centering
+\caption{FoodbankFragment.java}
+\end{figure}
+1. Purpose: This class is used to handles the foodbank submission of the user and save the inputted data first before the user locates the submission location on the map.\break
+\par 2. Functionality: If a user wanted to submit a foodbank submission, they can fill up the details in foodbank submission page and this class will store all the submitted input into a temporary storage before sending it to the database. Field checkers are also implemented.\break
+
+3. Location of Source Code: DOOWA/app/src/main/java/com/example/doowa/ FoodbankFragment.java\break
+
+4. Class components: There are few methods implemented in this class.
+\begin{itemize}
+\item fbSubmission()
+\end{itemize}
+This method checks if the required fields are filled with valid values. If they are, then the inputted data are saved into the temporary storage. 
+\begin{itemize}
+\item onItemSelected()
+\end{itemize}
+This method is to handle the data which user picked in the drop down menu for the donation type.
+\break
+\subsection{ForgotPassActivity.java}
+\begin{figure}[h!]
+\includegraphics[width=5cm]{./code/forgotpassclass}
+\centering
+\caption{ForgotPassActivity.java}
+\end{figure}
+1. Purpose: This class handles how verification email are sent to users' email address for password reset.\break
+\par 2. Functionality: User will be asked to fill the text field with their email address. This class will check if such email address exist in database and send a verification email for password reset if true.\break
+
+3. Location of Source Code: DOOWA/app/src/main/java/com/example/doowa/ ForgotPassActivity.java\break
+
+4. Class components: There are few methods implemented in this class.
+\begin{itemize}
+\item onClick()
+\end{itemize}
+This method checks if the imputted email is valid and exist in database and send the verification email to the inputted address if true.
+\break
+\subsection{HistoryListActivity.java and SubmissionListActivity.java}
+\begin{figure}[h!]
+\includegraphics[width=5cm]{./code/historyclass}
+\centering
+\caption{HistoryListActivity.java}
+\end{figure}
+1. Purpose: This class handles the retrieval of users' submission from the database and display it on the history submission page.\break
+\par 2. Functionality: First, the class will send the username of the user to the server and the server will select the submission data according to the username. The server will send the list to this class and the list will be displayed.\break
+
+3. Location of Source Code: -DOOWA/app/src/main/java/com/example/doowa/HistoryList Activity.java\\
+-DOOWA/app/src/main/java/com/example/doowa/ SubmissonListActivity.java
+\break
+
+4. Class components: There are few methods implemented in this class.
+\begin{itemize}
+\item filterRequest()
+\end{itemize}
+This method sends the username to server and receive the data of the users' deleted submission.
+\begin{itemize}
+\item loadSubmission()
+\end{itemize}
+This method displays the data received from the previous method to the screen.
+\break
+\subsection{HistoryListAdapter.java and SubmissionListAdapter.java}
+\begin{figure}[h!]
+\includegraphics[width=5cm]{./code/historyadapter}
+\centering
+\caption{HistoryListAdapter.java}
+\end{figure}
+1. Purpose: This class mainly used to let the users interact with the menu for each submission list which is represented by the three dot on the corned in the submission list page (or history page.) such as see details, check location, or delete the submission.\break
+\par 2. Functionality: The class has few functions which displays the submission type and the time submitted. Then, if the user choose to see the details, then the user will be redirected to the details page. If they decide to check the location, then they will be directed to the map page. Finally, if they choose to delete the submission, the the submission will be sent to the server and the server will delete the submission from the database according to the id.\break
+
+3. Location of Source Code: -DOOWA/app/src/main/java/com/example/doowa/HistoryList Adapter.java\\
+-DOOWA/app/src/main/java/com/example/doowa/ SubmissonListAdapter.java
+\break
+
+4. Class components: There are few methods implemented in this class.
+\begin{itemize}
+\item onBindViewHolder()
+\end{itemize}
+This method handles the choice menu for each submission ion the list and do different things accordingly whenever a user clicked on the chosen menu.
+\begin{itemize}
+\item deleteSubmission()
+\end{itemize}
+This method deletes the submission from the database.
+\begin{itemize}
+\item restoreSubmission()
+\end{itemize}
+This method lets the user to restore the submission from the history back to the submission list and will be displayed on the map again.
+\break
+\subsection{LoginActivity.java}
+\begin{figure}[h!]
+\includegraphics[width=5cm]{./code/loginclass}
+\centering
+\caption{LoginActivity.java}
+\end{figure}
+1. Purpose: This class mainly used to check the user info before logs them in into the main application page.\break
+\par 2. Functionality: The class has few functions which checks if the username and password combination inputted are valid from the database. After the combination is inputted and login button is clicked, the data will be send to the server and checked. If the combination is valid, then the user will be directed to the main page. If not, a failure message pops up. This class also handles the Google authentication services if the user decides to log in using their Google account.\break
+
+3. Location of Source Code: DOOWA/app/src/main/java/com/example/doowa/Login Activity.java\break
+
+4. Class components: There are few methods implemented in this class.
+\begin{itemize}
+\item createRequest(), signIn(), firebaseAuthWithGogle()
+\end{itemize}
+These methods handles the process of Google authentication if the user signed in using their existing Google account.
+\begin{itemize}
+\item userSignIn()
+\end{itemize}
+This method handles the situation if the user signed in using the account registered form the app.
+\break
+\subsection{MainActivity.java}
+\begin{figure}[h!]
+\includegraphics[width=5cm]{./code/mainclass}
+\centering
+\caption{MainActivity.java}
+\end{figure}
+1. Purpose: This class is used to process the bottom navigation display on the main page.\break
+
+\par 2. Functionality: The class basically acts as a fragment container for 4 main pages which are map, request submission, foodbank donation and account.  \break
+
+3. Location of Source Code: DOOWA/app/src/main/java/com/example/doowa/Main Activity.java\break
+\break
+\subsection{MapFragment.java}
+\begin{figure}[h!]
+\includegraphics[width=5cm]{./code/mapfragmentclass}
+\centering
+\caption{MapFragment.java}
+\end{figure}
+1. Purpose: This class is used to handle how the maps appears on the main map page and how the submission markers are located on the map.\break
+\par 2. Functionality: The class will first fetch all the submission data from the database and stored in a List object. Then, the latitude and longitude are retrieved from the List and the markers are displayed on that data. The marker icons are also changed according to the donation type of the submission which is retrieved from the List.\break
+
+3. Location of Source Code: DOOWA/app/src/main/java/com/example/doowa/MapFrag ment.java\break
+
+4. Class components: There are few methods implemented in this class.
+\begin{itemize}
+\item loadRequest
+\end{itemize}
+These methods retrieves all the donation data from the database, extracts the data and marks the submission locations the on the map accordingly.
+\break
+\subsection{RegisterActivity.java}
+\begin{figure}[h!]
+\includegraphics[width=5cm]{./code/registerclass}
+\centering
+\caption{RegisterActivity.java}
+\end{figure}
+1. Purpose: This class handles the user registration if the user are not yet made an account ion the application.\break
+\par 2. Functionality: When the user completely filled the registration form, this class will check if each fields are filled with valid values. Then, the class will send the data to the server and the server will check if the inputted username and email already exist in the database. If it is, the registrations failed but if not, the password will be hashed for privacy and all the submitted data will be stored into the database. \break
+
+3. Location of Source Code: DOOWA/app/src/main/java/com/example/doowa/Register Activity.java\break
+
+4. Class components: There are few methods implemented in this class.
+\begin{itemize}
+\item userRegistration()
+\end{itemize}
+These methods checks if all the fields in the registration page are filled with valid values and sends the data to the server. Finally, it will tell the user if the registration is successful or not.
+\break
+\subsection{ReportActivity.java}
+\begin{figure}[h!]
+\includegraphics[width=5cm]{./code/reportclass}
+\centering
+\caption{ReportActivity.java}
+\end{figure}
+1. Purpose: This class is used to let the users send any reports if they saw any submission that are breaking the DOOWA guidelines.\break
+\par 2. Functionality: If a user wanted to submit a report, they can use the feature implemented from this class and when the submit button is clicked, the submission will be sent to our database.\break
+
+3. Location of Source Code: DOOWA/app/src/main/java/com/example/doowa/ ReportActivity.java\break
+
+4. Class components: There are few methods implemented in this class.
+\begin{itemize}
+\item onCreateView()
+\end{itemize}
+This method prepares the text box for input and assign the button to be clickable.
+\begin{itemize}
+\item onClick()
+\end{itemize}
+When the submit button is clicked, this method sends the contents of the text box to database.
+\break
+\subsection{Requests.java and Upload.java}
+\begin{figure}[h!]
+\includegraphics[width=5cm]{./code/requestclass}
+\centering
+\caption{Requests.java}
+\end{figure}
+1. Purpose: This class is used to store the retrieved submissions (or uploaded image) from the database and create a List object with these types.\break
+\par 2. Functionality: As mentioned before.This class is used to store the retrieved submissions (or uploaded image) from the database and create a List object with these types which will be used in other classes.\break
+
+3. Location of Source Code: DOOWA/app/src/main/java/com/example/doowa/Requests.java\\
+ DOOWA/app/src/main/java/com/example/doowa/Upload.java
+\break
+\break
+\subsection{SetLocationActivity.java}
+\begin{figure}[h!]
+\includegraphics[width=5cm]{./code/setlocationclass}
+\centering
+\caption{SetLocationActivity.java}
+\end{figure}
+1. Purpose: This class is used to let the users set their desired location on the map for their submission. Then, the location is saved and sent to the database.\break
+\par 2. Functionality: After a user made a request or foodbank submission, users will be brought to this page to choose where to mark the submission location on map. User can either use the draggable marker to mark their location or alternatively, use their device current location. Before user can access this location or mark the location on the map, this class will check if the user already enabled the location and network services on their devices. \break
+
+3. Location of Source Code: DOOWA/app/src/main/java/com/example/doowa/ SetLocationActivity.java\break
+
+4. Class components: There are few methods implemented in this class.
+\begin{itemize}
+\item insertRequestDB()
+\end{itemize}
+This method prepares the data submitted by the user from the request or foodbank submission page and the marker location. Then, the method will push all these submission details to the database. 
+\begin{itemize}
+\item  getRequestData()
+\end{itemize}
+This method is used to fetch the data that are filled by the users from the request or foodbank page.
+\begin{itemize}
+\item getCurrentLocation()
+\end{itemize}
+This method assigns the current location of the users' device to the double value "latitude" and "longitude" of the class.
+\begin{itemize}
+\item checkLocationService()
+\end{itemize}
+This method checks if the users already enabled network and location services on their devices.
+\newpage
+
+
+\section{Use Cases}
+to be continued...
+
 
 \end{document}
-
