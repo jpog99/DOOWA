@@ -43,9 +43,11 @@ class DataBase
         $row = mysqli_fetch_assoc($result);
         if (mysqli_num_rows($result) != 0) {
             $dbusername = $row['username'];
+            $dbfullname = $row['fullname'];
             $dbpassword = $row['password'];
             if ($dbusername == $username && password_verify($password, $dbpassword)) {
                 $login = true;
+                echo $dbusername . " " . $dbfullname;
             } else $login = false;
         } else $login = false;
 
@@ -58,7 +60,7 @@ class DataBase
         $username = $this->prepareData($username);
         $password = $this->prepareData($password);
         $email = $this->prepareData($email);
-        //$password = password_hash($password, PASSWORD_DEFAULT);
+        $password = password_hash($password, PASSWORD_DEFAULT);
         $this->sql =
             "INSERT INTO " . $table . " (fullname, username, password, email) VALUES ('" . $fullname . "','" . $username . "','" . $password . "','" . $email . "')";
         if (mysqli_query($this->connect, $this->sql)) {
@@ -66,7 +68,7 @@ class DataBase
         } else return false;
     }
 
-    function insertRequests($table,$lat,$lng,$phone,$donationType,$address,$details,$image,$report,$time,$name,$profilepic,$meetingTime,$type)
+    function insertRequests($table,$lat,$lng,$phone,$donationType,$address,$details,$image,$report,$time,$name,$profilepic,$meetingTime,$type,$displayName)
     {
         $lat = $this->prepareData($lat); 
         $lng = $this->prepareData($lng); 
@@ -81,9 +83,35 @@ class DataBase
         $profilepic = $this->prepareData($profilepic); 
         $meetingTime =$this->prepareData($meetingTime); 
         $type = $this->prepareData($type); 
+        $displayName = $this->prepareData($displayName); 
 
         $this->sql =
-            "INSERT INTO " . $table . " (lat,lng,phone,donationType,address,details,image,report,time,name,profilepic,meetingTime,type) VALUES ('" . $lat . "','" . $lng . "','" . $phone . "','" . $donationType . "','" . $address . "','" . $details . "','" . $image . "','" . $report . "','" . $time . "','" . $name . "','" . $profilepic . "','" . $meetingTime . "','" . $type . "')";
+            "INSERT INTO " . $table . " (lat,lng,phone,donationType,address,details,image,report,time,name,profilepic,meetingTime,type,displayName) VALUES ('" . $lat . "','" . $lng . "','" . $phone . "','" . $donationType . "','" . $address . "','" . $details . "','" . $image . "','" . $report . "','" . $time . "','" . $name . "','" . $profilepic . "','" . $meetingTime . "','" . $type . "','" . $displayName . "')";
+        if (mysqli_query($this->connect, $this->sql)) {
+            return true;
+        } else return false;
+    }
+
+    function restoreRequests($table,$id,$lat,$lng,$phone,$donationType,$address,$details,$image,$report,$time,$name,$profilepic,$meetingTime,$type,$displayName)
+    {
+        $id = $this->prepareData($id); 
+        $lat = $this->prepareData($lat); 
+        $lng = $this->prepareData($lng); 
+        $phone = $this->prepareData($phone); 
+        $donationType = $this->prepareData($donationType); 
+        $address = $this->prepareData($address); 
+        $details = $this->prepareData($details); 
+        $image = $this->prepareData($image); 
+        $report = $this->prepareData($report); 
+        $time = $this->prepareData($time); 
+        $name = $this->prepareData($name); 
+        $profilepic = $this->prepareData($profilepic); 
+        $meetingTime =$this->prepareData($meetingTime); 
+        $type = $this->prepareData($type); 
+        $displayName = $this->prepareData($displayName); 
+
+        $this->sql =
+            "INSERT INTO " . $table . " (id,lat,lng,phone,donationType,address,details,image,report,time,name,profilepic,meetingTime,type,displayName) VALUES ('" . $id . "','" . $lat . "','" . $lng . "','" . $phone . "','" . $donationType . "','" . $address . "','" . $details . "','" . $image . "','" . $report . "','" . $time . "','" . $name . "','" . $profilepic . "','" . $meetingTime . "','" . $type . "','" . $displayName . "')";
         if (mysqli_query($this->connect, $this->sql)) {
             return true;
         } else return false;

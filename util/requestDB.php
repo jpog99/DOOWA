@@ -1,10 +1,7 @@
 <?php 
  
  //database constants
- define('DB_HOST', 'us-cdbr-east-04.cleardb.com');
- define('DB_USER', 'b61d31d80b2e74');
- define('DB_PASS', '5b824682');
- define('DB_NAME', 'heroku_0981d636c949294');
+ require "DataBaseConfigPull.php";
  
  //connecting to database and getting the connection object
  $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
@@ -16,19 +13,20 @@
  }
  
  //creating a query
- $stmt = $conn->prepare("SELECT lat,lng,phone,donationType,address,details,image,report,time,name,profilepic,meetingTime,type FROM requests;");
+ $stmt = $conn->prepare("SELECT * FROM requests;");
  
  //executing the query 
  $stmt->execute();
  
  //binding results to the query 
- $stmt->bind_result($lat,$lng,$phone,$donationType,$address,$details,$image,$report,$time,$name,$profilepic,$meetingTime,$type);
+ $stmt->bind_result($id,$lat,$lng,$phone,$donationType,$address,$details,$image,$report,$time,$name,$profilepic,$meetingTime,$type,$displayName);
  
  $requests = array(); 
  
  //traversing through all the result 
  while($stmt->fetch()){
  $temp = array();
+ $temp['id'] = $id;
  $temp['lat'] = $lat; 
  $temp['lng'] = $lng; 
  $temp['phone'] = $phone; 
@@ -42,6 +40,7 @@
  $temp['profilepic'] = $profilepic; 
  $temp['meetingTime'] = $meetingTime; 
  $temp['type'] = $type; 
+ $temp['displayName'] = $displayName;
 
 
  array_push($requests, $temp);
