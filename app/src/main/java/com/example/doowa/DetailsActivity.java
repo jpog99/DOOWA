@@ -190,7 +190,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
                 }else{
                     Toast.makeText(this, "No image preview available.", Toast.LENGTH_SHORT).show();
                 }
-                
+
                 break;
         }
     }
