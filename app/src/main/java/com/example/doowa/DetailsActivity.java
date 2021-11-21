@@ -39,7 +39,7 @@ import java.util.List;
 public class DetailsActivity extends AppCompatActivity implements View.OnClickListener {
     TextView txt_donationType, txt_detailsReport,txt_name,txt_address,txt_details,txt_time, txt_detailsAsk, txt_detailsType, txt_meetingType, txt_meetingTime;
     ImageView img_image, img_profilepic, img_call, img_msg;
-    String phone;
+    String phone,imageurl = "";
     private static final String DBRequest_URL = "https://doowa-server.herokuapp.com/requestDB.php";
     List<Requests> requestList;
     private static final int REQUEST_CALL = 1;
@@ -68,6 +68,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         img_call.setOnClickListener(this);
         img_msg.setOnClickListener(this);
         txt_detailsReport.setOnClickListener(this);
+        img_image.setOnClickListener(this);
 
         requestList = new ArrayList<>();
 
@@ -138,8 +139,10 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
                                     phone = requests.phone;
                                     if(!requests.profilepic.equals(""))
                                         Glide.with(getApplicationContext()).load(String.valueOf(requests.profilepic)).into(img_profilepic);
-                                    if(!requests.image.equals(""))
+                                    if(!requests.image.equals("")){
                                         Glide.with(getApplicationContext()).load(String.valueOf(requests.image)).into(img_image);
+                                        imageurl = requests.image;
+                                    }
                                     if(requests.meetingTime.equals("")){
                                         txt_meetingType.setVisibility(View.INVISIBLE);
                                         txt_meetingTime.setVisibility(View.INVISIBLE);
@@ -167,6 +170,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
+        Intent intent;
         switch (v.getId()){
             case R.id.img_detailsCall:
                 makePhoneCall();
@@ -175,8 +179,19 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", phone, null)));
                 break;
             case R.id.txt_detailsReport:
-                Intent intent = new Intent(getApplicationContext(), ReportActivity.class);
+                intent = new Intent(getApplicationContext(), ReportActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.img_detailsImage:
+                if(!imageurl.equals("")){
+                    intent = new Intent(getApplicationContext(), PreviewActivity.class);
+                    intent.putExtra("image",imageurl);
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(this, "No image preview available.", Toast.LENGTH_SHORT).show();
+                }
+                
+                break;
         }
     }
 
