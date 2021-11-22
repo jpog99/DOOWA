@@ -96,4 +96,13 @@
     <string name="language_choose">언어 선택</string>
     <string name="guidelines">도움 요청방법 을 확인해주세요 <a href="https://github.com/jpog99/DOOWA/tree/master/documentations#submission-guidelines">  요청방법.</a></string>
     <string name="hyperlink_tnc">저는 약관을 읽었고 동의합니다<a href="https://github.com/jpog99/DOOWA/tree/master/documentations#doowa-term-and-services">  약관.</a></string>
+
+    <string name="bank_choose">응햏 선택</string>
+    <string name="woori">우리</string>
+    <string name="hana">KEB 하나</string>
+    <string name="sinhan">신한</string>
+    <string name="kookmin">국민</string>
+    <string name="nonghyeon">농협</string>
+    <string name="suhyup">수협</string>
+
 </resources>

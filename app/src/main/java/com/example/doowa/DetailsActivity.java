@@ -7,7 +7,9 @@ import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -15,6 +17,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -44,6 +47,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
     List<Requests> requestList;
     private static final int REQUEST_CALL = 1;
     ProgressDialog progressDialog;
+    Button btn_transferMoney;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,12 +67,14 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         img_profilepic = (ImageView) findViewById(R.id.img_detailsProfilePic);
         img_call = (ImageView)findViewById(R.id.img_detailsCall);
         img_msg = (ImageView)findViewById(R.id.img_detailsMsg);
+        btn_transferMoney = (Button) findViewById(R.id.btn_detailsTransferMoney);
         progressDialog = new ProgressDialog(this);
 
         img_call.setOnClickListener(this);
         img_msg.setOnClickListener(this);
         txt_detailsReport.setOnClickListener(this);
         img_image.setOnClickListener(this);
+        btn_transferMoney.setOnClickListener(this);
 
         requestList = new ArrayList<>();
 
@@ -190,7 +196,9 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
                 }else{
                     Toast.makeText(this, "No image preview available.", Toast.LENGTH_SHORT).show();
                 }
-
+                break;
+            case R.id.btn_detailsTransferMoney:
+                showBankDialog();
                 break;
         }
     }
@@ -216,5 +224,49 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
                 Toast.makeText(this, "Permission DENIED", Toast.LENGTH_SHORT).show();
             }
         }
+    }
+
+    private void showBankDialog() {
+            final String[] listitems = {getResources().getString(R.string.woori),
+                    getResources().getString(R.string.hana),
+                    getResources().getString(R.string.sinhan),
+                    getResources().getString(R.string.kookmin),
+                    getResources().getString(R.string.nonghyeon),
+                    getResources().getString(R.string.suhyup)};
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(getResources().getString(R.string.bank_choose));
+        builder.setSingleChoiceItems(listitems, -1, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                if (which == 0){
+                    openBank("https://spot.wooribank.com/pot/Dream?withyou=en&LCL=EN");
+                }
+                else if (which == 1){
+                    openBank("https://www.kebhana.com/easyone_index_en.html");
+                }
+                else if (which == 2){
+                    openBank("https://www.shinhan.com/en/#300000000000");
+                }
+                else if (which == 3){
+                    openBank("https://www.kbstar.com/");
+                }
+                else if (which == 4){
+                    openBank("https://banking.nonghyup.com/nhbank.html");
+                }
+                else if (which == 5){
+                    openBank("https://suhyup-bank.com/");
+                }
+
+                dialog.dismiss();
+            }
+        });
+        AlertDialog mDialog = builder.create();
+        mDialog.show();
+    }
+
+    private void openBank(String link) {
+        Uri uri = Uri.parse(link);
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
     }
 }

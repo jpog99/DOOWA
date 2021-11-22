@@ -79,6 +79,13 @@
     <string name="signout_title">Daftar Keluar</string>
     <string name="signout_message">Anda pasti untuk daftar keluar?</string>
     <string name="language_choose">Pilih Bahasa</string>
+    <string name="woori">Woori</string>
+    <string name="hana">KEB Hana</string>
+    <string name="sinhan">Shinhan</string>
+    <string name="kookmin">Kookmin</string>
+    <string name="nonghyeon">Nonghyup</string>
+    <string name="suhyup">Suhyup</string>
+    <string name="bank_choose">Pilih Bank</string>
     <string name="guidelines">Semak garis panduan submisi kami <a href="https://github.com/jpog99/DOOWA/tree/master/documentations#submission-guidelines">di sini.</a></string>
     <string name="hyperlink_tnc">Saya setuju dengan <a href="https://github.com/jpog99/DOOWA/tree/master/documentations#doowa-term-and-services">Terma dan Syarat.</a></string>
 </resources>
