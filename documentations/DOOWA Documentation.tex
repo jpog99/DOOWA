@@ -313,7 +313,7 @@ This application is launched by the United Nations with the aim of feeding the n
 \centering
 \end{figure}We will use MySQL for data management because as mentioned before, it can be directly connected with our Heroku server. Today, MySQL is the second ranking RDBMS solution in the world, according to DB Engines. Its users include a wide range of websites and applications, including household brands like Spotify, Netflix, Facebook and Booking.com. Finally, the data stored there can be easily viewed in tables.\\
 \begin{itemize}
-\item Goole FIrebase
+\item Google Firebase
 \end{itemize}
 \end{itemize}
 \end{itemize}
@@ -1155,7 +1155,7 @@ This method prepares the text box for input and assign the button to be clickabl
 \item onClick()
 \end{itemize}
 When the submit button is clicked, this method sends the contents of the text box to database.
-\newpage
+\break
 \subsection{CameraActivity.java}
 \begin{figure}[h!]
 \includegraphics[width=5cm]{./code/camera}
@@ -1438,7 +1438,7 @@ This method assigns the current location of the users' device to the double valu
 \item checkLocationService()
 \end{itemize}
 This method checks if the users already enabled network and location services on their devices.
-\newpage
+\break
 
 
 \section{Use Cases}
@@ -1486,7 +1486,600 @@ If users successfully log in into their account, users will be redirected to the
 \caption{Login process.}
 \end{figure}
 
+\subsection{Use Case II: User Registration}
 
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/registerlogo}
+\centering
+\caption{Doowa Logo.}
+\end{figure}
+
+\par User has to first register for an account before proceeding to the next step. On the sign-up page, there will be the application name which is Doowa and there is a short slogan “Share and Stay Blessed” below the name. next, there is also a few sections that must be answered including full name, username, email, and password. 
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/registername}
+\centering
+\caption{Fullname field.}
+\end{figure}
+\par User is asked to fill in their full name in a text form. It is preferable to fill this section with alphabets rather than numbers or symbols. 
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/registername2}
+\centering
+\caption{Empty fullname case.}
+\end{figure}
+
+\par If the user proceeds to register without filling in the full name, error message will pop-up in the full name section indicating that full name is required to fill in.
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/registeruser}
+\centering
+\caption{Username field.}
+\end{figure}
+\par User also has to create a username that later will be used for logging in and be able to use the application. Username has unlimited options as long as it is unique from others. If user entered a username that has been registered, there will be an error and hence cannot complete the sign-up process. Usernames may consist of alphabets, numbers, and symbols. 
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/registeruser2}
+\centering
+\caption{Empty username case.}
+\end{figure}
+\par If the user proceeds to register without filling in their username, error message will pop-up in the username section indicating that username is required to fill in. 
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/registeremail}
+\centering
+\caption{Email field.}
+\end{figure}
+\par Next, email is also one of the sections that has to be filled in by the user. Email must be registered so that user can use this email address to receive and not miss out any important information from the application services. Users cannot use the same registered email address twice. 
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/registeremail2}
+\centering
+\caption{Empty email case.}
+\end{figure}
+\par If the user proceeds to register without filling in their email, error message will pop-up in the email section indicating that email is required to fill in. error message will also pop-op if the user tends to fill in the email address without a proper email address format. 
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/registerfail}
+\centering
+\caption{Duplicate username/email case.}
+\end{figure}
+\par This message will pop out if any of the registered username or email has been used by another user. This indicates that the user cannot register with the same username or password. 
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/registerpass}
+\centering
+\caption{Password field.}
+\end{figure}
+\par User must create a password to be logged in to the application. The input password will not be seen while filling in the section. 
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/registerpass2}
+\centering
+\caption{Invalid password case.}
+\end{figure}
+\par If the user proceeds to register without creating a password, error message will pop-up in the password section indicating that the password section is required to fill in. 
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/registerpassc}
+\centering
+\caption{Password confirmation field.}
+\end{figure}
+\par User fills on this section to confirm their password that has been first entered. If the password does not match, it will also pop up an error message indicating the password entered is not the same.
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/registerpassc2}
+\centering
+\caption{Invalid password confirmation.}
+\end{figure}
+\par This error message will pop-up if user does not enter the same password that has been filled in the password section. Hence, the password created is invalid.
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/registertnc}
+\centering
+\caption{Terms and Condition.}
+\end{figure}
+\par User must read and agree to all the terms and conditions before using the application. If user does not agree to the terms and conditions, they are not able to proceed to another step. User can read and understand the terms and conditions by pressing “Terms and Conditions”. All the terms and conditions will be stated in a pop-up window.
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/registertnc2}
+\centering
+\caption{Terms and conditions page.}
+\end{figure}
+\par User can read and understand the terms and conditions by pressing “Terms and Conditions”. This will redirect user to a website for Doowa Terms and Services.
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/registertnc3}
+\centering
+\caption{Unchecked TnC case.}
+\end{figure}
+\par If the user does not agree and tick the box for the terms and conditions, there will be caution symbol indicating that they must agree to terms and conditions to successfully register. 
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/registerfail2}
+\centering
+\caption{Fail registration.}
+\end{figure}
+\par If the user wishes to create a username or providing an email that has been registered in the application, this error message will pop-up indicating that the registration process is failed because they used the register username or email address.
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/registerbutton}
+\centering
+\caption{Register button.}
+\end{figure}
+\par After all the sections have been filled in and user has agreed and ticked to the terms and conditions, they will be able to register a new account by pressing the “Register” button.
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/registersuccess}
+\centering
+\caption{Successful registration.}
+\end{figure}
+\par This message will pop-up indicating the user that their account has been successfully created and is ready to be used. 
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/registerlogin}
+\centering
+\caption{Login prompt.}
+\end{figure}
+\par If the user already has a registered account, user can press “Log in.” to proceed to the log in page and continue logging in instead of registering a new account.
+
+\par The flowchart for user registration case is as below.
+\begin{figure}[h!]
+\includegraphics[width=6cm]{./flow/register}
+\centering
+\caption{User registration process.}
+\end{figure}
+
+\subsection{Use Case III: Password Recovery}
+\par In an event where users forgot the password that they signed up with, they can always restore their password with a few simple steps.
+
+\par They can first click on the forgot password? Line and they will be redirected to the password recovery page.
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/forgotmain}
+\centering
+\caption{Password retrieval page.}
+\end{figure}
+\par Users then need to fill in the email that they register with in the provided field. If the field is left empty/invalid input is entered, warning message will pop-up.
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/forgotsuccess}
+\centering
+\caption{Successful password retrieval.}
+\end{figure}
+\par Once correct email is entered, one verification email will be sent to user’s email detailing the new recovery. 
+password that they can now use to log into the application.
+
+\par A pop up message will come out and inform the users that a verification email had been sent to their email address.
+
+\subsection{Use Case IV: When User Opens Main Map}
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/mapmain}
+\centering
+\caption{Map displaying markers.}
+\end{figure}
+\par When user is on the main map page, this will help user to find those who are seeking for donation by referring to the pins that are on the map. User can also drag the map if they wish to provide the donation at the different location radius. 
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/maptap}
+\centering
+\caption{Map bubble.}
+\end{figure}
+\par Once donor has decided to provide the donation, they can press the pin on the map to pop-up the type of donation window and further tap to redirect them to the details page where there will be more information regarding the recipient and donation that they are seeking.
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/maptool}
+\centering
+\caption{Integrated Google Maps tools.}
+\end{figure}
+\par User will have two options that come up on the bottom left part of the map page when they have selected on of the recipient through the location pin. 
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/mapnavi}
+\centering
+\caption{Google Map navigation.}
+\end{figure}
+\par User then will redirect to Google Maps if there press the left button option which is the direction to the recipient’s place. This helps donor to have clear navigation to heading the place.
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/mapnavi2}
+\centering
+\caption{Location on Google Map.}
+\end{figure}
+\par If the user (donor) clicked the right button of the options,  donor will redirect to Google Maps for a precise location and further information regarding the place to have a better in searching for the place.
+
+\subsection{Use Case V: Opening Donation/Foodbank Details}
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{detailspage}
+\centering
+\caption{Details page.}
+\end{figure}
+
+Details page is the page where donor can access to communicate with their recipient. On the page, there will be profile picture, call and message button, as well as basic details such as name, address meeting time and ant extra pictures as attachments.
+
+Profile picture : User can upload a profile picture that is related to them and most importantly it aligns with the guidelines of the application. If the picture is inappropriate, the profile can be terminated by the administrator.
+
+Call : Recipient can provide their phone number on the application so that when it is easier for donor to reach them out. Donor can press the phone call button to start calling recipient immediately. 
+
+Message : Donor also has an option to reach out the recipient through messages. Donor can press the message (dialogue box) button to directly message the recipient for further information.
+
+Name : Recipient must provide their full name so that donor will get to know recipient’s basic information for them to use if there are any inappropriate misbehavior. 
+
+Address : Recipient can add a full detailed address at the address section so that donor can provide the donation by delivering to the address. The address must be detailed and real. 
+
+Meeting time : Recipient can provide preferred meeting time so that donor and recipient can agree to one date and time if they are planning to meet in face-to-face situation. 
+
+Attachments : Recipient can upload extra pictures as attachments so that donor will have better understanding on what type of donation that the recipient is looking for. Users could have multiple attachments in this section if the pictures uploaded are appropriate and aligns with guidelines.
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/detailbank}
+\centering
+\caption{Bank selection.}
+\end{figure}
+
+Donor can proceed to donate if they wish to provide the donation in terms of money. Once, donor press this button, a pop-up window will show the bank options of what bank donor will use as a medium to transfer the money. Donor must at least choose one bank option to proceed.
+
+Once donor has chosen a bank option that will be used for the transfer, it will redirect donor to the bank’s official website for further details to successfully transfer the money. The bank’s official website differs to every bank option that has been chosen.
+
+User may report the submission if there is any misbehavior on the page details. Once the user pressed the “report this submission?”, this will redirect to the submission report page where user can provide more details about the misbehavior so that the creator of the submission will no longer be able to use the application.
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/detailimage}
+\centering
+\caption{Bigger image view.}
+\end{figure}
+
+Bigger picture view : If there is at least one attachment available on the details page, user can have a better view of the image by tapping the image to view in a bigger size. 
+
+
+
+\subsection{Use Case VI: User Submitting Donation Request}
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/rqmain}
+\centering
+\caption{Request submission page.}
+\end{figure}
+The moment users log into the app, they will be directed to the main page and they can proceed to make their help request by clicking the request button on the bottom of their screen.
+
+On the request page, users will be greeted with the title Donation Request with the slogan Don’t Worry, Be Happy! Along with a few blank fields that they need to fill in in order to upload their request on the map.
+
+Users have to fill in every field with a valid information for their request to be accepted. Any invalid input will be met with error message. Required information that users need to provide is their name, type of donation, address, donation details to describe their request, available meeting time, contact number and bank account information(optional) in case they want the donation to be transferred into their bank account. Users can also click the camera icon to upload pictures along with their request.
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/rq1}
+\centering
+\caption{Blank name error.}
+\end{figure}
+
+Error message will pop up if the requester name if left empty
+
+
+Users can choose the type of donation they require from the drop-down menu in the Donation type field and choose others if they require other help than the option provided.
+
+\begin{figure}[h!]
+\includegraphics[width=2cm]{./usecase/rq2}
+\centering
+\caption{Donation types.}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/rq3}
+\centering
+\caption{Blank address error.}
+\end{figure}
+
+Example of error message that will pop up if the address field is left empty.
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/rq4}
+\centering
+\caption{Blank details error.}
+\end{figure}
+
+Example of error message that will pop up if the Details field is left empty.
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/rq5}
+\centering
+\caption{Invalid contact number case.}
+\end{figure}
+Example of error message that will pop up if the Contact Number field is left empty or if invalid input is entered.
+
+When user click the camera icon to upload a picture, they will redirect to the picture upload page. This page helps users to upload the picture to the food bank page. User can also enter the file name to easily upload the picture without redirecting to another gallery to choose the picture manually.
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/rq6}
+\centering
+\caption{Donation request submitted successfully.}
+\end{figure}
+
+After successfully setting up their location, users will be prompted with pop up message informing that their request had been successfully marked on the map.
+
+The process that user went through when setting up location is represented in the flow chart below.
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./flow/request}
+\centering
+\caption{Request submission flowchart.}
+\end{figure}
+
+\subsection{Use Case VII: User Submitting Foodbank Info}
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/fbname}
+\centering
+\caption{Blank name error.}
+\end{figure}
+
+If the user proceeds to register for food bank without creating the organization name, error message will pop-up in the organization name section indicating that the section is required to fill in. 
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/fbtype}
+\centering
+\caption{Donation types.}
+\end{figure}
+
+If user click at the choose donation type, user can choose which donation they are going to donate. It includes money, necessities, and groceries. If the type of donation is not included in the options, user may choose “Others” option to indicate the type of donation is neither of them.
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/fb addr}
+\centering
+\caption{Blank address error.}
+\end{figure}
+
+If the user proceeds to register for food bank without providing the full address, error message will pop-up in the address section indicating that the address section is required to fill in.
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/fbdetails}
+\centering
+\caption{Blank details error.}
+\end{figure}
+
+If the user proceeds to register for food bank without providing further details on their food bank, error message will pop-up in the details section indicating that the section is required to fill in.
+
+If the user proceeds to register for food bank without providing their organization’s operating hour on their food bank, error message will pop-up in the operating hour section indicating that the section is required to fill in.
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/fbphone}
+\centering
+\caption{Invalid contact number error.}
+\end{figure}
+
+This error message will pop-up if the user tends to provide an invalid phone number that includes alphabets. User must only input numbers in this section so that it is valid. User also cannot leave this section blank as they have to provide phone number so that donor can easily communicate with the distributor.
+
+Before user creates the food bank account, it is advisable to read and understand the submission guidelines of the application. 
+
+Once user has clicked “here” to read the submission guidelines, they will redirect to Submission Guidelines page to have further information and details about the submission. 
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/fbsuccess}
+\centering
+\caption{Foodbank submitted successfully.}
+\end{figure}
+
+If the user has filled in all the details correctly and set a map location for the organization, this message will pop-up indicating that registration for food bank has successfully been made.
+
+The flowchart for this process is shown below.
+
+\begin{figure}[h!]
+\includegraphics[width=5.5cm]{./flow/foodbank}
+\centering
+\caption{Foodbank submission flowchart.}
+\end{figure}
+\subsection{Use Case VIII: Uploading Image for Submission}
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/cameramain}
+\centering
+\caption{Image upload page.}
+\end{figure}
+\par When user click the camera icon to upload a picture, they will redirect to the picture upload page. This page helps users to upload the picture to the food bank page. User can also enter the file name to easily upload the picture without redirecting to another gallery to choose the picture manually. 
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/camerapick}
+\centering
+\caption{Image selection from device gallery.}
+\end{figure}
+\par Once user proceeds with upload file button, they will redirect to gallery to choose any picture that they would like to upload as profile picture.
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/cameracon}
+\centering
+\caption{Upload confirmation.}
+\end{figure}
+\par Once user has chosen a picture and click the “Use Image” button, a confirmation window will pop-up asking user whether they are confirmed to use the picture as the profile picture. If user has confirmed the picture, they may press the “OK” button, otherwise they may press the “CANCEL” button to cancel the request.
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/camerafail}
+\centering
+\caption{No file selected.}
+\end{figure}
+\par If there is no file (image) selected, error message will pop-up indicating that there is no file selected and hence the image upload cannot be continued. \break
+
+Flowchart for the image upload is as below.
+\begin{figure}[h!]
+\includegraphics[width=5.5cm]{./flow/camera}
+\centering
+\caption{Image upload flowchart.}
+\end{figure}
+
+\subsection{Use Case X: Marking Location on Map}
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/fbsetloc}
+\centering
+\caption{Location set button.}
+\end{figure}
+After correctly filling in every field, users can click the set map location button to upload their request to the map for every donor in the area to see and help.
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/setlocmain}
+\centering
+\caption{Location set page.}
+\end{figure}
+
+\par Once user clicked the “Set Map Location” button, they will redirect to the map page with pin on it to indicate where their exact location is. User may also relocate the location pin to the most exact location that they desire to for their organization address. 
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/setloccon}
+\centering
+\caption{Location set confirmation.}
+\end{figure}
+
+\par This confirmation message will pop-up to confirm the marked location (location pin) as the exact location for the organization’s address. User can click “OK” if they confirm to perform the request to use the marked location. Otherwise, they can press “CANCEL” if they would like to cancel the marked location request. 
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/setlocmarker}
+\centering
+\caption{Location set marker.}
+\end{figure}
+\par Once user has selected to mark the current location, there will be a location pin with a pop-up message for user to hold and drag the pin to the exact location. User can zoom in and zoom out to have better location precision for the pin.
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/setlocfail}
+\centering
+\caption{Location set error.}
+\end{figure}
+
+The error message will pop-up if they tend to use the “Set Location”, but the location pin is not being dragged or set properly by the user. It indicates that user must at least drag the location pin to the exact location to proceed.
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/setloccon2}
+\centering
+\caption{Location set confirmation.}
+\end{figure}
+
+This confirmation message will pop-up to confirm the current location as the exact location for the organization’s address. User can click “OK” if they confirm to perform the request to use the current location. Otherwise, they can press “CANCEL” if they would like to cancel the current location request.
+
+The process that user went through when setting up location is represented in the flow chart below.
+
+\begin{figure}[h!]
+\includegraphics[width=5.5cm]{./flow/setlocation}
+\centering
+\caption{Location set flowchart.}
+\end{figure}
+
+\subsection{Use Case IX: User Account Page}
+Users can access their account page by clicking the account button at the lower right corner of the main page.
+
+Upon clicking this button users will be directed to the account page which look like below.
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/accmina}
+\centering
+\caption{Account page.}
+\end{figure}
+
+The account page consists of user’s username and profile picture along with stars representing their ratings on the app. 
+
+Below that user can access their submission lists, the donation tracker and points exchange page where they can exchange their points for coupons/gifticon provided by the developer. 
+
+On this page, users can also utilise a few services provided by the app by clicking on the respective icon.
+
+They can choose their preferred language, access their donation/request history, read on some FAQs, report bugs or offer suggestions and finally they can also sign out from the application.
+
+In the case where donation of goods was done through the post, both donors and requester can keep tract of the parcel.
+
+When users click on the donation tracker icon, they will be directed to this page where they can input the tracking number accordingly and the application will display the status of their package.
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/signout}
+\centering
+\caption{Sign out confirmation.}
+\end{figure}
+
+When users clicked the sign out icon, they will be prompted with this pop-up message confirming whether they really want to log out of the application. They can the proceed to log out by clicking OK.  \break   
+
+\subsection{Use Case IIX: Checking Own Submission List}
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/listfail}
+\centering
+\caption{Empty list message.}
+\end{figure}
+
+This message will pop-up if the user has not made any submission and donation yet.
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/listmain}
+\centering
+\caption{List of user submissions.}
+\end{figure}
+
+Here is the list on the submission page if there is at least one submission that has been made. Every submission has its own date and time created for reference.
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/listmenu}
+\centering
+\caption{List menu.}
+\end{figure}
+
+User can press three dots on the right side of each of the submission to have further information for each of them. It includes “Details”, “Check Location”, and “Delete Submission”. 
+
+When user has clicked on the “Details”, they will redirect to the Submission Details page of that specific submission list. The details of the list include type of donation, posted date and time, name, full address, further details, operating hours and also some extra attachments if available.
+
+When user has clicked on the “Check Location”, user will redirect to the Submission Location page where user can determine the exact location by referring to the location pin on the map. This will ease the process of finding and distributing the donation to the recipient.
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/listcon}
+\centering
+\caption{Delete submission confirmation.}
+\end{figure}
+
+If the user wishes to delete a specific submission list, user can do so by clicking on the “Delete Submission” button. Once it is clicked, confirmation message will pop-up to confirm the user about the deletion request. If the user wishes to delete the submission, they can click on “OK” button to confirm deletion, otherwise, they can go for “CANCEL” button to immediately cancel the request.
+
+\subsection{Use Case IIIX: Checking Deleted Submission }
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/history1}
+\centering
+\caption{Empty history message.}
+\end{figure}
+
+This message will pop-up if the user has not made any submission/donation yet or they have not deleted any of the submission yet. Only deleted submissions will appear on the history page.
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/history2}
+\centering
+\caption{History submission.}
+\end{figure}
+
+Here is the list on the submission history page if there is at least one submission that has been deleted. Every submission has its own date and time created for reference.
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/history3}
+\centering
+\caption{History menu.}
+\end{figure}
+
+User can press three dots on the right side of each of the submission to have further information for each of them. It includes “Details”, “Check Location”, “Delete Submission” and “Restore Submission”
+
+When user has clicked on the “Details”, they will be redirected to the Submission Details page of that specific submission list. The details of the list include type of donation, posted date and time, name, full address, further details, operating hours and also some extra attachments if available.
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/history4}
+\centering
+\caption{Restore submission confirmation.}
+\end{figure}
+
+If the user wishes to delete a specific submission list, user can do so by clicking on the “Delete Submission” button. Once it is clicked, confirmation message will pop-up to confirm the user about the deletion request. If the user wishes to delete the submission, they can click on “OK” button to confirm deletion, otherwise, they can go for “CANCEL” button to immediately cancel the request.
+
+When user has clicked on the “Check Location”, user will redirect to the Submission Location page where user can determine the exact location by referring to the location pin on the map. This will ease the process of finding and distributing the donation to the recipient.
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/history5}
+\centering
+\caption{Submission successfully restored.}
+\end{figure}
+
+If the user wishes to restore a specific request on the history list, user can simple do so by clicking on the “Restore Submission” button. Once it is clicked, that specific request will be available back on the map and user can continue receiving help through it. A pop-up message will come out to inform users that their request restoration is successful.
+
+\subsection{Use Case XV: Changing Language}
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/langchoose}
+\centering
+\caption{Language choices.}
+\end{figure}
+
+User has an option to change language including English, Malay, and Korean language based on their preferences. When the language is changed, it will have a different language of the application. This makes the user to easily navigate the application without any misunderstanding due to the language barrier.
+
+User may only choose one language at a time before proceeding. Once the preferred language has been chosen, user can press on the desired language to change the language version of the application into the chosen language. If user wants to cancel the request of changing language, user can press the same language version of the application to exit the window and the changing language request will not be made.
+
+\begin{figure}[h!]
+\includegraphics[width=6cm]{./usecase/langmain}
+\centering
+\caption{Language changed successfully.}
+\end{figure}
+
+\subsection{Use Case XVI: Sending Suggestion/ Bugs Report}
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/bugmain}
+\centering
+\caption{Bug field.}
+\end{figure}
+
+User can report add any suggestions or report any bugs occurred while using the application. User will be provided a space for them to write any suggestion so that the application can be improved in the future. User can also enter this submission in a few sentences or in one paragraph that consists of alphabets, numbers, and also symbols. 
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/bugfail}
+\centering
+\caption{Empty field error.}
+\end{figure}
+If the user does not enter any text in this section, they will not be able to submit the report or suggestion. User must at least enter one word in order to submit the suggestion.
+
+User can press the “Submit” button once the report and suggestion section has entered. Otherwise, user will not be able to press the button and thus, error in submitting their report or suggestion.
+
+\begin{figure}[h!]
+\includegraphics[width=4cm]{./usecase/bugsuccess}
+\centering
+\caption{Bug successfully submitted.}
+\end{figure}
+
+This message will pop-up to indicate the suggestion and report submission has successfully been made and there is no error in the submission section. 
 
 
 \end{document}
+
